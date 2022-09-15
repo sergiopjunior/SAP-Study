@@ -1,0 +1,96 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangUser</Type>
+		<Language>ABAP4</Language>
+		<Desc>User specific settings for ABAP4</Desc>
+	</FILEINFO>
+	<EXPANDS>
+		<Expand key="cor">
+			<Descr>Correction (*&gt;&gt;X&lt;&lt;$*&gt;&gt;X&lt;&lt;)</Descr>
+			<Text>*&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; %user%| &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;START&lt;\n*"%DateTime%\n%SurroundedText%\n*&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; %user% &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;END&lt;</Text>
+		</Expand>
+		<Expand key="case">
+			<Descr>Case (§) when</Descr>
+			<Text>CASE | .\n	WHEN .\n	WHEN .\n	WHEN OTHERS.\nENDCASE.</Text>
+		</Expand>
+		<Expand key="Method">
+			<Descr>Method (§)</Descr>
+			<Text>**********************************************************************\n* METHOD    :  %Name%\n* Created   :  %DateTime%\n**********************************************************************\nMETHOD %Name% .\n|\nENDMETHOD. "%Name%</Text>
+		</Expand>
+		<Expand key="ife">
+			<Descr>If (§) Else</Descr>
+			<Text>IF |.\n\nELSE.\n\nENDIF.</Text>
+		</Expand>
+		<Expand key="cf">
+			<Descr>Call Function (§)</Descr>
+			<Text>CALL FUNCTION '|'.\n	EXPORTING\n\n	IMPORTING\n	\n	EXCEPTIONS\n	  OTHERS = 1.</Text>
+		</Expand>
+		<Expand key="form">
+			<Descr>Form (§)</Descr>
+			<Text>**********************************************************************\n* FORM    :  %Form name%\n* Created :  %DateTime%\n**********************************************************************\nFORM %Form name% USING  |\n                     CHANGING .\n%SurroundedText%\nENDFORM. "%Form name%</Text>
+		</Expand>
+		<Expand key="catch">
+			<Descr>Catch (§)</Descr>
+			<Text>CATCH SYSTEM-EXCEPTIONS |.\n%SurroundedText%\nENDCATCH.</Text>
+		</Expand>
+		<Expand key="try">
+			<Descr>Try (§)</Descr>
+			<Text>TRY |.\n%SurroundedText%\nCATCH .\n\nENDTRY.</Text>
+		</Expand>
+		<Expand key="loop">
+			<Descr>Loop (§)</Descr>
+			<Text>LOOP AT | .\n%SurroundedText%\nENDLOOP.</Text>
+		</Expand>
+		<Expand key="report">
+			<Descr>Report (§)</Descr>
+			<Text>*----------------------------------------------------------------------*\n* Report : %Document%\n* Author : D038062\n*----------------------------------------------------------------------*\n\nREPORT   %Document%\n            no standard page heading\n            line-size  80\n            line-count 65(0)\n            message-id |\n            defining database  .</Text>
+		</Expand>
+		<Expand key="***">
+			<Descr>***.....</Descr>
+			<Text>**********************************************************************</Text>
+		</Expand>
+		<Expand key="*--">
+			<Descr>*-------...</Descr>
+			<Text>*--------------------------------------------------------------------*</Text>
+		</Expand>
+		<Expand key="modulei">
+			<Descr>Module Input (§)</Descr>
+			<Text>MODULE %Module Name% INPUT.\n%SurroundedText%\nENDMODULE. "%Module Name%</Text>
+		</Expand>
+		<Expand key="while">
+			<Descr>While (§)</Descr>
+			<Text>WHILE |.\n%SurroundedText%\nENDWHILE.</Text>
+		</Expand>
+		<Expand key="do">
+			<Descr>do (§)</Descr>
+			<Text>DO |  TIMES.\n%SurroundedText%\nENDDO.</Text>
+		</Expand>
+		<Expand key="define">
+			<Descr>DEFINE (§)</Descr>
+			<Text>DEFINE %Macro Name%.\n%SurroundedText%\nEND-OF-DEFINITION. "%Macro Name%</Text>
+		</Expand>
+		<Expand key="classd">
+			<Descr>Class Definition</Descr>
+			<Text>*---------------------------------------------------------------------*\n*       CLASS %Class Name% DEFINITION\n*---------------------------------------------------------------------*\nCLASS %Class Name%.\n  PUBLIC SECTION.\n    METHODS: constructor\n    IMPORTING |\n    TYPE REF TO\n 	 FOR EVENT\n     OF\n     IMPORTING   .\n\n  PRIVATE SECTION.\n\nENDCLASS. "%Class Name%</Text>
+		</Expand>
+		<Expand key="select">
+			<Descr>Select (§)</Descr>
+			<Text>SELECT * FROM %Database table name%\n         WHERE | EQ g1\n         AND   f2 BETWEEN g2 AND g3.\n\nENDSELECT. "%Database table name%\n</Text>
+		</Expand>
+		<Expand key="/">
+			<Descr>/SAPAPO/$</Descr>
+			<Text>/SAPAPO/|</Text>
+		</Expand>
+		<Expand key="if">
+			<Descr>If (§)</Descr>
+			<Text>IF |.\n%SurroundedText%\nENDIF.</Text>
+		</Expand>
+		<Expand key="region">
+			<Descr>Region (§)</Descr>
+			<Text>&quot;$ Region %Region Name%\n%SurroundedText%\n&quot;$ Endregion %Region Name%</Text>
+		</Expand>
+	</EXPANDS>
+</XMLConfigSettings>

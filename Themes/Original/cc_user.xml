@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Efstratios Tsantilis</Author>
+		<Type>LangUser</Type>
+		<Language>CC</Language>
+		<Desc>User specific settings for Code Composer</Desc>
+	</FILEINFO>
+	<EXPANDS>		
+		<Expand key="@if">
+			<Descr>@if</Descr>
+				<Text>
+				@if $var$\n\n  @elseif $var$\n\n  @else\n\n@end "if\n
+				</Text>
+		</Expand>
+		<Expand key="@table">
+			<Descr>@table</Descr>
+				<Text>
+				@table $tabvar$\n\n  @initial\n\n  @first\n\n  @notfirst\n\n  @body\n\n  @last\n\n  @notlast\n\n@end "table\n
+				</Text>
+		</Expand>
+		<Expand key="@area">
+			<Descr>@area</Descr>
+				<Text>
+				@area area_name\n\n @importing var1 \n @importing @var var2 @optional \n\n@end "area\n
+				</Text>
+		</Expand>
+		<Expand key="@case">
+			<Descr>@case</Descr>
+				<Text>
+					@case $var$\n\n  @when @initial \n\n  @when A \n\n  @when $varname$\n\n  @when @others\n\n@end "case\n
+				</Text>
+		</Expand>
+		<Expand key="@set">
+			<Descr>@set</Descr>
+				<Text>
+					@set newvar $var$\n
+				</Text>
+		</Expand>
+		<Expand key="@setvar">
+			<Descr>@setvar</Descr>
+				<Text>
+					@setvar newvar $varname$\n
+				</Text>
+		</Expand>
+		<Expand key="@repeat">
+			<Descr>@repeat</Descr>
+				<Text>
+					@repeat repeat_name\n\n  @initial\n\n  @first\n\n  @notfirst\n\n  @body\n\n  @last\n\n  @notlast\n\n@end "repeat\n
+				</Text>
+		</Expand>
+		<Expand key="@newcontext">
+			<Descr>@newcontext</Descr>
+				<Text>
+				@newcontext\n*@ This defines a local context\n@end "newcontext\n			
+				</Text>
+		</Expand>
+		<Expand key="@insertarea">
+			<Descr>@insertarea</Descr>
+				<Text>
+				@insertarea area_name { ABC $var1$ } "@prog progname\n												
+				</Text>
+		</Expand>
+		<Expand key="@an">
+			<Descr>@annotation</Descr>
+				<Text>
+				@a @name $name$ @value $value$ @type $type$ @context $context$\n
+				</Text>
+		</Expand>	
+		<Expand key="@function">
+			<Descr>@Function</Descr>
+				<Text>
+				@function function_name \n @importing var1 \n @importing @var var2 @optional \n\n @set return $anyvalue$ \n\n@end "function \n
+				</Text>
+		</Expand>	
+		
+	</EXPANDS>
+</XMLConfigSettings>

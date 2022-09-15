@@ -1,0 +1,307 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangSpec</Type>
+		<Language>BSP</Language>
+		<Desc>Language specification for BSP</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.bsp</FilePattern>
+		<CaseSensitive>0</CaseSensitive>
+		<OpenClose>()[]&lt;&gt;''</OpenClose>
+		<Delimiters></Delimiters>
+		<Operators>?-+/*=&lt;&gt;</Operators>
+		<Words>0-9a-Z_-</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<WrapCol>72</WrapCol>
+	</SPECIFICATION>
+	<COLORSYNTAX>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="-1" />
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1" />
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1" />
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520" />
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15921906"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139" />
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487" />
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1" />
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1" />
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1" />
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="12632256" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;%--" end="--%&gt;" />
+			</Conditions>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12623485" bkclr="-1" />
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+			<Conditions>
+				<Condition start="&quot;" end="&quot;" />
+				<Condition start="'" end="'" />
+			</Conditions>
+		</TextType>
+		<TextType id="50" name="Elements" dstyle="0" dbkclr="0" ImageIdx="9" bold="0" italic="0" underline="0" clr="9109504" bkclr="-1">
+			<Keywords>
+				<Keyword text="a" />
+				<Keyword text="abbr" />
+				<Keyword text="acronym" />
+				<Keyword text="address" />
+				<Keyword text="applet" />
+				<Keyword text="area" />
+				<Keyword text="b" />
+				<Keyword text="base" />
+				<Keyword text="basefont" />
+				<Keyword text="bdo" />
+				<Keyword text="big" />
+				<Keyword text="blockquote" />
+				<Keyword text="body" />
+				<Keyword text="br" />
+				<Keyword text="button" />
+				<Keyword text="caption" />
+				<Keyword text="center" />
+				<Keyword text="cite" />
+				<Keyword text="code" />
+				<Keyword text="col" />
+				<Keyword text="colgroup" />
+				<Keyword text="dd" />
+				<Keyword text="del" />
+				<Keyword text="dfn" />
+				<Keyword text="dir" />
+				<Keyword text="div" />
+				<Keyword text="dl" />
+				<Keyword text="dt" />
+				<Keyword text="em" />
+				<Keyword text="fieldset" />
+				<Keyword text="font" />
+				<Keyword text="form" />
+				<Keyword text="frame" />
+				<Keyword text="frameset" />
+				<Keyword text="h1" />
+				<Keyword text="h2" />
+				<Keyword text="h3" />
+				<Keyword text="h4" />
+				<Keyword text="h5" />
+				<Keyword text="h6" />
+				<Keyword text="head" />
+				<Keyword text="hr" />
+				<Keyword text="html" />
+				<Keyword text="i" />
+				<Keyword text="iframe" />
+				<Keyword text="img" />
+				<Keyword text="input" />
+				<Keyword text="ins" />
+				<Keyword text="isindex" />
+				<Keyword text="kbd" />
+				<Keyword text="label" />
+				<Keyword text="legend" />
+				<Keyword text="li" />
+				<Keyword text="link" />
+				<Keyword text="map" />
+				<Keyword text="menu" />
+				<Keyword text="meta" />
+				<Keyword text="noframes" />
+				<Keyword text="noscript" />
+				<Keyword text="object" />
+				<Keyword text="ol" />
+				<Keyword text="optgroup" />
+				<Keyword text="option" />
+				<Keyword text="p" />
+				<Keyword text="param" />
+				<Keyword text="pre" />
+				<Keyword text="q" />
+				<Keyword text="s" />
+				<Keyword text="samp" />
+				<Keyword text="script" />
+				<Keyword text="select" />
+				<Keyword text="small" />
+				<Keyword text="span" />
+				<Keyword text="strike" />
+				<Keyword text="strong" />
+				<Keyword text="style" />
+				<Keyword text="sub" />
+				<Keyword text="sup" />
+				<Keyword text="table" />
+				<Keyword text="tbody" />
+				<Keyword text="td" />
+				<Keyword text="textarea" />
+				<Keyword text="tfoot" />
+				<Keyword text="th" />
+				<Keyword text="thead" />
+				<Keyword text="title" />
+				<Keyword text="tr" />
+				<Keyword text="tt" />
+				<Keyword text="u" />
+				<Keyword text="ul" />
+				<Keyword text="var" />
+				<Keyword text="xml" />
+				<Keyword text="xmlns" />
+			</Keywords>
+		</TextType>
+		<TextType id="51" name="Attributes" dstyle="0" dbkclr="0" ImageIdx="11" bold="0" italic="0" underline="0" clr="139" bkclr="-1">
+			<Keywords>
+				<Keyword text="abbr" />
+				<Keyword text="accept-charset" />
+				<Keyword text="accept" />
+				<Keyword text="accesskey" />
+				<Keyword text="action" />
+				<Keyword text="align" />
+				<Keyword text="alink" />
+				<Keyword text="alt" />
+				<Keyword text="archive" />
+				<Keyword text="axis" />
+				<Keyword text="background" />
+				<Keyword text="bgcolor" />
+				<Keyword text="border" />
+				<Keyword text="cellpadding" />
+				<Keyword text="cellspacing" />
+				<Keyword text="char" />
+				<Keyword text="charoff" />
+				<Keyword text="charset" />
+				<Keyword text="checked" />
+				<Keyword text="cite" />
+				<Keyword text="class" />
+				<Keyword text="classid" />
+				<Keyword text="clear" />
+				<Keyword text="codebase" />
+				<Keyword text="codetype" />
+				<Keyword text="color" />
+				<Keyword text="cols" />
+				<Keyword text="colspan" />
+				<Keyword text="compact" />
+				<Keyword text="content" />
+				<Keyword text="coords" />
+				<Keyword text="data" />
+				<Keyword text="datafld" />
+				<Keyword text="dataformatas" />
+				<Keyword text="datapagesize" />
+				<Keyword text="datasrc" />
+				<Keyword text="datetime" />
+				<Keyword text="declare" />
+				<Keyword text="defer" />
+				<Keyword text="dir" />
+				<Keyword text="disabled" />
+				<Keyword text="enctype" />
+				<Keyword text="event" />
+				<Keyword text="face" />
+				<Keyword text="for" />
+				<Keyword text="frame" />
+				<Keyword text="frameborder" />
+				<Keyword text="headers" />
+				<Keyword text="height" />
+				<Keyword text="href" />
+				<Keyword text="hreflang" />
+				<Keyword text="hspace" />
+				<Keyword text="http-equiv" />
+				<Keyword text="id" />
+				<Keyword text="ismap" />
+				<Keyword text="label" />
+				<Keyword text="lang" />
+				<Keyword text="language" />
+				<Keyword text="leftmargin" />
+				<Keyword text="link" />
+				<Keyword text="longdesc" />
+				<Keyword text="marginwidth" />
+				<Keyword text="marginheight" />
+				<Keyword text="maxlength" />
+				<Keyword text="media" />
+				<Keyword text="method" />
+				<Keyword text="multiple" />
+				<Keyword text="name" />
+				<Keyword text="nohref" />
+				<Keyword text="noresize" />
+				<Keyword text="noshade" />
+				<Keyword text="nowrap" />
+				<Keyword text="object" />
+				<Keyword text="onblur" />
+				<Keyword text="onchange" />
+				<Keyword text="onclick" />
+				<Keyword text="ondblclick" />
+				<Keyword text="onfocus" />
+				<Keyword text="onkeydown" />
+				<Keyword text="onkeypress" />
+				<Keyword text="onkeyup" />
+				<Keyword text="onload" />
+				<Keyword text="onmousedown" />
+				<Keyword text="onmousemove" />
+				<Keyword text="onmouseover" />
+				<Keyword text="onmouseout" />
+				<Keyword text="onmouseup" />
+				<Keyword text="onreset" />
+				<Keyword text="onselect" />
+				<Keyword text="onsubmit" />
+				<Keyword text="onunload" />
+				<Keyword text="profile" />
+				<Keyword text="prompt" />
+				<Keyword text="readonly" />
+				<Keyword text="rel" />
+				<Keyword text="rev" />
+				<Keyword text="rows" />
+				<Keyword text="rowspan" />
+				<Keyword text="rules" />
+				<Keyword text="scheme" />
+				<Keyword text="scope" />
+				<Keyword text="selected" />
+				<Keyword text="shape" />
+				<Keyword text="size" />
+				<Keyword text="span" />
+				<Keyword text="src" />
+				<Keyword text="standby" />
+				<Keyword text="start" />
+				<Keyword text="style" />
+				<Keyword text="summary" />
+				<Keyword text="tabindex" />
+				<Keyword text="target" />
+				<Keyword text="text" />
+				<Keyword text="title" />
+				<Keyword text="topmargin" />
+				<Keyword text="type" />
+				<Keyword text="usemap" />
+				<Keyword text="valign" />
+				<Keyword text="value" />
+				<Keyword text="valuetype" />
+				<Keyword text="version" />
+				<Keyword text="vlink" />
+				<Keyword text="vspace" />
+				<Keyword text="width" />
+				<Keyword text="text" />
+				<Keyword text="password" />
+				<Keyword text="checkbox" />
+				<Keyword text="radio" />
+				<Keyword text="submit" />
+				<Keyword text="reset" />
+				<Keyword text="file" />
+				<Keyword text="hidden" />
+				<Keyword text="image" />
+			</Keywords>
+		</TextType>
+		<TextType id="52" name="Constants" dstyle="0" dbkclr="0" bold="1" italic="0" underline="0" clr="-1" bkclr="-1">
+			<Conditions>
+				<Condition start="&amp;" end="" />
+			</Conditions>
+		</TextType>
+		<TextType id="53" name="ABAP" dstyle="0" dbkclr="0" lang="ABAP" bold="0" italic="0" underline="0" clr="255" bkclr="16383986">
+			<Conditions>
+				<Condition start="&lt;%" end="%&gt;" />
+			</Conditions>
+		</TextType>
+		<TextType id="54" name="Definition" dstyle="0" dbkclr="0" bold="1" italic="0" underline="0" clr="6008319" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;%@" end="%&gt;" />
+			</Conditions>
+		</TextType>
+		<TextType id="55" name="ABAP Parameter" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="16383986">
+			<Conditions>
+				<Condition start="&lt;%=" end="%&gt;" />
+			</Conditions>
+		</TextType>
+		<TextType id="56" name="HTML Comments" dstyle="0" dbkclr="0" bold="0" italic="1" underline="0" text="1" clr="6710886" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;!--" end="--&gt;" />
+			</Conditions>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>

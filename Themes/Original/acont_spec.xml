@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Christoph Stoeck</Author>
+		<Type>LangSpec</Type>
+		<Language>ACONT</Language>
+		<Desc>ABAP control blocks (q8)</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.acont</FilePattern>
+		<LexerDll></LexerDll>
+		<CaseSensitive>0</CaseSensitive>
+		<WrapCol>255</WrapCol>
+		<OpenClose>()[]&lt;&gt;''``</OpenClose>
+		<Delimiters>,.:</Delimiters>
+		<EscapeChar></EscapeChar>
+		<LineEnd>.</LineEnd>
+		<Operators>?-+/&amp;*=&lt;&gt;~</Operators>
+		<Words>0-9a-Z_-/</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<HierarchySeparator>
+			<Separator id="1" text="-"/>
+			<Separator id="2" text="-&gt;"/>
+			<Separator id="3" text="=&gt;"/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<COMPLEX_USING>
+
+	</COMPLEX_USING>
+	<STRUCTURES>
+	</STRUCTURES>
+	<FORMAT>
+		<DefaultIndent>2</DefaultIndent>
+		<ResetFormatSymbols>,</ResetFormatSymbols>
+		<FormatWords>
+		</FormatWords>
+	</FORMAT>
+	<SYNTAXINFO>
+		<InfoType id="1" name="Compiler error" clr="-1"/>
+		<InfoType id="2" name="Performance Tip" clr="-1"/>
+		<InfoType id="3" name="Syntax Tip" clr="-1"/>
+		<InfoType id="4" name="Spelling Error" clr="-1"/>
+	</SYNTAXINFO>
+	<COLORSYNTAX>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="14281970"/> 
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="16777215" bkclr="9922608"/> 
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/> 
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/> 
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/> 
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/> 
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/> 
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15921906"/> 
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139"/> 
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487"/> 
+		<TextType id="20" name="Format tags" dstyle="0" dbkclr="0" text="0" bold="0" italic="1" underline="0" clr="12614523" bkclr="-1"> 
+			<Conditions> 
+				<Condtion start="&quot;$" end="\n"/> 
+			</Conditions> 
+ 		</TextType> 
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1"/> 
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1"/> 
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1"/> 
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1"/> 
+		<TextType id="51" name="OPs" ImageIdx="13" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1"> 
+			<Keywords>
+                <Keyword text="EOEV"/>
+                <Keyword text="BRAF"/>
+                <Keyword text="BRAT"/>
+                <Keyword text="BRAN"/>
+                <Keyword text="BRAX"/>
+                <Keyword text="mvqk"/>
+                <Keyword text="mvqb"/>
+                <Keyword text="mvqs"/>
+                <Keyword text="mvqw"/>
+                <Keyword text="mvq2"/>
+                <Keyword text="mlqk"/>
+                <Keyword text="mlq1"/>
+                <Keyword text="ccqi"/>
+                <Keyword text="ccqf"/>
+                <Keyword text="ccqp"/>
+                <Keyword text="ccqd"/>
+                <Keyword text="cmpb"/>
+                <Keyword text="cmpf"/>
+                <Keyword text="cmpp"/>
+                <Keyword text="cpnl"/>
+                <Keyword text="cpnr"/>
+                <Keyword text="cmpl"/>
+                <Keyword text="cmpr"/>
+                <Keyword text="cpp4"/>
+                <Keyword text="cpp8"/>
+                <Keyword text="cp4z"/>
+                <Keyword text="cpz4"/>
+                <Keyword text="cp8z"/>
+                <Keyword text="cpz8"/>
+                <Keyword text="cp0l"/>
+                <Keyword text="cp0r"/>
+                <Keyword text="whlc"/>
+                <Keyword text="whli"/>
+                <Keyword text="whdo"/>
+                <Keyword text="move"/>
+                <Keyword text="movl"/>
+                <Keyword text="comp"/>
+                <Keyword text="cmp8"/>
+                <Keyword text="cmp1"/>
+                <Keyword text="when"/>
+                <Keyword text="ccsi"/>
+                <Keyword text="ccsf"/>
+                <Keyword text="ccsp"/>
+                <Keyword text="ccsd"/>
+                <Keyword text="lreg"/>
+                <Keyword text="assc"/>
+                <Keyword text="assi"/>
+                <Keyword text="LINE"/>
+                <Keyword text="SKIP"/>
+                <Keyword text="GETL"/>
+                <Keyword text="BACK"/>
+                <Keyword text="WRIB"/>
+                <Keyword text="WRIT"/>
+                <Keyword text="MOVE"/>
+                <Keyword text="COMP"/>
+                <Keyword text="UNPK"/>
+                <Keyword text="SCAN"/>
+                <Keyword text="BITS"/>
+                <Keyword text="CALC"/>
+                <Keyword text="CALL"/>
+                <Keyword text="PERF"/>
+                <Keyword text="PERP"/>
+                <Keyword text="CALY"/>
+                <Keyword text="READ"/>
+                <Keyword text="ADDF"/>
+                <Keyword text="COND"/>
+                <Keyword text="TCOL"/>
+                <Keyword text="TINS"/>
+                <Keyword text="STOP"/>
+                <Keyword text="LOOP"/>
+                <Keyword text="IMPO"/>
+                <Keyword text="LOPR"/>
+                <Keyword text="CNTL"/>
+                <Keyword text="SUMM"/>
+                <Keyword text="SORT"/>
+                <Keyword text="SORX"/>
+                <Keyword text="REFR"/>
+                <Keyword text="REJE"/>
+                <Keyword text="SELC"/>
+                <Keyword text="TMOD"/>
+                <Keyword text="WHIL"/>
+                <Keyword text="FMBE"/>
+                <Keyword text="FMBA"/>
+                <Keyword text="FMBS"/>
+                <Keyword text="UPDT"/>
+                <Keyword text="EOS "/>
+                <Keyword text="TDEL"/>
+                <Keyword text="RELX"/>
+                <Keyword text="SUBM"/>
+                <Keyword text="TUTL"/>
+                <Keyword text="REPL"/>
+                <Keyword text="SETF"/>
+                <Keyword text="MESS"/>
+                <Keyword text="INSR"/>
+                <Keyword text="EXPO"/>
+                <Keyword text="CLEA"/>
+                <Keyword text="BREA"/>
+                <Keyword text="HIDE"/>
+                <Keyword text="WHEN"/>
+                <Keyword text="MOVL"/>
+                <Keyword text="EDOR"/>
+                <Keyword text="LANG"/>
+                <Keyword text="TREA"/>
+                <Keyword text="SHIF"/>
+                <Keyword text="STCK"/>
+                <Keyword text="REST"/>
+                <Keyword text="GBIT"/>
+                <Keyword text="TAPP"/>
+                <Keyword text="TRAL"/>
+                <Keyword text="TIME"/>
+                <Keyword text="LOAD"/>
+                <Keyword text="PRIC"/>
+                <Keyword text="SETC"/>
+                <Keyword text="TCOD"/>
+                <Keyword text="PARA"/>
+                <Keyword text="DESC"/>
+                <Keyword text="PRIT"/>
+                <Keyword text="SRCH"/>
+                <Keyword text="EXTR"/>
+                <Keyword text="FGOP"/>
+                <Keyword text="SETS"/>
+                <Keyword text="GENR"/>
+                <Keyword text="AUTH"/>
+                <Keyword text="FREE"/>
+                <Keyword text="DSQL"/>
+                <Keyword text="SQLR"/>
+                <Keyword text="SQLM"/>
+                <Keyword text="TRAC"/>
+                <Keyword text="LSCR"/>
+                <Keyword text="DSET"/>
+                <Keyword text="EXIT"/>
+                <Keyword text="DIAL"/>
+                <Keyword text="XDAT"/>
+                <Keyword text="SYCH"/>
+                <Keyword text="SDAM"/>
+                <Keyword text="MATH"/>
+                <Keyword text="SCPM"/>
+                <Keyword text="COMM"/>
+                <Keyword text="SQLS"/>
+                <Keyword text="WHER"/>
+                <Keyword text="TREN"/>
+                <Keyword text="NOP1"/>
+                <Keyword text="NOP2"/>
+                <Keyword text="NOP4"/>
+                <Keyword text="perf"/>
+                <Keyword text="ENDF"/>
+                <Keyword text="cali"/>
+                <Keyword text="calp"/>
+                <Keyword text="cald"/>
+                <Keyword text="calf"/>
+                <Keyword text="movs"/>
+                <Keyword text="FUNC"/>
+                <Keyword text="FUNE"/>
+                <Keyword text="FUNP"/>
+                <Keyword text="ASSI"/>
+                <Keyword text="OFFL"/>
+                <Keyword text="NTAB"/>
+                <Keyword text="SCUA"/>
+                <Keyword text="CONV"/>
+                <Keyword text="CMPS"/>
+                <Keyword text="WPOS"/>
+                <Keyword text="DOUT"/>
+                <Keyword text="SCRL"/>
+                <Keyword text="SYSC"/>
+                <Keyword text="PUT "/>
+                <Keyword text="TCHK"/>
+                <Keyword text="DWRI"/>
+                <Keyword text="WIND"/>
+                <Keyword text="xper"/>
+                <Keyword text="MVCO"/>
+                <Keyword text="FRAM"/>
+                <Keyword text="PAR1"/>
+                <Keyword text="PAR2"/>
+                <Keyword text="PAR4"/>
+                <Keyword text="LIST"/>
+                <Keyword text="OOIF"/>
+                <Keyword text="FMBX"/>
+                <Keyword text="ENDM"/>
+                <Keyword text="JEND"/>
+                <Keyword text="WAIT"/>
+                <Keyword text="BREL"/>
+                <Keyword text="ABOO"/>
+                <Keyword text="CATC"/>
+                <Keyword text="METH"/>
+                <Keyword text="CLCC"/>
+                <Keyword text="clcm"/>
+                <Keyword text="clcl"/>
+                <Keyword text="clom"/>
+                <Keyword text="SETH"/>
+                <Keyword text="ATRA"/>
+                <Keyword text="CPOP"/>
+                <Keyword text="CAST"/>
+                <Keyword text="SRFC"/>
+                <Keyword text="GETR"/>
+                <Keyword text="LABL"/>
+                <Keyword text="LREG"/>
+                <Keyword text="EXCP"/>
+                <Keyword text="FIND"/>
+                <Keyword text="CRTD"/>
+                <Keyword text="SCHE"/>
+                <Keyword text="oflc"/>
+                <Keyword text="PRDF"/>
+                <Keyword text="TRFO"/>
+                <Keyword text="REP "/>
+                <Keyword text="EREP"/>
+                <Keyword text="ASSE"/>
+                <Keyword text="BRID"/>
+                <Keyword text="dtch"/>
+                <Keyword text="end "/>
+            </Keywords>
+        </TextType>
+        <TextType id="52" name="Ops length Short" ImageIdx="13" bold="1" italic="0" underline="0" clr="-1" bkclr="-1"> 
+            <Keywords>
+                <Keyword text="S"/>
+            </Keywords>
+        </TextType>
+        <TextType id="53" name="Ops length Normal" ImageIdx="13" bold="1" italic="0" underline="0" clr="-1" bkclr="-1"> 
+            <Keywords>
+                    <Keyword text="N"/>
+            </Keywords>
+        </TextType>
+        <TextType id="54" name="Ops length Long" ImageIdx="13" bold="1" italic="0" underline="0" clr="-1" bkclr="-1"> 
+            <Keywords>
+                <Keyword text="L"/>
+            </Keywords>
+        </TextType>
+        <TextType id="55" name="End-of-event" ImageIdx="13" bold="1" italic="0" underline="0" clr="255" bkclr="-1"> 
+            <Keywords>
+                <Keyword text="----"/>
+            </Keywords>
+        </TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>
+
+
+

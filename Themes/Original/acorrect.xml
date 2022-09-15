@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="acorrect.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>Autocorrection</Type>
+		<Desc>Autocorrection file</Desc>
+		<Language/>
+	</FILEINFO>
+	<AUTOCORRECTION>
+		<ENGLISH>
+			<Correct from="onyl" to="only"/>
+			<Correct from="foudn" to="found"/>
+			<Correct from="ocurred" to="occurred"/>
+			<Correct from="recrod" to="record"/>
+			<Correct from="htis" to="this"/>
+			<Correct from="actualy" to="actually"/>
+			<Correct from="possable" to="possible"/>
+			<Correct from="thgat" to="that"/>
+			<Correct from="recieve" to="receive"/>
+			<Correct from="occassionally" to="occasionally"/>
+			<Correct from="russina" to="russian"/>
+			<Correct from="possably" to="possibly"/>
+			<Correct from="amking" to="making"/>
+			<Correct from="omre" to="more"/>
+			<Correct from="probablly" to="probably"/>
+			<Correct from="supress" to="suppress"/>
+			<Correct from="definit" to="definite"/>
+			<Correct from="smoe" to="some"/>
+			<Correct from="accessable" to="accessible"/>
+			<Correct from="jsut" to="just"/>
+			<Correct from="hapened" to="happened"/>
+			<Correct from="wtih" to="with"/>
+			<Correct from="neccessary" to="necessary"/>
+			<Correct from="towrad" to="toward"/>
+			<Correct from="clera" to="clear"/>
+			<Correct from="suceed" to="succeed"/>
+			<Correct from="mkea" to="make"/>
+			<Correct from="fomr" to="from"/>
+			<Correct from="wehn" to="when"/>
+			<Correct from="amke" to="make"/>
+			<Correct from="wnat" to="want"/>
+			<Correct from="fidn" to="find"/>
+			<Correct from="soulds" to="souls"/>
+			<Correct from="turnk" to="trunk"/>
+			<Correct from="greif" to="grief"/>
+			<Correct from="occured" to="occurred"/>
+			<Correct from="tahn" to="than"/>
+			<Correct from="claer" to="clear"/>
+			<Correct from="taht" to="that"/>
+			<Correct from="hwile" to="while"/>
+			<Correct from="lsat" to="last"/>
+			<Correct from="scirpt" to="script"/>
+			<Correct from="imediately" to="immediately"/>
+			<Correct from="wriet" to="write"/>
+			<Correct from="fiel" to="file"/>
+			<Correct from="strat" to="start"/>
+			<Correct from="occurrance" to="occurrence"/>
+			<Correct from="iu" to="i"/>
+			<Correct from="cpoy" to="copy"/>
+			<Correct from="frist" to="first"/>
+			<Correct from="oging" to="going"/>
+			<Correct from="stpo" to="stop"/>
+			<Correct from="hvaing" to="having"/>
+			<Correct from="inot" to="into"/>
+			<Correct from="prefered" to="preferred"/>
+			<Correct from="arguement" to="argument"/>
+			<Correct from="bcak" to="back"/>
+			<Correct from="parrallel" to="parallel"/>
+			<Correct from="wohle" to="whole"/>
+			<Correct from="anbd" to="and"/>
+			<Correct from="wirting" to="writing"/>
+			<Correct from="useage" to="usage"/>
+			<Correct from="refering" to="referring"/>
+			<Correct from="avhe" to="have"/>
+			<Correct from="regluar" to="regular"/>
+			<Correct from="tyhe" to="the"/>
+			<Correct from="levle" to="level"/>
+			<Correct from="smae" to="same"/>
+			<Correct from="untill" to="until"/>
+			<Correct from="interupt" to="interrupt"/>
+			<Correct from="useing" to="using"/>
+			<Correct from="ocurrs" to="occurs"/>
+			<Correct from="whcih" to="which"/>
+			<Correct from="liek" to="like"/>
+			<Correct from="hace" to="have"/>
+			<Correct from="recieving" to="receiving"/>
+			<Correct from="eles" to="else"/>
+			<Correct from="donig" to="doing"/>
+			<Correct from="eveyr" to="every"/>
+			<Correct from="devide" to="divide"/>
+			<Correct from="wiht" to="with"/>
+			<Correct from="befoer" to="before"/>
+			<Correct from="moer" to="more"/>
+			<Correct from="enxt" to="next"/>
+			<Correct from="rwite" to="write"/>
+			<Correct from="thne" to="then"/>
+			<Correct from="otehr" to="other"/>
+			<Correct from="chasr" to="characters"/>
+			<Correct from="gogin" to="going"/>
+			<Correct from="sinse" to="since"/>
+			<Correct from="firts" to="first"/>
+			<Correct from="proceed" to="proceed"/>
+			<Correct from="tiem" to="time"/>
+			<Correct from="mroe" to="more"/>
+			<Correct from="fianlly" to="finally"/>
+			<Correct from="hten" to="then"/>
+			<Correct from="goign" to="going"/>
+			<Correct from="iwth" to="with"/>
+			<Correct from="tiome" to="time"/>
+			<Correct from="occurr" to="occur"/>
+			<Correct from="gonig" to="going"/>
+			<Correct from="tih" to="with"/>
+			<Correct from="liuke" to="like"/>
+			<Correct from="esle" to="else"/>
+			<Correct from="mkaing" to="making"/>
+			<Correct from="sohw" to="show"/>
+			<Correct from="grwo" to="grow"/>
+			<Correct from="eyar" to="year"/>
+			<Correct from="mkae" to="make"/>
+			<Correct from="whic" to="which"/>
+			<Correct from="paralel" to="parallel"/>
+			<Correct from="owrk" to="work"/>
+		</ENGLISH>
+	</AUTOCORRECTION>
+</XMLConfigSettings>

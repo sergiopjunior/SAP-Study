@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Niemand</Author>
+		<Type>LangSpec</Type>
+		<Language>BWIP_FOX</Language>
+		<Desc>Language specification for BWIP_FOX</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.BWIP_FOX</FilePattern>
+		<CaseSensitive>0</CaseSensitive>
+		<OpenClose>()[]''``||{}</OpenClose>
+		<Delimiters>,.:</Delimiters>
+		<WrapBy>(),</WrapBy>
+		<LineEnd>.</LineEnd>
+		<Words>0-9a-Z_/&lt;&gt;</Words>
+		<HierarchySeparator>
+			<Separator id="1" text="-"/>
+			<Separator id="2" text="-&gt;"/>
+			<Separator id="3" text="=&gt;"/>
+			<Separator id="4" text="~"/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<STRUCTURES>
+		<exception-follows value="="/>
+		<Structure open="if" middle="else" close="endif" header="1" sent_start="1">
+			<Middle name="elseif"/>
+		</Structure>
+		<Structure open="case" middle="when" close="endcase" header="1" sent_start="1">
+			<Middle name="others"/>
+		</Structure>
+		<Structure open="loop" close="endloop" header="1" sent_start="1"/>
+		<Structure open="while" close="endwhile" header="1" sent_start="1"/>
+		<Structure open="do" close="enddo" header="1" sent_start="1"/>
+		<Structure open="foreach" close="endfor" header="1" sent_start="1"/>
+	</STRUCTURES>
+	<FORMAT>
+		<DefaultIndent>2</DefaultIndent>
+		<ResetFormatSymbols>,</ResetFormatSymbols>
+		<FormatWords>
+			<FormatWord word="data" indent="6" next_line="1"/>
+			<FormatWord word="elseif" indent="-2"/>
+		</FormatWords>
+	</FORMAT>
+	<SYNTAXINFO>
+		<InfoType id="1" name="Compiler error" clr="-1"/>
+		<InfoType id="2" name="Performance tip" clr="-1"/>
+		<InfoType id="3" name="Syntax tip" clr="-1"/>
+		<InfoType id="4" name="Spelling error" clr="-1"/>
+	</SYNTAXINFO>
+  <FILTERICONCAPTION>
+    <IconIndex id="0" name="Bold"/>
+    <IconIndex id="1" name="Public"/>
+    <IconIndex id="2" name="Protected"/>
+    <IconIndex id="3" name="Private"/>
+    <IconIndex id="4" name="Class"/>
+    <IconIndex id="5" name="Variable"/>
+    <IconIndex id="6" name="Constant"/>
+    <IconIndex id="7" name="Structure"/>
+    <IconIndex id="8" name="Function"/>
+    <IconIndex id="9" name="Type"/>
+    <IconIndex id="10" name="Method"/>
+    <IconIndex id="11" name="Keyword"/>
+    <IconIndex id="12" name="Regular"/>
+    <IconIndex id="13" name="Screen"/>
+    <IconIndex id="14" name="Include"/>
+    <IconIndex id="15" name="Application"/>
+    <IconIndex id="16" name="Table"/>
+    <IconIndex id="17" name="Attribute"/>
+    <IconIndex id="18" name="Relation"/>
+    <IconIndex id="19" name="Event"/>
+  </FILTERICONCAPTION>
+	<COLORSYNTAX>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139"/>
+		<TextType id="11" name="Changed and saved indicator" dstyle="1" dbkclr="1" clr="12895487"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Erroneous line" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/>
+		<TextType id="3" name="Inactive selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/>
+        <TextType id="13" name="Maximum line length" dstyle="1" dbkclr="1" clr="255"/>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="16777215" bkclr="9922608"/>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="14281970"/>
+		<TextType id="21" name="Text highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1"/>
+		<TextType id="22" name="Text highlights error" bold="1" italic="0" underline="0" clr="255" bkclr="-1"/>
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15789798"/>
+
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="8421504" bkclr="-1">
+			<FirstChar>*</FirstChar>
+			<Conditions>
+				<Condition start="&quot;" end="\n"/>
+			</Conditions>
+		</TextType>
+		<TextType id="52" name="Keywords" ImageIdx="13" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1">
+			<Keywords>
+              <Keyword text="DATA"/>
+              <Keyword text="TABLE"/>
+              <Keyword text="INFOPROVIDER"/>
+              <Keyword text="TYPE"/>
+              <Keyword text="CLEAR"/>
+              <Keyword text="DELETE"/>
+              <Keyword text="EXISTS"/>
+              <Keyword text="BREAK-POINT"/>
+              <Keyword text="EXIT"/>
+              <Keyword text="MESSAGE"/>
+              <Keyword text="DO"/>
+              <Keyword text="ENDDO"/>
+              <Keyword text="WHILE"/>
+              <Keyword text="ENDWHILE"/>
+              <Keyword text="FOREACH"/>
+              <Keyword text="ENDFOR"/>
+              <Keyword text="IF"/>
+              <Keyword text="ENDIF"/>
+              <Keyword text="ELSE"/>
+              <Keyword text="ELSEIF"/>
+              <Keyword text="OR"/>
+              <Keyword text="AND"/>
+              <Keyword text="IS"/>
+              <Keyword text="NIL"/>
+              <Keyword text="IN"/>
+              <Keyword text="REFDATA"/>
+              <Keyword text="SELECTION"/>
+              <Keyword text="INITIAL"/>
+              <Keyword text="*"/>
+              <Keyword text="/"/>
+              <Keyword text="DIV"/>
+              <Keyword text="MOD"/>
+              <Keyword text="**"/>
+              <Keyword text="+"/>
+              <Keyword text="-"/>
+              <Keyword text="("/>
+              <Keyword text=")"/>
+              <Keyword text="{"/>
+              <Keyword text="}"/>
+              <Keyword text="|"/>
+              <Keyword text=","/>
+              <Keyword text="CEIL"/>
+              <Keyword text="FLOOR"/>
+              <Keyword text="TRUNC"/>
+              <Keyword text="FRAC"/>
+              <Keyword text="ABS"/>
+              <Keyword text="SIGN"/>
+              <Keyword text="ACOS"/>
+              <Keyword text="ASIN"/>
+              <Keyword text="ATAN"/>
+              <Keyword text="COS"/>
+              <Keyword text="SIN"/>
+              <Keyword text="TAN"/>
+              <Keyword text="COSH"/>
+              <Keyword text="TANH"/>
+              <Keyword text="EXP"/>
+              <Keyword text="LOG"/>
+              <Keyword text="LOG10"/>
+              <Keyword text="SQRT"/>
+              <Keyword text="MAX"/>
+              <Keyword text="MIN"/>
+              <Keyword text="PERP"/>
+              <Keyword text="DECD"/>
+              <Keyword text="VARV"/>
+              <Keyword text="VARI"/>
+              <Keyword text="VARC"/>
+              <Keyword text="TMVL"/>
+              <Keyword text="ATRV"/>
+              <Keyword text="OBJV"/>
+              <Keyword text="STRING"/>
+              <Keyword text="SUBSTR"/>
+              <Keyword text="STRLEN"/>
+              <Keyword text="ATRVT"/>
+              <Keyword text="MDEXISTS"/>
+              <Keyword text="REPLACE"/>
+              <Keyword text="CONCAT"/>
+              <Keyword text="CURC"/>
+              <Keyword text="ROUND"/>
+              <Keyword text="CONVERT"/>
+              <Keyword text="DECIMALS"/>
+              <Keyword text="UNIT_DECIMALS"/>
+              <Keyword text="C2DATE"/>
+              <Keyword text="DISC"/>
+            </Keywords>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="16750899" bkclr="-1"/>
+		<TextType id="55" name="Operators" ImageIdx="12" bold="0" italic="0" underline="0" clr="8388736" bkclr="-1">
+			<Separators>
+				<Separator text="."/>
+				<Separator text=":"/>
+				<Separator text=","/>
+				<Separator text="("/>
+				<Separator text=")"/>
+			</Separators>
+			<Keywords>
+				<Keyword text="="/>
+				<Keyword text="=?"/>
+			</Keywords>
+		</TextType>
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="1680973" bkclr="-1">
+			<FirstChar/>
+			<Conditions>
+				<Condition start="'" end="'"/>
+			</Conditions>
+		</TextType>
+		<TextType id="40" name="Syntactical error" dstyle="1" dbkclr="0" clr="255" bkclr="-1"/>
+		<TextType id="70" name="Token operator" bold="0" italic="0" underline="0" clr="8421504" bkclr="-1">
+			<Separators>
+				<Separator text="-"/>
+				<Separator text="-&gt;"/>
+				<Separator text="=&gt;"/>
+				<Separator text="~"/>
+			</Separators>
+		</TextType>
+		<TextType id="20" name="User region" dstyle="0" dbkclr="0" text="0" bold="0" italic="1" underline="0" clr="12614523" bkclr="-1">
+			<Conditions>
+				<Condition start="&quot;$" end="\n"/>
+			</Conditions>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>
