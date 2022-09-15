@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="keymap.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>KeyMap</Type>
+		<Desc>Keyboard mapping file</Desc>
+	</FILEINFO>
+	<HOTKEYSCHEMA name="SAPGUI">
+		<HOTKEY id="37100">
+			<VerbID>Edit.CharLeft</VerbID>
+			<Descr>Move left by one char</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="37"/>
+		</HOTKEY>
+		<HOTKEY id="37101">
+			<VerbID>Edit.ExtCharLeft</VerbID>
+			<Descr>Select char left from cursor</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="37"/>
+		</HOTKEY>
+		<HOTKEY id="37131">
+			<VerbID>Edit.ExtBlockCharLeft</VerbID>
+			<Descr>Select char left from cursor in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="37"/>
+		</HOTKEY>
+		<HOTKEY id="37102">
+			<VerbID>Edit.CharRight</VerbID>
+			<Descr>Move right by one char</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="39"/>
+		</HOTKEY>
+		<HOTKEY id="37103">
+			<VerbID>Edit.ExtCharRight</VerbID>
+			<Descr>Select char right from cursor</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="39"/>
+		</HOTKEY>
+		<HOTKEY id="37132">
+			<VerbID>Edit.ExtBlockCharRight</VerbID>
+			<Descr>Select char right from cursor in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="39"/>
+		</HOTKEY>
+		<HOTKEY id="37110">
+			<VerbID>Edit.LineDown</VerbID>
+			<Descr>Move cursor one line down</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="40"/>
+		</HOTKEY>
+		<HOTKEY id="37111">
+			<VerbID>Edit.ExtLineDown</VerbID>
+			<Descr>Select text from current position until same position in previous line</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="40"/>
+		</HOTKEY>
+		<HOTKEY id="37136">
+			<VerbID>Edit.ExtBlockLineDown</VerbID>
+			<Descr>Select text from current position until same position in previous line in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="40"/>
+		</HOTKEY>
+		<HOTKEY id="37108">
+			<VerbID>Edit.LineUp</VerbID>
+			<Descr>Move cursor one line up</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="38"/>
+		</HOTKEY>
+		<HOTKEY id="37109">
+			<VerbID>Edit.ExtLineUp</VerbID>
+			<Descr>Select text from current position until same position in next line</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="38"/>
+		</HOTKEY>
+		<HOTKEY id="37135">
+			<VerbID>Edit.ExtBlockLineUp</VerbID>
+			<Descr>Select text from current position until same position in next line in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="38"/>
+		</HOTKEY>
+		<HOTKEY id="37120">
+			<VerbID>Edit.Home</VerbID>
+			<Descr>Move cursor to the beginning of the line</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="36"/>
+		</HOTKEY>
+		<HOTKEY id="37121">
+			<VerbID>Edit.ExtHome</VerbID>
+			<Descr>Select text from cursor position until beginning of the line</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="36"/>
+		</HOTKEY>
+		<HOTKEY id="37142">
+			<VerbID>Edit.ExtBlockHome</VerbID>
+			<Descr>Select text from cursor position until beginning of the line in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="36"/>
+		</HOTKEY>
+		<HOTKEY id="37118">
+			<VerbID>Edit.LineEnd</VerbID>
+			<Descr>Move cursor to the end of the line</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="35"/>
+		</HOTKEY>
+		<HOTKEY id="37119">
+			<VerbID>Edit.ExtLineEnd</VerbID>
+			<Descr>Select text form current position until end of the line</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="35"/>
+		</HOTKEY>
+		<HOTKEY id="37141">
+			<VerbID>Edit.ExtBlockLineEnd</VerbID>
+			<Descr>Select text form current position until end of the line in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="35"/>
+		</HOTKEY>
+		<HOTKEY id="37116">
+			<VerbID>Edit.PageDown</VerbID>
+			<Descr>Scroll document one page down</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="34"/>
+		</HOTKEY>
+		<HOTKEY id="37117">
+			<VerbID>Edit.ExtPageDown</VerbID>
+			<Descr>Select from current position until one page down</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="34"/>
+		</HOTKEY>
+		<HOTKEY id="37140">
+			<VerbID>Edit.ExtBlockPageDown</VerbID>
+			<Descr>Select from current position until one page down in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="34"/>
+		</HOTKEY>
+		<HOTKEY id="37114">
+			<VerbID>Edit.PageUp</VerbID>
+			<Descr>Scroll document one page up</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="33"/>
+		</HOTKEY>
+		<HOTKEY id="37115">
+			<VerbID>Edit.ExtPageUp</VerbID>
+			<Descr>Select from current position until one page up</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="33"/>
+		</HOTKEY>
+		<HOTKEY id="37139">
+			<VerbID>Edit.ExtBlockPageUp</VerbID>
+			<Descr>Select from current position until one page up in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="1" Key="33"/>
+		</HOTKEY>
+		<HOTKEY id="37145">
+			<VerbID>Edit.PageBegin</VerbID>
+			<Descr>Move cursor to the first line of current screen</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="33"/>
+		</HOTKEY>
+		<HOTKEY id="37146">
+			<VerbID>Edit.PageEnd</VerbID>
+			<Descr>Move cursor to the last line of current screen</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="34"/>
+		</HOTKEY>
+		<HOTKEY id="37147">
+			<VerbID>Edit.ExtPageBegin</VerbID>
+			<Descr>Move cursor to the first line of current screen</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="33"/>
+		</HOTKEY>
+		<HOTKEY id="37148">
+			<VerbID>Edit.ExtPageEnd</VerbID>
+			<Descr>Move cursor to the last line of current screen</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="34"/>
+		</HOTKEY>
+		<HOTKEY id="37149">
+			<VerbID>Edit.ExtBlockPageBegin</VerbID>
+			<Descr>Move cursor to the first line of current screen</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="33"/>
+		</HOTKEY>
+		<HOTKEY id="37150">
+			<VerbID>Edit.ExtBlockPageEnd</VerbID>
+			<Descr>Move cursor to the last line of current screen</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="34"/>
+		</HOTKEY>
+		<HOTKEY id="37122">
+			<VerbID>Edit.TextBegin</VerbID>
+			<Descr>Move cursor to the beginning of the document</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="36"/>
+		</HOTKEY>
+		<HOTKEY id="37123">
+			<VerbID>Edit.ExtTextBegin</VerbID>
+			<Descr>Select from current position until beginning of the document</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="36"/>
+		</HOTKEY>
+		<HOTKEY id="37143">
+			<VerbID>Edit.ExtBlockTextBegin</VerbID>
+			<Descr>Select from current position until beginning of the document in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="36"/>
+		</HOTKEY>
+		<HOTKEY id="37124">
+			<VerbID>Edit.TextEnd</VerbID>
+			<Descr>Move cursor to the end of the document</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="35"/>
+		</HOTKEY>
+		<HOTKEY id="37125">
+			<VerbID>Edit.ExtTextEnd</VerbID>
+			<Descr>Select from current position until end of the document</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="35"/>
+		</HOTKEY>
+		<HOTKEY id="37144">
+			<VerbID>Edit.ExtBlockTextEnd</VerbID>
+			<Descr>Select from current position until end of the document in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="35"/>
+		</HOTKEY>
+		<HOTKEY id="37104">
+			<VerbID>Edit.WordLeft</VerbID>
+			<Descr>Move cursor one word left</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="37"/>
+		</HOTKEY>
+		<HOTKEY id="37105">
+			<VerbID>Edit.ExtWordLeft</VerbID>
+			<Descr>Select word left</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="37"/>
+		</HOTKEY>
+		<HOTKEY id="37133">
+			<VerbID>Edit.ExtBlockWordLeft</VerbID>
+			<Descr>Select word left in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="37"/>
+		</HOTKEY>
+		<HOTKEY id="37106">
+			<VerbID>Edit.WordRight</VerbID>
+			<Descr>Move cursor one word right</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="39"/>
+		</HOTKEY>
+		<HOTKEY id="37107">
+			<VerbID>Edit.ExtWordRight</VerbID>
+			<Descr>Select word right</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="39"/>
+		</HOTKEY>
+		<HOTKEY id="37134">
+			<VerbID>Edit.ExtBlockWordRight</VerbID>
+			<Descr>Select word right</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="39"/>
+		</HOTKEY>
+		<HOTKEY id="37127">
+			<VerbID>Edit.ParagraphNext</VerbID>
+			<Descr>Move cursor to next paragraph</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="221"/>
+		</HOTKEY>
+		<HOTKEY id="37129">
+			<VerbID>Edit.ExtParagraphNext</VerbID>
+			<Descr>Select text from cursor to start of next paragraph</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="221"/>
+		</HOTKEY>
+		<HOTKEY id="37138">
+			<VerbID>Edit.ExtBlockParagraphNext</VerbID>
+			<Descr>Select text from cursor to start of next paragraph in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="221"/>
+		</HOTKEY>
+		<HOTKEY id="37128">
+			<VerbID>Edit.ParagraphPrev</VerbID>
+			<Descr>Move cursor to previous paragraph</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="219"/>
+		</HOTKEY>
+		<HOTKEY id="37130">
+			<VerbID>Edit.ExtParagraphPrev</VerbID>
+			<Descr>Select text from cursor to start of previous paragraph</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="219"/>
+		</HOTKEY>
+		<HOTKEY id="37137">
+			<VerbID>Edit.ExtBlockParagraphPrev</VerbID>
+			<Descr>Select text from cursor to start of previous paragraph in Block Mode</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="1" Key="219"/>
+		</HOTKEY>
+		<HOTKEY id="37113">
+			<VerbID>Edit.ScrollDown</VerbID>
+			<Descr>Scroll document one line down</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="40"/>
+		</HOTKEY>
+		<HOTKEY id="37112">
+			<VerbID>Edit.ScrollUp</VerbID>
+			<Descr>Scroll document one line up</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="38"/>
+		</HOTKEY>
+		<HOTKEY id="37415">
+			<VerbID>Edit.ShowSettingsDlg</VerbID>
+			<Descr>Show the settings dialog</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="79"/>
+		</HOTKEY>
+		<HOTKEY id="57636">
+			<VerbID>Edit.Find</VerbID>
+			<Descr>Call Find dialog</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="70"/>
+		</HOTKEY>
+		<HOTKEY id="37126">
+			<VerbID>Edit.FindPrevious</VerbID>
+			<Descr>Repeat last search backward from the current position</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="71"/>
+		</HOTKEY>
+		<HOTKEY id="57640">
+			<VerbID>Edit.Repeat</VerbID>
+			<Descr>Repeat last search from current position</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="71"/>
+		</HOTKEY>
+		<HOTKEY id="57641">
+			<VerbID>Edit.Replace</VerbID>
+			<Descr>Call replace dialog</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="72"/>
+		</HOTKEY>
+		<HOTKEY id="37228">
+			<VerbID>Edit.FindIncrementalNext</VerbID>
+			<Descr>Forward incremental search in text</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="73"/>
+		</HOTKEY>
+		<HOTKEY id="37229">
+			<VerbID>Edit.FindIncrementalPrevious</VerbID>
+			<Descr>Backward incremental search in text</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="73"/>
+		</HOTKEY>
+		<HOTKEY id="37230">
+			<VerbID>Edit.EditBreakpoint</VerbID>
+			<Descr>Toggles breakpoint on current line</Descr>
+		</HOTKEY>
+		<HOTKEY id="37231">
+			<VerbID>Edit.EditBreakpointDisable</VerbID>
+			<Descr>Toggles disable/enable state of breakpoint</Descr>
+		</HOTKEY>
+		<HOTKEY id="37223">
+			<VerbID>Edit.ToggleBookmark</VerbID>
+			<Descr>Toggle unnamed bookmark</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="77"/>
+		</HOTKEY>
+		<HOTKEY id="37200">
+			<VerbID>Edit.ToggleBookmark0</VerbID>
+			<Descr>Toggle bookmark 0</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="48"/>
+		</HOTKEY>
+		<HOTKEY id="37201">
+			<VerbID>Edit.ToggleBookmark1</VerbID>
+			<Descr>Toggle bookmark 1</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="49"/>
+		</HOTKEY>
+		<HOTKEY id="37202">
+			<VerbID>Edit.ToggleBookmark2</VerbID>
+			<Descr>Toggle bookmark 2</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="50"/>
+		</HOTKEY>
+		<HOTKEY id="37203">
+			<VerbID>Edit.ToggleBookmark3</VerbID>
+			<Descr>Toggle bookmark 3</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="51"/>
+		</HOTKEY>
+		<HOTKEY id="37204">
+			<VerbID>Edit.ToggleBookmark4</VerbID>
+			<Descr>Toggle bookmark 4</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="52"/>
+		</HOTKEY>
+		<HOTKEY id="37205">
+			<VerbID>Edit.ToggleBookmark5</VerbID>
+			<Descr>Toggle bookmark 5</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="53"/>
+		</HOTKEY>
+		<HOTKEY id="37206">
+			<VerbID>Edit.ToggleBookmark6</VerbID>
+			<Descr>Toggle bookmark 6</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="54"/>
+		</HOTKEY>
+		<HOTKEY id="37207">
+			<VerbID>Edit.ToggleBookmark7</VerbID>
+			<Descr>Toggle bookmark 7</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="55"/>
+		</HOTKEY>
+		<HOTKEY id="37208">
+			<VerbID>Edit.ToggleBookmark8</VerbID>
+			<Descr>Toggle bookmark 8</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="56"/>
+		</HOTKEY>
+		<HOTKEY id="37209">
+			<VerbID>Edit.ToggleBookmark9</VerbID>
+			<Descr>Toggle bookmark 9</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="57"/>
+		</HOTKEY>
+		<HOTKEY id="37210">
+			<VerbID>Edit.GoBookmark0</VerbID>
+			<Descr>Go to the bookmark 0</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="48"/>
+		</HOTKEY>
+		<HOTKEY id="37211">
+			<VerbID>Edit.GoBookmark1</VerbID>
+			<Descr>Go to the bookmark 1</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="49"/>
+		</HOTKEY>
+		<HOTKEY id="37212">
+			<VerbID>Edit.GoBookmark2</VerbID>
+			<Descr>Go to the bookmark 2</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="50"/>
+		</HOTKEY>
+		<HOTKEY id="37213">
+			<VerbID>Edit.GoBookmark3</VerbID>
+			<Descr>Go to the bookmark 3</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="51"/>
+		</HOTKEY>
+		<HOTKEY id="37214">
+			<VerbID>Edit.GoBookmark4</VerbID>
+			<Descr>Go to the bookmark 4</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="52"/>
+		</HOTKEY>
+		<HOTKEY id="37215">
+			<VerbID>Edit.GoBookmark5</VerbID>
+			<Descr>Go to the bookmark 5</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="53"/>
+		</HOTKEY>
+		<HOTKEY id="37216">
+			<VerbID>Edit.GoBookmark6</VerbID>
+			<Descr>Go to the bookmark 6</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="54"/>
+		</HOTKEY>
+		<HOTKEY id="37217">
+			<VerbID>Edit.GoBookmark7</VerbID>
+			<Descr>Go to the bookmark 7</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="55"/>
+		</HOTKEY>
+		<HOTKEY id="37218">
+			<VerbID>Edit.GoBookmark8</VerbID>
+			<Descr>Go to the bookmark 8</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="56"/>
+		</HOTKEY>
+		<HOTKEY id="37219">
+			<VerbID>Edit.GoBookmark9</VerbID>
+			<Descr>Go to the bookmark 9</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="57"/>
+		</HOTKEY>
+		<HOTKEY id="37308">
+			<VerbID>Edit.GoTo</VerbID>
+			<Descr>Go to the specified line</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="79"/>
+		</HOTKEY>
+		<HOTKEY id="37227">
+			<VerbID>Edit.GoToLastChange</VerbID>
+			<Descr>Go to the place of the last change of the document</Descr>
+		</HOTKEY>
+		<HOTKEY id="37326">
+			<VerbID>Edit.NavigateForward</VerbID>
+			<Descr>Navigate forward to previously visited location</Descr>
+		</HOTKEY>
+		<HOTKEY id="37327">
+			<VerbID>Edit.NavigateBackward</VerbID>
+			<Descr>Navigate to previously visited location</Descr>
+		</HOTKEY>
+		<HOTKEY id="37224">
+			<VerbID>Edit.GoToNextBookmark</VerbID>
+			<Descr>Go to the next bookmark</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="77"/>
+		</HOTKEY>
+		<HOTKEY id="37225">
+			<VerbID>Edit.GoToPrevBookmark</VerbID>
+			<Descr>Go to the previous bookmark</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="77"/>
+		</HOTKEY>
+		<HOTKEY id="37226">
+			<VerbID>Edit.ClearAllBookmarks</VerbID>
+			<Descr>Clear all existing bookmark in document</Descr>
+		</HOTKEY>
+		<HOTKEY id="37000">
+			<VerbID>Edit.Delete</VerbID>
+			<Descr>Delete char right from cursor</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="46"/>
+		</HOTKEY>
+		<HOTKEY id="37001">
+			<VerbID>Edit.DeleteBack</VerbID>
+			<Descr>Delete char left from cursor (Backspace)</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="8"/>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="8"/>
+		</HOTKEY>
+		<HOTKEY id="37006">
+			<VerbID>Edit.DeleteWord</VerbID>
+			<Descr>Delete word right of cursor</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="46"/>
+		</HOTKEY>
+		<HOTKEY id="37002">
+			<VerbID>Edit.DeleteWordBack</VerbID>
+			<Descr>Delete word left from cursor</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="8"/>
+		</HOTKEY>
+		<HOTKEY id="37003">
+			<VerbID>Edit.Tab</VerbID>
+			<Descr>Insert tab or indent selection</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="9"/>
+		</HOTKEY>
+		<HOTKEY id="37004">
+			<VerbID>Edit.UnTab</VerbID>
+			<Descr>Untabify selection</Descr>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="9"/>
+		</HOTKEY>
+		<HOTKEY id="57634">
+			<VerbID>Edit.Copy</VerbID>
+			<Descr>Copy selection</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="67"/>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="45"/>
+		</HOTKEY>
+		<HOTKEY id="37348">
+			<VerbID>Edit.CopyAppend</VerbID>
+			<Descr>Copy selection and append it to current clipboard</Descr>
+		</HOTKEY>
+		<HOTKEY id="57635">
+			<VerbID>Edit.Cut</VerbID>
+			<Descr>Cut selection</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="88"/>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="46"/>
+		</HOTKEY>
+		<HOTKEY id="37349">
+			<VerbID>Edit.CutAppend</VerbID>
+			<Descr>Cut selection and append it to current clipboard</Descr>
+		</HOTKEY>
+		<HOTKEY id="57637">
+			<VerbID>Edit.Paste</VerbID>
+			<Descr>Paste selection</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="86"/>
+			<Shortcut Shift="1" Ctrl="0" Alt="0" Key="45"/>
+		</HOTKEY>
+		<HOTKEY id="37315">
+			<VerbID>Edit.PasteExtended</VerbID>
+			<Descr>Extended paste selection</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="86"/>
+		</HOTKEY>
+		<HOTKEY id="37316">
+			<VerbID>Edit.Append</VerbID>
+			<Descr>Append to Clipboard current selection</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="45"/>
+		</HOTKEY>
+		<HOTKEY id="57644">
+			<VerbID>Edit.Redo</VerbID>
+			<Descr>Redo operation</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="89"/>
+		</HOTKEY>
+		<HOTKEY id="57643">
+			<VerbID>Edit.Undo</VerbID>
+			<Descr>Undo operation</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="90"/>
+			<Shortcut Shift="0" Ctrl="0" Alt="1" Key="8"/>
+		</HOTKEY>
+		<HOTKEY id="37309">
+			<VerbID>Edit.LineComment</VerbID>
+			<Descr>Comment selected lines or current one</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="188"/>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="226"/>
+		</HOTKEY>
+		<HOTKEY id="37310">
+			<VerbID>Edit.LineUncomment</VerbID>
+			<Descr>Uncomment selected lines or current one</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="190"/>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="226"/>
+		</HOTKEY>
+		<HOTKEY id="37324">
+			<VerbID>Edit.SelectionComment</VerbID>
+			<Descr>Comment selected text</Descr>
+		</HOTKEY>
+		<HOTKEY id="37325">
+			<VerbID>Edit.SelectionUncomment</VerbID>
+			<Descr>Uncomment selected text</Descr>
+		</HOTKEY>
+		<HOTKEY id="37336">
+			<VerbID>Edit.LineCut</VerbID>
+			<Descr>Cut current line</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="88"/>
+		</HOTKEY>
+		<HOTKEY id="37337">
+			<VerbID>Edit.LineCopy</VerbID>
+			<Descr>Copy current line</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="84"/>
+		</HOTKEY>
+		<HOTKEY id="37338">
+			<VerbID>Edit.LineDelete</VerbID>
+			<Descr>Delete current line</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="76"/>
+		</HOTKEY>
+		<HOTKEY id="37339">
+			<VerbID>Edit.LineTranspose</VerbID>
+			<Descr>Transpose line with previous</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="84"/>
+		</HOTKEY>
+		<HOTKEY id="37340">
+			<VerbID>Edit.LineDuplicate</VerbID>
+			<Descr>Duplicate current line</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="68"/>
+		</HOTKEY>
+		<HOTKEY id="37007">
+			<VerbID>Edit.Indent</VerbID>
+			<Descr>Increase line indent</Descr>
+		</HOTKEY>
+		<HOTKEY id="37008">
+			<VerbID>Edit.UnIndent</VerbID>
+			<Descr>Decrease line indent</Descr>
+		</HOTKEY>
+		<HOTKEY id="37317">
+			<VerbID>Edit.JoinLines</VerbID>
+			<Descr>Join selected lines</Descr>
+		</HOTKEY>
+		<HOTKEY id="37350">
+			<VerbID>Edit.SortLines</VerbID>
+			<Descr>Sort selected lines</Descr>
+		</HOTKEY>
+		<HOTKEY id="37320">
+			<VerbID>Edit.FormatAll</VerbID>
+			<Descr>Format whole document</Descr>
+		</HOTKEY>
+		<HOTKEY id="37321">
+			<VerbID>Edit.FormatSelection</VerbID>
+			<Descr>Format selected text</Descr>
+		</HOTKEY>
+		<HOTKEY id="37322">
+			<VerbID>Edit.MoveLinesUp</VerbID>
+			<Descr>Move selected lines up</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="38"/>
+		</HOTKEY>
+		<HOTKEY id="37323">
+			<VerbID>Edit.MoveLinesDown</VerbID>
+			<Descr>Move selected lines down</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="40"/>
+		</HOTKEY>
+		<HOTKEY id="57642">
+			<VerbID>Edit.SelectAll</VerbID>
+			<Descr>Select whole document</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="65"/>
+		</HOTKEY>
+		<HOTKEY id="37303">
+			<VerbID>Edit.Lowercase</VerbID>
+			<Descr>Convert selection to the lower case</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="76"/>
+		</HOTKEY>
+		<HOTKEY id="37304">
+			<VerbID>Edit.Uppercase</VerbID>
+			<Descr>Convert selection to the upper case</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="85"/>
+		</HOTKEY>
+		<HOTKEY id="37305">
+			<VerbID>Edit.Capitalize</VerbID>
+			<Descr>Capitalize selection</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="74"/>
+		</HOTKEY>
+		<HOTKEY id="37306">
+			<VerbID>Edit.Sentence</VerbID>
+			<Descr>Convert selection to sentence style</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="84"/>
+		</HOTKEY>
+		<HOTKEY id="37307">
+			<VerbID>Edit.Swapcase</VerbID>
+			<Descr>Swap case of text in current selection</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="75"/>
+		</HOTKEY>
+		<HOTKEY id="37005">
+			<VerbID>Edit.SwitchOvrmode</VerbID>
+			<Descr>Switch overwrite mode (INS)</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="45"/>
+		</HOTKEY>
+		<HOTKEY id="37311">
+			<VerbID>Edit.Autocomplete</VerbID>
+			<Descr>Auto complete word</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="32"/>
+		</HOTKEY>
+		<HOTKEY id="37318">
+			<VerbID>Edit.QuickInfo</VerbID>
+			<Descr>Show Quick Info for current word</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="32"/>
+		</HOTKEY>
+		<HOTKEY id="37312">
+			<VerbID>Edit.Autoexpand</VerbID>
+			<Descr>Expand typed keyword from template</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="13"/>
+		</HOTKEY>
+		<HOTKEY id="37341">
+			<VerbID>Edit.ColorComplete</VerbID>
+			<Descr>Display Color Auto Complete list</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="67"/>
+		</HOTKEY>
+		<HOTKEY id="37342">
+			<VerbID>Edit.ExtractTemplate</VerbID>
+			<Descr>Extract template from the selected text</Descr>
+		</HOTKEY>
+		<HOTKEY id="37700">
+			<VerbID>Edit.WordHelp</VerbID>
+			<Descr>Provide help for selected or current word/text</Descr>
+			<Shortcut Shift="0" Ctrl="0" Alt="0" Key="112"/>
+		</HOTKEY>
+		<HOTKEY id="37332">
+			<VerbID>View.MagnifyTextSize</VerbID>
+			<Descr>Magnify text size</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="107"/>
+		</HOTKEY>
+		<HOTKEY id="37333">
+			<VerbID>View.ReduceTextSize</VerbID>
+			<Descr>Reduce text size</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="109"/>
+		</HOTKEY>
+		<HOTKEY id="37334">
+			<VerbID>View.RestoreTextSize</VerbID>
+			<Descr>Restore text size to normal</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="111"/>
+		</HOTKEY>
+		<HOTKEY id="37313">
+			<VerbID>View.CollapseAll</VerbID>
+			<Descr>Collapse all structures in document</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="109"/>
+		</HOTKEY>
+		<HOTKEY id="37319">
+			<VerbID>View.CollapseComments</VerbID>
+			<Descr>Collapse all comments in document</Descr>
+		</HOTKEY>
+		<HOTKEY id="37314">
+			<VerbID>View.OpenAll</VerbID>
+			<Descr>Open all structures in document</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="107"/>
+		</HOTKEY>
+		<HOTKEY id="37335">
+			<VerbID>View.ToggleCurrent</VerbID>
+			<Descr>Expand or Collapse current outlining node.</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="106"/>
+		</HOTKEY>
+		<HOTKEY id="37346">
+			<VerbID>View.OpenCurrent</VerbID>
+			<Descr>Expand current outlining node.</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="107"/>
+		</HOTKEY>
+		<HOTKEY id="37347">
+			<VerbID>View.CloseCurrent</VerbID>
+			<Descr>Collapse current outlining node.</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="109"/>
+		</HOTKEY>
+		<HOTKEY id="37406">
+			<VerbID>File.ExportHTML</VerbID>
+			<Descr>Export file to HTML format</Descr>
+		</HOTKEY>
+		<HOTKEY id="37407">
+			<VerbID>File.ExportRTF</VerbID>
+			<Descr>Export file to Rich Text Format (RTF) format</Descr>
+		</HOTKEY>
+		<HOTKEY id="37408">
+			<VerbID>File.ExportPDF</VerbID>
+			<Descr>Export file to Adobe Acrobat (PDF) format</Descr>
+		</HOTKEY>
+		<HOTKEY id="57605">
+			<VerbID>File.PageSetup</VerbID>
+			<Descr>Call Page Setup dialog</Descr>
+		</HOTKEY>
+		<HOTKEY id="57607">
+			<VerbID>File.Print</VerbID>
+			<Descr>Call Print dialog</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="0" Key="80"/>
+		</HOTKEY>
+		<HOTKEY id="57608">
+			<VerbID>File.PrintDirect</VerbID>
+			<Descr>Immediately prints document</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="80"/>
+		</HOTKEY>
+		<HOTKEY id="57609">
+			<VerbID>File.PrintPreview</VerbID>
+			<Descr>Call print preview dialog</Descr>
+			<Shortcut Shift="0" Ctrl="1" Alt="1" Key="80"/>
+		</HOTKEY>
+		<HOTKEY id="57604">
+			<VerbID>File.SaveAs</VerbID>
+			<Descr>Call dialog to choose another file name for saving</Descr>
+			<Shortcut Shift="1" Ctrl="1" Alt="0" Key="83"/>
+		</HOTKEY>
+	</HOTKEYSCHEMA>
+</XMLConfigSettings>

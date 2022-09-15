@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>NN</Author>
+		<Type>LangSpec</Type>
+		<Language>SQLSC</Language>
+		<Desc>Syntax Highlighting for ABAP SqlScript</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.sq</FilePattern>
+		<OpenClose>()[]{}&lt;&gt;''``</OpenClose>
+		<Delimiters>,.:</Delimiters>
+		<WrapBy>(),</WrapBy>
+		<EscapeChar></EscapeChar>
+		<LineEnd>;</LineEnd>
+		<Operators>?-+/&amp;*=&lt;&gt;~</Operators>
+		<Words>0-9a-Z_/-@</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<HierarchySeparator>
+			<Separator id="1" text="."/>
+			<Separator id="2" text="~"/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<COMPLEX_USING>
+		<Word text="at"/>
+		<Word text="where"/>
+		<Word text="key"/>
+	</COMPLEX_USING>
+	<STRUCTURES>
+		<Structure open="public" close="end" header="0" has_name="1"/>
+		<Structure open="private" close="end" header="1" has_name="1"/>		
+	</STRUCTURES>
+	<FORMAT>
+		<DefaultIndent>2</DefaultIndent>
+		<ResetFormatSymbols>,</ResetFormatSymbols>
+		<FormatWords>
+			<FormatWord word="begin" indent="2" next_line="1"/>
+		</FormatWords>
+	</FORMAT>
+	<SYNTAXINFO>
+		<InfoType id="1" name="Compiler error" clr="-1"/>
+		<InfoType id="2" name="Compiler warning" clr="-1"/>
+	</SYNTAXINFO>
+	<COLORSYNTAX>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139"/>
+		<TextType id="11" name="Changed and saved indicator" dstyle="1" dbkclr="1" clr="12895487"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Erroneous line" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/>
+		<TextType id="3" name="Inactive selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="16777215" bkclr="9922608"/>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="14281970"/>
+		<TextType id="21" name="Text highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1" CaseDisplayMode="0"/>
+		<TextType id="22" name="Text highlights error" bold="1" italic="0" underline="0" clr="255" bkclr="-1" CaseDisplayMode="0"/>
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1" CaseDisplayMode="0"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15789798"/>
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="8421504" bkclr="-1" CaseDisplayMode="0">
+			<Conditions>
+				<Condition start="--" end="\n"/>
+				<Condition start="/*" end="*/"/>
+			</Conditions>
+		</TextType>
+		<TextType id="51" name="Function Keywords" ImageIdx="13" bold="0" italic="0" underline="0" clr="16750899" bkclr="-1" CaseDisplayMode="0">
+			<Keywords>
+				<Keyword text="min"/>
+				<Keyword text="max"/>
+				<Keyword text="sum"/>
+				<Keyword text="avg"/>
+
+				<Keyword text="count"/>
+				<Keyword text="var"/>
+				<Keyword text="stdvar"/>
+			</Keywords>
+		</TextType>
+		<TextType id="55" name="Keywords" ImageIdx="13" bold="0" italic="0" underline="0" clr="9922608" bkclr="-1" CaseDisplayMode="0">
+			<Keywords>
+				<Keyword text="contains"/>
+				<Keyword text="exists"/>
+				<Keyword text="stdvar"/>
+
+				<Keyword text="abs"/>
+				<Keyword text="acos"/>
+				<Keyword text="asin"/>
+				<Keyword text="atan"/>
+				<Keyword text="atan2"/>
+				<Keyword text="bitand"/>
+				<Keyword text="ceil"/>
+				<Keyword text="cos"/>
+				<Keyword text="cosh"/>
+				<Keyword text="exp"/>
+				<Keyword text="floor"/>
+				<Keyword text="greatest"/>
+				<Keyword text="least"/>
+				<Keyword text="ln"/>
+				<Keyword text="log"/>
+				<Keyword text="mod"/>
+				<Keyword text="power"/>
+				<Keyword text="round"/>
+				<Keyword text="sign"/>
+				<Keyword text="sin"/>
+				<Keyword text="sinh"/>
+				<Keyword text="sqrt"/>
+				<Keyword text="tan"/>
+				<Keyword text="tanh"/>
+
+				<Keyword text="ascii"/>
+				<Keyword text="chr"/>
+				<Keyword text="concat"/>
+				<Keyword text="instr"/>
+				<Keyword text="length"/>
+				<Keyword text="lower"/>
+				<Keyword text="lpad"/>
+				<Keyword text="ltrim"/>
+				<Keyword text="nchr"/>
+				<Keyword text="replace"/>
+				<Keyword text="rpad"/>
+				<Keyword text="rtrim"/>
+				<Keyword text="substr"/>
+				<Keyword text="substr_after"/>
+				<Keyword text="substr_before"/>
+				<Keyword text="trim"/>
+				<Keyword text="unicode"/>
+				<Keyword text="upper"/>
+
+				<Keyword text="add_days"/>
+				<Keyword text="add_months"/>
+				<Keyword text="add_seconds"/>
+				<Keyword text="days_between"/>
+				<Keyword text="extract"/>
+				<Keyword text="last_day"/>
+				<Keyword text="next_day"/>
+				<Keyword text="sysdate"/>
+				<Keyword text="systime"/>
+				<Keyword text="systimestamp"/>
+				<Keyword text="utcdate"/>
+				<Keyword text="utctime"/>
+				<Keyword text="utctimestamp"/>
+				<Keyword text="weekday"/>
+
+				<Keyword text="base64_decode"/>
+				<Keyword text="base64_encode"/>
+				<Keyword text="hextoraw"/>
+				<Keyword text="rawtohex"/>
+				<Keyword text="rawtonhex"/>
+				<Keyword text="to_binary"/>
+				<Keyword text="to_char"/>
+				<Keyword text="to_clob"/>
+				<Keyword text="to_date"/>
+				<Keyword text="to_decimal"/>
+				<Keyword text="to_double"/>
+				<Keyword text="to_nchar"/>
+				<Keyword text="to_nclob"/>
+				<Keyword text="to_number"/>
+				<Keyword text="to_real"/>
+				<Keyword text="to_time"/>
+				<Keyword text="to_timestamp"/>
+
+				<Keyword text="coalesce"/>
+				<Keyword text="decode"/>
+				<Keyword text="nullif"/>
+				<Keyword text="nvl"/>
+				<Keyword text="nvl2"/>
+				<Keyword text="current_user"/>
+
+				<Keyword text="xmlextract"/>
+				<Keyword text="xmlelement"/>
+				<Keyword text="xmlnamespaces"/>
+				<Keyword text="xmlattributes"/>
+				<Keyword text="add_xmlduration"/>
+			</Keywords>
+		</TextType>
+		<TextType id="52" name="Keywords" ImageIdx="13" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1" CaseDisplayMode="0">
+			<Keywords>
+				<Keyword text="select"/>
+				<Keyword text="from"/>
+				<Keyword text="inner"/>
+				<Keyword text="left"/>
+				<Keyword text="right"/>
+				<Keyword text="full"/>
+				<Keyword text="outer"/>
+				<Keyword text="join"/>
+				<Keyword text="on"/>
+				<Keyword text="as"/>
+				<Keyword text="where"/>				
+				<Keyword text="and"/>
+				<Keyword text="or"/>
+				<Keyword text="not"/>
+				<Keyword text="is"/>
+				<Keyword text="null"/>
+				<Keyword text="like"/>
+				<Keyword text="between"/>
+				<Keyword text="table"/>
+				<Keyword text="scalar"/>
+				<Keyword text="aggregation"/>
+				<Keyword text="vector"/>
+				<Keyword text="type"/>
+				<Keyword text="function"/>
+				<Keyword text="begin"/>
+				<Keyword text="end"/>
+				<Keyword text="in"/>
+				<Keyword text="out"/>
+				<Keyword text="call"/>
+
+				<Keyword text="group"/>
+				<Keyword text="by"/>
+				<Keyword text="order"/>
+				<Keyword text="asc"/>
+				<Keyword text="desc"/>
+				<Keyword text="having"/>
+				<Keyword text="natural"/>
+				<Keyword text="distinct"/>
+				<Keyword text="escape"/>
+				<Keyword text="any"/>
+				<Keyword text="some"/>
+
+				<Keyword text="intersect"/>
+				<Keyword text="union"/>
+				<Keyword text="all"/>
+				<Keyword text="minus"/>
+				<Keyword text="except"/>
+
+				<Keyword text="to"/>
+				<Keyword text="top"/>
+
+				<Keyword text="private"/>
+				<Keyword text="public"/>
+			</Keywords>
+		</TextType>
+		<TextType id="53" name="no Keywords" ImageIdx="13" bold="0" italic="0" underline="0" clr="255" bkclr="16777215" CaseDisplayMode="0">
+			<Keywords>
+				<Keyword text="create"/>
+				<Keyword text="replace"/>
+				<Keyword text="drop"/>
+				<Keyword text="alter"/>
+				<Keyword text="language"/>
+				<Keyword text="template"/>
+				<Keyword text="calls"/>
+				<Keyword text="callt"/>
+				<Keyword text="test"/>
+				<Keyword text="string"/>	
+				<Keyword text="char"/>	
+				<Keyword text="varchar"/>	
+				<Keyword text="nchar"/>	
+				<Keyword text="nvarchar"/>	
+				<Keyword text="tinyint"/>	
+				<Keyword text="integer"/>	
+
+			</Keywords>
+		</TextType>
+		<TextType id="54" name="Input Variable" ImageIdx="13" bold="0" italic="0" underline="0" clr="16750899" bkclr="-1" CaseDisplayMode="0">
+			<Conditions>
+				<Condition start="@" end="@"/>
+				</Conditions>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="16750899" bkclr="-1" CaseDisplayMode="0"/>
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="1680973" bkclr="-1" CaseDisplayMode="0">
+			<FirstChar/>
+			<Conditions>
+				<Condition start="'" end="'"/>
+				<Condition start="&quot;" end="&quot;"/>
+			</Conditions>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>

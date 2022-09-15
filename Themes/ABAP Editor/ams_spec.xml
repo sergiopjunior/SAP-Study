@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Welf Walter</Author>
+        <Type>LangSpec</Type>
+		<Language>AMS</Language>
+		<Desc>Language specification for ABAP Mapping Script</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.ams</FilePattern>
+		<CaseSensitive>1</CaseSensitive>
+		<OpenClose>{}()``</OpenClose>
+		<Delimiters>,():=</Delimiters>
+		<Operators></Operators>
+		<Words>a-Z_$</Words>
+		<Numbers></Numbers>
+		<WrapBy></WrapBy>
+	</SPECIFICATION>
+  <STRUCTURES>
+    <Structure open="{" close="}"/>
+  </STRUCTURES>
+  <COLORSYNTAX>
+    <TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="-1" />
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1" />
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1" />
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520" />
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15789798"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139" />
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487" />
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1" />
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1" />
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1" />
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="12632256" bkclr="-1">
+			<Conditions>
+				<Condition start="#" end="\n"/>
+			</Conditions>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12623485" bkclr="-1" />
+    <TextType id="34" name="Literals" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="1" clr="37632" bkclr="-1">
+      <Conditions>        
+        <Condition start="`" end="`" />
+      </Conditions>
+    </TextType>
+    <TextType id="35" name="String template" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="1" clr="37632" bkclr="-1">
+      <Conditions>
+        <Condition start="|" end="|" />
+      </Conditions>
+    </TextType>
+    <TextType id="51" name="Operators" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+      <Separators>
+        <Separator text=":="/>
+        <Separator text=":="/>
+        <Separator text="="/>
+        <Separator text="&lt;"/>
+        <Separator text="&lt;="/>
+        <Separator text="&gt;"/>
+        <Separator text="&gt;="/>
+        <Separator text="-"/>
+        <Separator text="&lt;&gt;"/>
+        <Separator text="is initial"/>
+        <Separator text="is bound"/>
+        <Separator text="is not initial"/>
+        <Separator text="is not bound"/>
+      </Separators>
+    </TextType>
+    <TextType id="52" name="Cardinality" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+      <Keywords>
+        <Keyword text="&lt;1&gt;"/>
+        <Keyword text="&lt;+&gt;"/>
+        <Keyword text="&lt;*&gt;"/>
+        <Keyword text="&lt;!&gt;"/>
+        <Keyword text="&lt;C&gt;"/>
+      </Keywords>
+    </TextType>
+    <TextType id="54" name="Brackets" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+      <Separators>
+        <Separator text="("/>
+        <Separator text=")"/>
+        <Separator text="{"/>
+        <Separator text="}"/>
+      </Separators>
+    </TextType>
+    <TextType id="50" name="Keywords" dstyle="0" dbkclr="0" ImageIdx="9" bold="1" italic="0" underline="0" clr="16711680" bkclr="-1">
+      <Keywords>
+        <Keyword text="for"/>
+        <Keyword text="stable"/>
+        <Keyword text="where"/>
+        <Keyword text="and"/>
+        <Keyword text="or"/>
+        <Keyword text="not"/>
+        <Keyword text="is"/>
+        <Keyword text="initial"/>
+        <Keyword text="bound"/>
+        <Keyword text="insert"/>
+        <Keyword text="in"/>
+        <Keyword text="out"/>
+        <Keyword text="if"/>
+        <Keyword text="then"/>
+        <Keyword text="else"/>
+        <Keyword text="corresponding"/>
+        <Keyword text="exact"/>
+        <Keyword text="aggregate(sum)"/>
+        <Keyword text="aggregate(max)"/>
+        <Keyword text="aggregate(min)"/>
+        <Keyword text="aggregate(insert)"/>
+        <Keyword text="clear"/>
+      </Keywords>
+    </TextType>
+    <TextType id="51" name="String Template Format Options" dstyle="0" dbkclr="0" ImageIdx="9" bold="1" italic="0" underline="0" clr="16711680" bkclr="-1">
+      <Keywords>
+        <Keyword text="width"/>
+        <Keyword text="exponent"/>
+        <Keyword text="decimals"/>
+        <Keyword text="pad"/>
+        <Keyword text="align"/>
+        <Keyword text="left"/>
+        <Keyword text="right"/>
+        <Keyword text="center"/>
+        <Keyword text="alpha"/>
+        <Keyword text="in"/>
+        <Keyword text="out"/>
+        <Keyword text="raw"/>
+        <Keyword text="user"/>
+        <Keyword text="environment"/>
+        <Keyword text="xsd"/>
+        <Keyword text="yes"/>
+        <Keyword text="no"/>
+        <Keyword text="case"/>
+        <Keyword text="upper"/>
+        <Keyword text="lower"/>
+        <Keyword text="raw"/>
+        <Keyword text="iso"/>
+        <Keyword text="space"/>
+        <Keyword text="style"/>
+        <Keyword text="simple"/>
+        <Keyword text="sign_as_postfix"/>
+        <Keyword text="scale_preserving"/>
+        <Keyword text="scientific"/>
+        <Keyword text="scientific_with_leading_zero"/>
+        <Keyword text="scale_preserving_scientific"/>
+        <Keyword text="engineering"/>
+        <Keyword text="sign"/>
+        <Keyword text="left"/>
+        <Keyword text="leftplus"/>
+        <Keyword text="leftspace"/>
+        <Keyword text="right"/>
+        <Keyword text="rightplus"/>
+        <Keyword text="rightspace"/>
+        <Keyword text="zero"/>
+        <Keyword text="yes"/>
+        <Keyword text="no"/>
+        <Keyword text="number"/>
+        <Keyword text="time"/>
+        <Keyword text="timestamp"/>
+      </Keywords>
+    </TextType>
+    <!-- 
+    This TextType doesn't color the last letter of the variable. Additionally it dumps in the Debug build.
+    <TextType id="53" name="VariableAccess" ImageIdx="12" bold="0" italic="0" underline="0" clr="8388736" bkclr="-1">
+      <Conditions>
+        <Condition start="$" end=""/>
+      </Conditions>
+		</TextType>
+    -->
+	</COLORSYNTAX>
+</XMLConfigSettings>

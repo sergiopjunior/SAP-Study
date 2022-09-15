@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangSpec</Type>
+		<Language>TEXT</Language>
+		<Desc>Language specification plain text</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.txt;*.diz;*.log</FilePattern>
+		<CaseSensitive>0</CaseSensitive>
+		<OpenClose>()[]{}&lt;&gt;''</OpenClose>
+		<Delimiters></Delimiters>
+		<LineEnd></LineEnd>
+		<Operators>?-+/*=&lt;&gt;</Operators>
+		<Words>0-9a-Z_-</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<HierarchySeparator/>
+		<WrapCol>0</WrapCol>
+	</SPECIFICATION>
+	<COLORSYNTAX>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="-1"/>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15921906"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139"/>
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487"/>
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1"/>
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1"/>		
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1"/>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12623485" bkclr="-1"/>
+		<TextType id="50" name="WWW adresses and E-Mails" dstyle="0" dbkclr="0" bold="0" italic="0" underline="1" clr="16711680" bkclr="-1">
+			<Conditions>
+				<Condition start="http://" end=""/>
+				<Condition start="https://" end=""/>
+				<Condition start="mailto:" end=""/>
+			</Conditions>
+		</TextType>
+		<TextType id="51" name="Title" dstyle="0" dbkclr="0" bold="1" italic="0" underline="0" clr="9109504" bkclr="-1">
+			<Conditions>
+				<Condition start="***" end="\n"/>
+			</Conditions>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>

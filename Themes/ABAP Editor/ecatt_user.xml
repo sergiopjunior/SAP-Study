@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Markus Dinkel</Author>
+		<Type>LangUser</Type>
+		<Language>ECATT</Language>
+		<Desc>User specific settings for eCATT</Desc>
+	</FILEINFO>
+	<EXPANDS>
+		<Expand key="***">
+			<Descr>***.....</Descr>
+			<Text>**********************************************************************</Text>
+		</Expand>
+		<Expand key="*--">
+			<Descr>*-------...</Descr>
+			<Text>*--------------------------------------------------------------------*</Text>
+		</Expand>
+		<Expand key="abap">
+			<Descr>ABAP</Descr>
+			<Text>ABAP.\n\nENDABAP.</Text>
+		</Expand>
+		<Expand key="do">
+			<Descr>DO ( )</Descr>
+			<Text>DO ( | ).\n\nENDDO.</Text>
+		</Expand>
+		<Expand key="if">
+			<Descr>IF ( )</Descr>
+			<Text>IF ( | ).\n\nENDIF.</Text>
+		</Expand>
+		<Expand key="ife">
+			<Descr>IF ( ) ELSE</Descr>
+			<Text>IF ( | ).\n\nELSE.\n\nENDIF.</Text>
+		</Expand>
+		<Expand key="loop">
+			<Descr>LOOP ( )</Descr>
+			<Text>LOOP ( | ).\n\nENDLOOP.</Text>
+		</Expand>
+		<Expand key="message">
+			<Descr>MESSAGE ( )</Descr>
+			<Text>MESSAGE ( | ).\n\nENDMESSAGE (  ).</Text>
+		</Expand>
+		<Expand key="perf">
+			<Descr>PERF ( )</Descr>
+			<Text>PERF ( |, ).\n\nENDPERF.</Text>
+		</Expand>
+	</EXPANDS>
+</XMLConfigSettings>

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangUser</Type>
+		<Language>BSP</Language>
+		<Desc>User specific settings for BSP</Desc>
+	</FILEINFO>
+	<EXPANDS>
+	</EXPANDS>
+</XMLConfigSettings>
