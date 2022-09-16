@@ -90,7 +90,8 @@ CLASS cl_main IMPLEMENTATION.
 
     LOOP AT it_soi INTO wa_soi.
       CLEAR wa_output.
-
+      CLEAR wa_soh. 
+      
       READ TABLE it_soh
             INTO wa_soh
             WITH key salesorderuuid = wa_soi-salesorderitemuuid
@@ -105,8 +106,7 @@ CLASS cl_main IMPLEMENTATION.
         wa_output-quantity = wa_soi-quantity.
 
         IF sy-subrc EQ 0.
-          APPEND wa_output TO it_output.
-          CLEAR wa_soh.    
+          APPEND wa_output TO it_output. 
         ENDIF.
       ENDIF.
 
