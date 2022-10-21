@@ -16,32 +16,24 @@ Dentro de cada Request existem uma ou mais Tasks (tarefas), que é a unidade mí
 
 1- Acesse a transação "SE09":
 
-![image-20220913134005323](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220913134005323.png)
+![image-20220915103554500](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220915103554500.png)
 
 
 
 2- Clique no botão de criação de requests:
 
-![image-20220913134719333](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220913134719333.png)
-
-
+![image-20220915103724127](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220915103724127.png)
 
 3- Selecione o tipo da Request e clique no botão de confirmação:
 
-![image-20220913135634535](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220913135634535.png)
-
-
+![image-20220915104101111](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220915104101111.png)
 
 4- Coloque a descrição da Request e o ambiente alvo para qual será transportada, depois clique no botão de salvar:
 
-![image-20220913140322806](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220913140322806.png)
-
-
+![image-20220915104702860](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220915104702860.png)
 
 5- Uma tela de exibição de Requests será exibida, mostrando a Request criada e suas Tasks:
 
-![image-20220913140720728](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220913140720728.png)
-
-
+![image-20220915105126995](C:\Users\UpWardfy\AppData\Roaming\Typora\typora-user-images\image-20220915105126995.png)
 
 Com a Request criada, basta apenas começar a criar objetos e adicioná-los a ela.

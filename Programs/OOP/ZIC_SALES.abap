@@ -87,11 +87,11 @@ CLASS cl_main IMPLEMENTATION.
   METHOD process_data.
     SORT: it_soh BY salesorderuuid,
           it_soi BY salesorderuuid salesorderitemuuid.
+    DATA: temp type SNWD_NODE_KEY.
 
     LOOP AT it_soi INTO wa_soi.
-      CLEAR wa_output.
-      CLEAR wa_soh. 
-      
+      temp = wa_soi-salesorderuuid.
+
       READ TABLE it_soh
             INTO wa_soh
             WITH key salesorderuuid = wa_soi-salesorderitemuuid
@@ -106,7 +106,9 @@ CLASS cl_main IMPLEMENTATION.
         wa_output-quantity = wa_soi-quantity.
 
         IF sy-subrc EQ 0.
-          APPEND wa_output TO it_output. 
+          APPEND wa_output TO it_output.
+          CLEAR wa_soh.
+          CLEAR wa_output.
         ENDIF.
       ENDIF.
 
