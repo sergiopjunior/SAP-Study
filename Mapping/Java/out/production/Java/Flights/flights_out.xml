@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><resp:Response xmlns:resp="https://lnl-s4h.opustech.com.br/Flights" xmlns:data="https://lnl-s4h.opustech.com.br/FlightsData" xmlns:info="https://lnl-s4h.opustech.com.br/FlightInfo"><Results><Flight>
+        
+        <Airline>AC</Airline>
+        <FlightNumber>0820</FlightNumber>
+        <FlightDate>20/12/2002</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>
+        </CountryFrom>
+        <CityFrom>TOKYO</CityFrom>
+        <CountryTo>
+        </CountryTo>
+        <CityTo>FRANKFURT</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AF</Airline>
+        <FlightNumber>0820</FlightNumber>
+        <FlightDate>23/12/2002</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>
+        </CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>
+        </CountryTo>
+        <CityTo>SIDNEY</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>0400</FlightNumber>
+        <FlightDate>28/02/1995</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A319</PlaneType>
+        <CountryFrom>
+        </CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>
+        </CountryTo>
+        <CityTo>NEW YORK</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>0454</FlightNumber>
+        <FlightDate>17/11/1995</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A319</PlaneType>
+        <CountryFrom>
+        </CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>
+        </CountryTo>
+        <CityTo>SAN FRANCISCO</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>0455</FlightNumber>
+        <FlightDate>06/06/1995</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A319</PlaneType>
+        <CountryFrom>
+        </CountryFrom>
+        <CityFrom>SAN FRANCISCO</CityFrom>
+        <CountryTo>
+        </CountryTo>
+        <CityTo>FRANKFURT</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>3577</FlightNumber>
+        <FlightDate>28/04/1995</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A319</PlaneType>
+        <CountryFrom>
+        </CountryFrom>
+        <CityFrom>SIDNEY</CityFrom>
+        <CountryTo>
+        </CountryTo>
+        <CityTo>FRANKFURT</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9981</FlightNumber>
+        <FlightDate>21/12/2002</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9981</FlightNumber>
+        <FlightDate>23/01/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9981</FlightNumber>
+        <FlightDate>24/01/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9982</FlightNumber>
+        <FlightDate>21/12/2002</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9982</FlightNumber>
+        <FlightDate>23/01/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9982</FlightNumber>
+        <FlightDate>24/01/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9983</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9983</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9983</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9983</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9983</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9984</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9984</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9984</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9984</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9984</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9985</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9985</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9985</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9985</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9985</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>SQ</Airline>
+        <FlightNumber>0026</FlightNumber>
+        <FlightDate>28/02/1995</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>DC-10-10</PlaneType>
+        <CountryFrom>
+        </CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>
+        </CountryTo>
+        <CityTo>NEW YORK</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0066</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0066</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0066</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0066</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0066</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0067</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0067</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0067</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0067</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0067</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7775</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7775</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7775</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7775</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7775</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7776</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7776</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7776</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7776</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7776</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7777</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7777</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7777</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7777</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>7777</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9935</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9935</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9935</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9935</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9935</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9986</FlightNumber>
+        <FlightDate>01/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9986</FlightNumber>
+        <FlightDate>02/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9986</FlightNumber>
+        <FlightDate>03/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9986</FlightNumber>
+        <FlightDate>04/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>LH</Airline>
+        <FlightNumber>9986</FlightNumber>
+        <FlightDate>05/02/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight><Flight>
+        
+        <Airline>AA</Airline>
+        <FlightNumber>0067</FlightNumber>
+        <FlightDate>03/04/2022</FlightDate>
+        <FlightTime>00:00:00</FlightTime><PlaneType>A330-300</PlaneType>
+        <CountryFrom>DE</CountryFrom>
+        <CityFrom>FRANKFURT</CityFrom>
+        <CountryTo>DE</CountryTo>
+        <CityTo>DRESDEN</CityTo>
+        
+    </Flight></Results>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</resp:Response>
