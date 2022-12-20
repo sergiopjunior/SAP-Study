@@ -1,0 +1,46 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZC_FLIGHTS_CDS/ZC_FLIGHTS(Airline='AC',FlightNumber='0820',FlightDate=datetime'2002-12-20T00%3A00%3A00')",
+                    "uri": "https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZC_FLIGHTS_CDS/ZC_FLIGHTS(Airline='AC',FlightNumber='0820',FlightDate=datetime'2002-12-20T00%3A00%3A00')",
+                    "type": "ZC_FLIGHTS_CDS.ZC_FLIGHTSType"
+                },
+                "Airline": "AC",
+                "FlightNumber": "0820",
+                "FlightDate": "/Date(1040342400000)/",
+                "PlaneType": "A330-300",
+                "CountryFrom": "",
+                "CityFrom": "TOKYO",
+                "CountryTo": "",
+                "CityTo": "FRANKFURT",
+                "to_flight_booking_itm": {
+                    "__deferred": {
+                        "uri": "https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZC_FLIGHTS_CDS/ZC_FLIGHTS(Airline='AC',FlightNumber='0820',FlightDate=datetime'2002-12-20T00%3A00%3A00')/to_flight_booking_itm"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZC_FLIGHTS_CDS/ZC_FLIGHTS(Airline='AF',FlightNumber='0820',FlightDate=datetime'2002-12-23T00%3A00%3A00')",
+                    "uri": "https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZC_FLIGHTS_CDS/ZC_FLIGHTS(Airline='AF',FlightNumber='0820',FlightDate=datetime'2002-12-23T00%3A00%3A00')",
+                    "type": "ZC_FLIGHTS_CDS.ZC_FLIGHTSType"
+                },
+                "Airline": "AF",
+                "FlightNumber": "0820",
+                "FlightDate": "/Date(1040601600000)/",
+                "PlaneType": "A330-300",
+                "CountryFrom": "",
+                "CityFrom": "FRANKFURT",
+                "CountryTo": "",
+                "CityTo": "SIDNEY",
+                "to_flight_booking_itm": {
+                    "__deferred": {
+                        "uri": "https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZC_FLIGHTS_CDS/ZC_FLIGHTS(Airline='AF',FlightNumber='0820',FlightDate=datetime'2002-12-23T00%3A00%3A00')/to_flight_booking_itm"
+                    }
+                }
+            }
+        ]
+    }
+}
