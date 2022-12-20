@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.ext.libs.xpi;singleton:=true
+Bundle-Name: %pluginName
+Bundle-Version: 1.0.0.161121130745
+Bundle-Localization: plugin
+Bundle-ClassPath: lib/com.sap.ext.libs.xpi_core.jar
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.jdt.core,org.ecli
+ pse.jdt.ui,org.eclipse.ui
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.sap.ext.libs.xpi.Activator
+Bundle-Vendor: %pluginProvider
+Eclipse-LazyStart: true
+

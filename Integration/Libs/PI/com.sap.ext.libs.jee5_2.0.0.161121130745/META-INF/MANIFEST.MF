@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.ext.libs.jee5;singleton:=true
+Bundle-Name: com.sap.ext.libs.jee5
+Bundle-Version: 2.0.0.161121130745
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Bundle-ManifestVersion: 2
+Bundle-Vendor: SAP AG
+Eclipse-LazyStart: true
+

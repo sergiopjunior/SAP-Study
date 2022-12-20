@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Martin Runte</Author>
+		<Type>LangSpec</Type>
+		<Language>XML</Language>
+		<Desc>Language specification for XML</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.xml,*.htm;*.html</FilePattern>
+		<CaseSensitive>1</CaseSensitive>
+		<OpenClose>()[]''&lt;&gt;</OpenClose>
+		<Delimiters></Delimiters>
+		<Operators>?-+/*=&lt;&gt;</Operators>
+		<Words>0-9a-Z_-</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<WrapCol>0</WrapCol>
+	</SPECIFICATION>
+	<COLORSYNTAX>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="-1" />
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1" />
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1" />
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520" />
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15789798"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139" />
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487" />
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1" />
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1" />
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1" />
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="12632256" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;!--" end="--&gt;"/>
+			</Conditions>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12623485" bkclr="-1" />
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+			<Conditions> 
+				<Condition start="&quot;" end="&quot;" />
+				<Condition start="&apos;" end="&apos;" />                 
+			</Conditions>
+		</TextType>
+		<TextType id="50" name="ST Command" dstyle="0" dbkclr="0" ImageIdx="9" bold="1" italic="0" underline="0" clr="9109504" bkclr="-1">
+			<Keywords>            
+    			<Keyword text="xml"/>
+			    <Keyword text="xmlns"/>            
+  				<Keyword text="tt"/>
+				<Keyword text="root"/>                
+			    <Keyword text="template"/>
+			    <Keyword text="context"/>
+			    <Keyword text="type"/>
+			    <Keyword text="variable"/>
+				<Keyword text="parameter"/>                
+				<Keyword text="with-parameter"/>
+				<Keyword text="with-root"/>
+				<Keyword text="namespace"/>            
+				<Keyword text="include"/>
+				<Keyword text="transform"/>                
+				<Keyword text="serialize"/>                
+				<Keyword text="deserialize"/>
+				<Keyword text="front"/>
+				<Keyword text="node"/>
+				<Keyword text="read"/>
+				<Keyword text="switch"/>
+				<Keyword text="switch-var"/>
+				<Keyword text="empty"/>     
+				<Keyword text="skip"/>
+				<Keyword text="copy"/>                
+				<Keyword text="loop"/>
+				<Keyword text="clear"/>
+				<Keyword text="group"/>                
+				<Keyword text="assign"/>                
+				<Keyword text="apply"/>
+				<Keyword text="call"/>
+				<Keyword text="cond"/>
+				<Keyword text="cond-var"/>
+				<Keyword text="s-cond"/>                
+				<Keyword text="d-cond"/>
+				<Keyword text="write"/>            
+				<Keyword text="text"/>            
+				<Keyword text="value"/>
+				<Keyword text="attribute"/>
+				<Keyword text="any"/>
+				<Keyword text="call-method"/>
+				<Keyword text="casting"/>
+				<Keyword text="create-object"/>
+				<Keyword text="ref"/>
+			</Keywords>
+		</TextType>
+		<TextType id="51" name="ST Attributes" ImageIdx="12" bold="0" italic="0" underline="0" clr="8388736" bkclr="-1">        
+			<Keywords>
+				<Keyword text="name"/>
+				<Keyword text="ref"/>
+				<Keyword text="value-ref"/>
+				<Keyword text="transformation"/>
+				<Keyword text="class"/>
+				<Keyword text="extensible"/>
+				<Keyword text="lax"/>
+				<Keyword text="length"/>
+				<Keyword text="maxLength"/>
+				<Keyword text="minLength"/>
+				<Keyword text="namespace-ex"/>
+				<Keyword text="namespace-in"/>
+				<Keyword text="option"/>
+				<Keyword text="reader"/>
+				<Keyword text="writer"/>
+				<Keyword text="xsd-fractionDigits"/>
+				<Keyword text="xsd-maxExclusive"/>
+				<Keyword text="xsd-maxInclusive"/>
+				<Keyword text="xsd-minExclusive"/>
+				<Keyword text="xsd-minInclusive"/>
+				<Keyword text="xsd-totalDigits"/>
+				<Keyword text="xsd-type"/>
+			</Keywords>
+		</TextType>
+		<TextType id="56" name="XML Comments" dstyle="0" dbkclr="0" bold="0" italic="1" underline="0" text="1" clr="6710886" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;!--" end="--&gt;" />
+			</Conditions>
+		</TextType>
+		<TextType id="56" name="XML Pi" dstyle="0" dbkclr="0" bold="0" italic="1" underline="0" text="1" clr="6710886" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;?--" end="--?&gt;" />
+			</Conditions>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>

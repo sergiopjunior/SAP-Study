@@ -1,0 +1,84 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev, T. Nitschke</Author>
+		<Type>LangUser</Type>
+		<Language>SFOTL</Language>
+		<Desc>User specific settings for RC SGA</Desc>
+	</FILEINFO>
+	<EXPANDS>
+		<Expand key="case">
+			<Descr>Case (§) when</Descr>
+			<Text>CASE | .\n	WHEN .\n	WHEN .\n	WHEN OTHERS.\nENDCASE.</Text>
+		</Expand>
+		<Expand key="region">
+			<Descr>Region (§)</Descr>
+			<Text>"$ Region %Region Name%\n%SurroundedText%\n"$ Endregion %Region Name%</Text>
+		</Expand>
+		<Expand key="report">
+			<Descr>Report (§)</Descr>
+			<Text>*----------------------------------------------------------------------*\n* Report : %Document%\n* Author : D038062\n*----------------------------------------------------------------------*\n\nREPORT   %Document%\n            no standard page heading\n            line-size  80\n            line-count 65(0)\n            message-id |\n            defining database  .</Text>
+		</Expand>
+		<Expand key="loop">
+			<Descr>Loop (§)</Descr>
+			<Text>LOOP AT | .\n%SurroundedText%\nENDLOOP.</Text>
+		</Expand>
+		<Expand key="try">
+			<Descr>Try (§)</Descr>
+			<Text>TRY |.\n%SurroundedText%\nCATCH .\n\nENDTRY.</Text>
+		</Expand>
+		<Expand key="catch">
+			<Descr>Catch (§)</Descr>
+			<Text>CATCH SYSTEM-EXCEPTIONS |.\n%SurroundedText%\nENDCATCH.</Text>
+		</Expand>
+		<Expand key="form">
+			<Descr>Form (§)</Descr>
+			<Text>**********************************************************************\n* FORM    :  %Form name%\n* Created :  %DateTime%\n**********************************************************************\nFORM %Form name% USING  |\n                     CHANGING .\n%SurroundedText%\nENDFORM. "%Form name%</Text>
+		</Expand>
+		<Expand key="@repeat">
+			<Descr>@Repeat (§)</Descr>
+			<Text>@repeat |.\n%SurroundedText%\n@end.</Text>
+		</Expand>
+		<Expand key="*--">
+			<Descr>*-------...</Descr>
+			<Text>*--------------------------------------------------------------------*</Text>
+		</Expand>
+		<Expand key="***">
+			<Descr>***.....</Descr>
+			<Text>**********************************************************************</Text>
+		</Expand>
+		<Expand key="modulei">
+			<Descr>Module Input (§)</Descr>
+			<Text>MODULE %Module Name% INPUT.\n%SurroundedText%\nENDMODULE. "%Module Name%</Text>
+		</Expand>
+		<Expand key="@if">
+			<Descr>@If (§)</Descr>
+			<Text>@if |.\n%SurroundedText%\n@end.</Text>
+		</Expand>
+		<Expand key="do">
+			<Descr>do (§)</Descr>
+			<Text>DO |  TIMES.\n%SurroundedText%\nENDDO.</Text>
+		</Expand>
+		<Expand key="while">
+			<Descr>While (§)</Descr>
+			<Text>WHILE |.\n%SurroundedText%\nENDWHILE.</Text>
+		</Expand>
+		<Expand key="select">
+			<Descr>Select (§)</Descr>
+			<Text>SELECT * FROM %Database table name%\n         WHERE | EQ g1\n         AND   f2 BETWEEN g2 AND g3.\n\nENDSELECT. "%Database table name%\n</Text>
+		</Expand>
+		<Expand key="define">
+			<Descr>DEFINE (§)</Descr>
+			<Text>DEFINE %Macro Name%.\n%SurroundedText%\nEND-OF-DEFINITION. "%Macro Name%</Text>
+		</Expand>
+		<Expand key="if">
+			<Descr>If (§)</Descr>
+			<Text>IF |.\n%SurroundedText%\nENDIF.</Text>
+		</Expand>
+		<Expand key="*START">
+			<Descr>*START (§)</Descr>
+			<Text>*START \n%SurroundedText%\n*STOP</Text>
+		</Expand>
+	</EXPANDS>
+</XMLConfigSettings>

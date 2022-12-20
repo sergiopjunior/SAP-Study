@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.jdt.core.classpathContainerInitializer">
+      <classpathContainerInitializer
+            class="com.sap.ext.libs.xpi.XpiClasspathContainerInitializer"
+            id="com.sap.ext.libs.xpi.classpathContainer">
+      </classpathContainerInitializer>
+   </extension>
+   <extension
+         point="org.eclipse.jdt.ui.classpathContainerPage">
+      <classpathContainerPage
+            class="com.sap.ext.libs.xpi.XpiClasspathContainerWizardPage"
+            id="com.sap.ext.libs.xpi.classpathContainer"
+            name="%XpiClasspathContainer_Description">
+      </classpathContainerPage>
+   </extension>
+
+</plugin>

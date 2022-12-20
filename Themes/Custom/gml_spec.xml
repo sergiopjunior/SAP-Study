@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangSpec</Type>
+		<Language>GML</Language>
+		<Desc>Language specification for GML classes</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.gs;*.inc</FilePattern>
+		<CaseSensitive>1</CaseSensitive>
+		<OpenClose>()[]{}''""</OpenClose>
+		<Delimiters>,;.?:()[]</Delimiters>
+		<LineEnd>;</LineEnd>
+		<EscapeChar>\</EscapeChar>
+		<Operators>?%-+/&amp;*=&lt;&gt;|!~^</Operators>
+		<Words>0-9a-Z_$</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<WrapCol>0</WrapCol>
+		<HierarchySeparator>
+			<Separator id="1" text="::"/>
+			<Separator id="2" text="."/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<FORMAT>
+		<DefaultIndent>4</DefaultIndent>
+		<FormatWords>
+			<FormatWord word="public" indent="4" next_line="1" till_next="1"/>
+			<FormatWord word="private" indent="4" next_line="1" till_next="1"/>
+			<FormatWord word="protected" indent="4" next_line="1" till_next="1"/>
+			<FormatWord word="if" indent="4" next_line="1"/>
+			<FormatWord word="else" indent="4" next_line="1"/>
+			<FormatWord word="while" indent="4" next_line="1"/>
+			<FormatWord word="case" indent="4" next_line="1"/>
+			<FormatWord word="for" indent="4" next_line="1"/>
+		</FormatWords>
+	</FORMAT>
+	<STRUCTURES>
+		<Structure open="method" close="end" has_name="1" separator="1"/>
+		<Structure open="listen" close="end" has_name="1" separator="1"/>
+		<Structure open="constructor" close="end" has_name="1" separator="1"/>
+		<Structure open="{" close="}"/>
+	</STRUCTURES>
+	<COLORSYNTAX>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="-1"/>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="65535" bkclr="-1"/>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="55295" bkclr="139"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="16250871"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139"/>
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487"/>
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1"/>
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1"/>
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1"/>
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="12632256" bkclr="-1">
+			<Conditions>
+				<Condition start="//" end="\n"/>
+				<Condition start="/*" end="*/"/>
+			</Conditions>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12623485" bkclr="-1"/>
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+			<Conditions>
+				<Condition start="&quot;" end="&quot;"/>
+			</Conditions>
+		</TextType>
+		<TextType id="34" name="Char" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+			<Conditions>
+				<Condition start="'" end="'"/>
+			</Conditions>
+		</TextType>
+		<TextType id="38" name="Documentation" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="11838051" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;@" end="@&gt;"/>
+			</Conditions>
+		</TextType>
+		<TextType id="50" name="Preprocessor" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="35723" bkclr="-1">
+			<Conditions>
+				<Condition start="#" end="]"/>
+			</Conditions>
+		</TextType>
+		<TextType id="51" name="Keywords" dstyle="0" dbkclr="0" ImageIdx="13" bold="0" italic="0" underline="0" clr="9109504" bkclr="-1">
+			<Keywords>
+				<Keyword text="auto"/>
+				<Keyword text="break"/>
+				<Keyword text="case"/>
+				<Keyword text="catch"/>
+				<Keyword text="char"/>
+				<Keyword text="Class"/>
+				<Keyword text="const"/>
+				<Keyword text="constructor"/>
+				<Keyword text="continue"/>
+				<Keyword text="default"/>
+				<Keyword text="delete"/>
+				<Keyword text="do"/>
+				<Keyword text="else"/>
+				<Keyword text="end"/>
+				<Keyword text="enum"/>
+				<Keyword text="explicit"/>
+				<Keyword text="extern"/>
+				<Keyword text="float"/>
+				<Keyword text="for"/>
+				<Keyword text="friend"/>
+				<Keyword text="function"/>
+				<Keyword text="goto"/>
+				<Keyword text="if"/>
+				<Keyword text="implement"/>
+				<Keyword text="in"/>
+				<Keyword text="inherit"/>
+				<Keyword text="inline"/>
+				<Keyword text="interface"/>
+				<Keyword text="listen"/>
+				<Keyword text="long"/>
+				<Keyword text="method"/>
+				<Keyword text="mutable"/>
+				<Keyword text="naked"/>
+				<Keyword text="namespace"/>
+				<Keyword text="new"/>
+				<Keyword text="operator"/>
+				<Keyword text="override"/>
+				<Keyword text="private"/>
+				<Keyword text="protected"/>
+				<Keyword text="Prototype"/>
+				<Keyword text="property"/>
+				<Keyword text="public"/>
+				<Keyword text="readonly"/>
+				<Keyword text="register"/>
+				<Keyword text="return"/>
+				<Keyword text="signed"/>
+				<Keyword text="sizeof"/>
+				<Keyword text="static"/>
+				<Keyword text="struct"/>
+				<Keyword text="switch"/>
+				<Keyword text="template"/>
+				<Keyword text="this"/>
+				<Keyword text="thread"/>
+				<Keyword text="throw"/>
+				<Keyword text="try"/>
+				<Keyword text="typedef"/>
+				<Keyword text="typeid"/>
+				<Keyword text="typename"/>
+				<Keyword text="typeof"/>
+				<Keyword text="union"/>
+				<Keyword text="using"/>
+				<Keyword text="uuid"/>
+				<Keyword text="var"/>
+				<Keyword text="VERIFY"/>
+				<Keyword text="virtual"/>
+				<Keyword text="void"/>
+				<Keyword text="volatile"/>
+				<Keyword text="while"/>
+			</Keywords>
+		</TextType>
+		<TextType id="52" name="Regular" dstyle="0" dbkclr="0" ImageIdx="12" bold="0" italic="0" underline="0" clr="139" bkclr="-1">
+			<Keywords>
+				<Keyword text="BOOL"/>
+				<Keyword text="CRITICAL"/>
+				<Keyword text="FLOAT"/>
+				<Keyword text="UNESCAPEXML"/>
+				<Keyword text="ISA"/>
+				<Keyword text="WRITE"/>
+				<Keyword text="ISNULL"/>
+				<Keyword text="PROGRESS"/>
+				<Keyword text="JOIN"/>
+				<Keyword text="ESCAPEXML"/>
+				<Keyword text="PARSEXML"/>
+				<Keyword text="CHECKXML"/>
+				<Keyword text="ISEMPTY"/>
+				<Keyword text="SPLIT"/>
+				<Keyword text="STR"/>
+				<Keyword text="MAX_LEX"/>
+			</Keywords>
+		</TextType>
+		<TextType id="53" name="Attributes" dstyle="0" dbkclr="0" ImageIdx="12" bold="0" italic="0" underline="0" clr="2124031" bkclr="-1">
+			<Keywords>
+				<Keyword text="id"/>
+				<Keyword text="icon16"/>
+				<Keyword text="icon32"/>
+				<Keyword text="domain"/>
+				<Keyword text="visible"/>
+				<Keyword text="type"/>
+				<Keyword text="label"/>
+				<Keyword text="min"/>
+				<Keyword text="max"/>
+				<Keyword text="step"/>
+				<Keyword text="minLabel"/>
+				<Keyword text="maxLabel"/>
+				<Keyword text="format"/>
+				<Keyword text="title"/>
+				<Keyword text="toggle"/>
+				<Keyword text="inner"/>
+				<Keyword text="category"/>
+				<Keyword text="priority"/>
+				<Keyword text="height"/>
+				<Keyword text="descr"/>
+				<Keyword text="gmlclass"/>
+			</Keywords>
+		</TextType>
+		<TextType id="54" name="Data Types" dstyle="0" dbkclr="0" ImageIdx="10" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1">
+			<Keywords>
+				<Keyword text="bool"/>
+				<Keyword text="double"/>
+				<Keyword text="int"/>
+				<Keyword text="short"/>
+				<Keyword text="unsigned"/>
+			</Keywords>
+		</TextType>
+		<TextType id="55" name="Constants" dstyle="0" dbkclr="0" ImageIdx="7" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1">
+			<Keywords>
+				<Keyword text="false"/>
+				<Keyword text="null"/>
+				<Keyword text="true"/>
+				<Keyword text="undefined"/>
+			</Keywords>
+		</TextType>
+		<TextType id="56" name="Exceptions" dstyle="0" dbkclr="0" ImageIdx="7" bold="0" italic="0" underline="0" clr="255" bkclr="-1">
+			<Keywords>
+				<Keyword text="Error"/>
+			</Keywords>
+		</TextType>
+		<TextType id="57" name="Environment" dstyle="0" dbkclr="0" ImageIdx="7" bold="1" italic="0" underline="0" clr="9143144" bkclr="-1">
+			<Keywords>
+				<Keyword text="$ENV"/>
+				<Keyword text="$DOM"/>
+			</Keywords>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>

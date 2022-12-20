@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangUser</Type>
+		<Language>TEXT</Language>
+		<Desc>User specific settings for plain text files</Desc>
+	</FILEINFO>
+	<EXPANDS></EXPANDS>
+</XMLConfigSettings>

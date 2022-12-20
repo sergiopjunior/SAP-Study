@@ -1,0 +1,207 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Quick Introduction to the New ABAP Editor</title>
+<style type=text/css>
+BODY  {
+	FONT-FAMILY : Tahoma;
+	FONT-SIZE 	: 10pt;
+}
+.details{
+	font-size	: 12px;
+	font-family	: Verdana,Tahoma;
+	text-align  : justify;
+}
+
+.td_title{
+	height		   :40; 
+	vertical-align :middle;
+	font-weight    :bold;
+	color		   :#0066CC;
+	text-align	   :left;
+	font-size	   :14px;
+	font-family	   :Verdana, Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF"> 
+<div align="center"> 
+  <center> 
+    <table border="0" cellpadding="0" cellspacing="0" width="800"> 
+      <tr> 
+        <td class="td_title"><span style="font-size:16px">Quick Introduction</span></td> 
+      </tr> 
+      <tr> 
+        <td bgcolor="#0066CC" height="1"></td> 
+      </tr> 	  
+      <tr> 
+        <td> <table border="0" cellpadding="0" cellspacing="0"> 
+            <tr> 
+              <td width="20%" rowspan="2" align="center" valign="middle"><img src="./logo.jpg" width="100" height="99"></td> 
+              <td width="100%" class="td_title"><span style="font-size:18px">Welcome to the New ABAP Editor!</span></td> 
+            </tr> 
+            <tr><td align="justify" valign="top">
+	      <p align="justify">
+	      The New ABAP Editor is a state-of-the-art source code editor tailored towards
+	      developers creating and analyzing ABAP code.  The New Editor may be
+	      configured to replace the old frontend editor in many common transactions
+	      such as SE80, SE38, and SE24 and to display source code in the new ABAP
+	      debugger.
+              </p>
+	    </td></tr> 
+          </table></td> 
+      </tr> 
+      <tr> 
+        <td width="100%" colspan="2" height="314" valign="top"> <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" height="1" width="100%"> 
+            <tr> 
+              <td class="td_title"><img border="0" src="./point.gif">&nbsp;Quick introduction to main features</b></td> 
+            </tr> 
+            <tr> 
+              <td valign="top"><span class="details"><p align="justify">
+              The New ABAP Editor supports a large number of different programming
+	      languages such as BSP but has been optimized for ABAP code. The editor
+	      offers:
+	      <ul>
+	      <li>Customizable syntax highlighting</li>
+	      <li>Code outlines (i.e., collapsible blocks)</li>
+	      <li>Code hints and code completion [only on 7.10]</li>
+	      <li>Personalized code templates</li>
+	      <li>Advanced clipboard functionality</li>
+	      <li>Incremental search and customizable keyboard shortcuts</li>
+	      </ul>
+	      The detailed editor documentation will be distributed as part of the regular GUI
+              installation once it has been completed.
+              </p></span></td> 
+            </tr> 
+            <tr> 
+              <td class="td_title"><img border="0" src="./point.gif">&nbsp;Quick look at the editor interface</td> 
+            </tr> 
+            <tr> 
+              <td height="650" align="center" valign="center"><img src="./demo.gif"> </td> 
+            </tr> 
+
+            <tr> 
+              <td class="td_title"><img border="0" src="./point.gif"
+              width="7" height="7">&nbsp;Using code completion</td> 
+            </tr> 
+            <tr> 
+              <td valign="top"> <span class="details">
+              <p align="justify">
+	      The New ABAP Editor supports two kinds of code assistance that aim at
+              reducing the need for cross navigation and the consultation of the ABAP
+              online help.
+              </p>
+              <p align="justify">
+	      <b>Code hints</b> suggest the most common keywords and recently used
+              identifiers automatically as you type:
+              </p>
+              <p align="center">
+	      <img border="0" src="./codehint.png"/>
+	      </p>
+              <p align="justify">
+              Suggestions can be inserted by pressing the TAB or the RETURN key.  If the
+              suggestion is unique, the code hint will be displayed black-on-white.  If
+              there is more than one potential hint, the most relevant one is displayed
+              white-on-black.
+	      </p>
+              <p align="justify">
+	      Code hints are computed by the GUI.  For performance reasons, they are
+	      derived heuristically by analyzing the current statement only.  While
+	      keyword hints are always valid at the current cursor position, identifier
+	      hints cannot be filtered for correct type or visibility information and may
+	      thus present semantically invalid identifiers.
+	      </p>
+              <p align="justify">
+	      Some of the code hints shown may contain funny symbols such as
+	      <code>&sect;</code>.  These hints denote templates that may be inserted by
+	      accepting the hint with the TAB or RETURN key.  You can maintain your own
+	      library of templates in the settings dialog.
+              </p>
+              <p align="justify">
+              <b>Code completion</b> suggests valid keywords and identifiers that may be
+              inserted at a given source code position.  To invoke code completion, press
+              and hold the CONTROL key while pressing the SPACE key:
+	      </p>
+              <p align="center">
+	      <img border="0" src="./codecompl.png"/>
+	      </p>
+              <p align="justify">
+	      When the list of code completions is shown, you can continue typing to filter
+	      the list of suggestions by prefix.
+	      </p>
+              <p align="justify">
+	      Completion results include the following source code entities, each of which
+	      has its own unique icon:
+	      <ul>
+	      <li>Variables, including structures and components</li>
+	      <li>Types (including DDIC), classes</li>
+	      <li>Methods, attributes, constants</li>
+	      <li>Forms</li>
+	      <li>Functions</li>
+	      <li>Formal parameters of methods, functions, and forms</li>
+	      <li>Keywords</li>
+	      </ul>
+	      Items shown in boldface denote entities that match the requirements for
+	      source code entities at the current cursor position.  All other items denote
+	      entities that may contain additional entities that may also match the
+	      requirements.  In the example above, the interface
+	      <code>IF_SERIALIZABLE_OBJECT</code> may contain additional class methods that
+	      can be accessed by inserting the interface name at the current cursor
+	      position.
+	      </p>
+              <p align="justify">
+	      Once you have selected an individual suggestion, you can insert it into your
+              program by pressing the TAB or the RETURN key.  For some completions,
+              pressing CONTROL plus RETURN will not only insert the identifier but generate
+              a partially prefilled pattern.
+	      </p>
+              <p align="justify">
+	      <b>Important note:</b> Code completion is computed by the backend and thus
+	      requires a recent 7.10 kernel in order to work!
+              </p>
+              <p align="justify">
+	      To disable code hints and/or code completion, uncheck the appropriate
+	      checkboxes in the settings dialog.
+              </p>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td class="td_title"><img border="0" src="./point.gif" width="7" height="7">&nbsp;How to report a bug</td> 
+            </tr> 
+            <tr> 
+              <td valign="top"> <span class="details"> <p align="justify">
+                <ol> 
+                  <li>Verify that you have the newest
+            version of the editor installed. You can update your
+            control with <a href="\\pwdf1018\d031288\ab4\setup.vbs
+            ">this script</a> - maybe your problem has already
+            been fixed. <b>(This applies to beta testers ONLY!)</b></li>
+	    <li>Check the internal FAQ (CSN note 812186) for
+            up-to-date information about known problems.</li>
+	    <li>Find out who is responsible. If the error relates to
+            the syntax highlighting or the code completion, create an
+            internal message for component BC-ABA-LA. In all other
+            cases create an internal message for component
+            BC-FES-GUI.</li>
+	    <li>Please provide clear step-by-step instruction of how
+            to reproduce this error.</li>
+	    <li>Please be patient - we try to fix bugs as quickly as
+            possible, but propagating the corrections may require some
+            time. If something breaks and a fix is not yet available, you can always
+              disable code hints or code completion in the settings dialog.</li>
+                </ol> 
+		</p></span>
+		</td> 
+            </tr> 
+          </table></td> 
+      </tr> 
+      <tr> 
+        <td width="919" bgcolor="#0066CC" height="1" colspan="2"></td> 
+      </tr> 
+    </table> 
+  </center> 
+</div> 
+</body>
+</html>

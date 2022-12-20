@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>SAP</Author>
+		<Type>LangUser</Type>
+		<Language>COVAN</Language>
+		<Desc>User specific Coverage Analyzer settings</Desc>
+	</FILEINFO>
+	<EXPANDS>
+	</EXPANDS>
+</XMLConfigSettings>

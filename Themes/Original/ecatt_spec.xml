@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Markus Dinkel</Author>
+		<Type>LangSpec</Type>
+		<Language>ECATT</Language>
+		<Desc>Language specification for eCATT</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.ecatt</FilePattern>
+		<CaseSensitive>0</CaseSensitive>
+		<WrapCol>72</WrapCol>
+		<OpenClose>()[]&lt;&gt;''``</OpenClose>
+		<Delimiters>,.:</Delimiters>
+		<EscapeChar></EscapeChar>
+		<LineEnd>.</LineEnd>
+		<Operators>?-+/&amp;*=&lt;&gt;~</Operators>
+		<Words>0-9a-Z_-/</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<HierarchySeparator>
+			<Separator id="1" text="-"/>
+			<Separator id="2" text="-&gt;"/>
+			<Separator id="3" text="=&gt;"/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<COMPLEX_USING>
+		<Word text="at"/>
+		<Word text="where"/>
+		<Word text="key"/>
+	</COMPLEX_USING>
+	<STRUCTURES>
+		<Structure open="abap" close="endabap" header="1" sent_start="1"/>
+		<Structure open="if" middle="else" close="endif" header="1" sent_start="1"/>
+		<Structure open="do" close="enddo" header="1" sent_start="1"/>
+		<Structure open="loop" close="endloop" header="1" sent_start="1"/>
+		<Structure open="message" close="endmessage" sent_start="1"/>
+		<Structure open="perf" close="endperf" sent_start="1"/>
+	</STRUCTURES>
+	<FORMAT>
+		<DefaultIndent>2</DefaultIndent>
+		<ResetFormatSymbols>,</ResetFormatSymbols>
+		<FormatWords>
+			<FormatWord word="elseif" indent="-4"/>
+		</FormatWords>
+	</FORMAT>
+	<SYNTAXINFO>
+		<InfoType id="1" name="Compiler error" clr="-1"/>
+		<InfoType id="2" name="Performance Tip" clr="-1"/>
+		<InfoType id="3" name="Syntax Tip" clr="-1"/>
+		<InfoType id="4" name="Spelling Error" clr="-1"/>
+	</SYNTAXINFO>
+	<COLORSYNTAX>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="-1"/>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="65535" bkclr="-1"/>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15789798"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139"/>
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487"/>
+		<TextType id="20" name="Format tags" dstyle="0" dbkclr="0" text="0" bold="0" italic="1" underline="0" clr="12614523" bkclr="-1">
+			<Conditions>
+				<Condition start="&quot;$" end="\n"/>
+			</Conditions>
+		</TextType>
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1"/>
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1"/>
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1"/>
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="12632256" bkclr="-1">
+			<FirstChar>*</FirstChar>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12623485" bkclr="-1"/>
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+			<FirstChar/>
+			<Conditions>
+				<Condition start="'" end="'"/>
+				<Condition start="`" end="`"/>
+			</Conditions>
+		</TextType>
+		<TextType id="52" name="Keywords" ImageIdx="13" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1" CaseDisplayMode="0">
+			<Keywords>
+				<Keyword text="ABAP"/>
+                        	<Keyword text="AND"/>
+				<Keyword text="APPEND"/>
+				<Keyword text="BCSET"/>
+				<Keyword text="BREAK"/>
+				<Keyword text="CALLMETHOD"/>
+				<Keyword text="CALLSTATIC"/>
+				<Keyword text="CHEATTR"/>
+				<Keyword text="CHECKENQ"/>
+				<Keyword text="CHEGUI"/>
+				<Keyword text="CHESTATIC"/>
+				<Keyword text="CHETAB"/>
+				<Keyword text="CHEVAR"/>
+				<Keyword text="CLEAR"/>
+				<Keyword text="CREATEOBJ"/>
+				<Keyword text="DELETE"/>
+				<Keyword text="DELSTORE"/>
+				<Keyword text="DO"/>
+				<Keyword text="ELSE"/>
+				<Keyword text="ELSEIF"/>
+				<Keyword text="ENDABAP"/>
+				<Keyword text="ENDIF"/>
+				<Keyword text="ENDDO"/>
+				<Keyword text="ENDLOOP"/>
+				<Keyword text="ENDMESSAGE"/>
+				<Keyword text="ENDPERF"/>
+				<Keyword text="ESF"/>
+				<Keyword text="EXIT"/>
+				<Keyword text="FILL_RDC"/>
+				<Keyword text="FUN"/>
+				<Keyword text="GETATTR"/>
+				<Keyword text="GETGUI"/>
+				<Keyword text="GETLEN"/>
+				<Keyword text="GETSTATIC"/>
+				<Keyword text="GETTAB"/>
+				<Keyword text="IF"/>
+				<Keyword text="INSERT"/>
+				<Keyword text="LOOP"/>
+				<Keyword text="LOG"/>
+				<Keyword text="LOGMSG"/>
+				<Keyword text="LOGTEXT"/>
+				<Keyword text="MESSAGE"/>
+				<Keyword text="NOT"/>
+				<Keyword text="ON_LAST_MESSAGE_CHECK"/>
+				<Keyword text="OR"/>
+				<Keyword text="PERF"/>
+				<Keyword text="REF"/>
+				<Keyword text="REFCATT"/>
+				<Keyword text="REFEXT"/>
+				<Keyword text="REMOTECATT"/>
+				<Keyword text="RESCON"/>
+				<Keyword text="RESTAB"/>
+				<Keyword text="RETRIEVE"/>
+				<Keyword text="SAPGUI"/>
+				<Keyword text="SENDEXT"/>
+				<Keyword text="SETATTR"/>
+				<Keyword text="SETSTATIC"/>
+				<Keyword text="SETTAB"/>
+				<Keyword text="SETVALID"/>
+				<Keyword text="STORE"/>
+				<Keyword text="TCD"/>
+				<Keyword text="VALIDATE"/>
+				<Keyword text="WAIT"/>
+				<Keyword text="WAIT_ON_DYNPRO"/>
+				<Keyword text="WEBDYNPRO"/>
+				<Keyword text="WEBSERVICE"/>
+			</Keywords>
+		</TextType>
+		<TextType id="56" name="Constants" ImageIdx="7" bold="1" italic="0" underline="0" clr="-1" bkclr="-1">
+			<Keywords>
+				<Keyword text="Space"/>
+			</Keywords>
+			<Conditions>
+				<Condition start="&amp;" end=""/>
+			</Conditions>
+		</TextType>
+		<TextType id="57" name="ABAP4" dstyle="0" dbkclr="0" text="1" lang="ABAP4" bold="0" italic="0" underline="0" clr="255" bkclr="16383986">
+			<Conditions>
+				<Condition start="ABAP" end="ENDABAP"/>
+				<Condition start="abap" end="endabap"/>
+			</Conditions>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>

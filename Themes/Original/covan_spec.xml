@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>SAP</Author>
+		<Type>LangSpec</Type>
+		<Language>COVAN</Language>
+		<Desc>Coverage Analyzer display specification</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.sample</FilePattern>
+		<LexerDll>sapab4lex.dll</LexerDll>
+		<CaseSensitive>0</CaseSensitive>
+		<OpenClose>()[]&lt;&gt;''``</OpenClose>
+		<Delimiters>,.:</Delimiters>
+		<WrapBy>(),</WrapBy>
+		<EscapeChar></EscapeChar>
+		<LineEnd>.</LineEnd>
+		<Operators>?-+/&amp;*=&lt;&gt;~</Operators>
+		<Words>0-9a-Z_/</Words>
+		<Numbers>-+0-9a-fA-F.xXUL</Numbers>
+		<HierarchySeparator>
+			<Separator id="1" text="-"/>
+			<Separator id="2" text="-&gt;"/>
+			<Separator id="3" text="=&gt;"/>
+			<Separator id="4" text="~"/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<COMPLEX_USING>
+		<Word text="at"/>
+		<Word text="where"/>
+		<Word text="key"/>
+	</COMPLEX_USING>
+	<STRUCTURES>
+		<Structure open="region" close="endregion" header="0" has_name="1" sent_start="1"/>
+		<Structure open="if" middle="else" close="endif" header="1" sent_start="1">
+			<Middle name="elseif"/>
+		</Structure>
+		<Structure open="case" middle="when" close="endcase" header="1" sent_start="1">
+			<Middle name="others"/>
+		</Structure>
+		<Structure open="loop" close="endloop" header="1" sent_start="1"/>
+		<Structure open="form" close="endform" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="while" close="endwhile" header="1" sent_start="1"/>
+		<Structure open="do" close="enddo" header="1" sent_start="1"/>
+		<Structure open="try" middle="catch" close="endtry" header="1" sent_start="1"/>
+		<Structure open="class" close="endclass" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="method" close="endmethod" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="function" close="endfunction" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="module" close="endmodule" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="interface" close="endinterface" header="1" sent_start="1"/>
+		<Structure open="at" close="endat" header="1" sent_start="1"/>
+		<Structure open="exec" close="endexec" header="0" sent_start="1"/>
+		<Structure open="define" close="end-of-definition" has_name="1" separator="1" header="0" sent_start="1"/>
+		<Structure open="provide" close="endprovide" header="1" sent_start="1"/>
+		<Structure open="select" close="endselect" header="1" sent_start="1"/>
+		<Structure open="begin" close="end" header="0"/>
+		<Structure open="enhancement" close="endenhancement" header="0" has_name="1" separator="1" sent_start="1"/>
+		<Structure open="enhancement-section" close="end-enhancement-section" header="0" has_name="1" separator="1" sent_start="1"/>
+	</STRUCTURES>
+	<FORMAT>
+		<DefaultIndent>2</DefaultIndent>
+		<ResetFormatSymbols>,</ResetFormatSymbols>
+		<FormatWords>
+		</FormatWords>
+	</FORMAT>
+	<SYNTAXINFO>
+		<InfoType id="1" name="Compiler error" clr="-1"/>
+		<InfoType id="2" name="Performance tip" clr="-1"/>
+		<InfoType id="3" name="Syntax tip" clr="-1"/>
+		<InfoType id="4" name="Spelling error" clr="-1"/>
+	</SYNTAXINFO>
+	<COLORSYNTAX>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="16777215" bkclr="9922608"/>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="14281970"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="6710886" bkclr="-1"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="15789798"/>
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1" CaseDisplayMode="0"/>
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="8421504" bkclr="-1" CaseDisplayMode="0">
+			<FirstChar>*</FirstChar>
+			<Conditions>
+				<Condition start="&quot;" end="\n"/>
+			</Conditions>
+		</TextType>
+		<TextType id="101" name="Coverage none" dstyle="0" dbkclr="0" clr="0" bkclr="8421616"/>
+		<TextType id="102" name="Coverage current" dstyle="0" dbkclr="0" clr="0" bkclr="8450176"/>
+		<TextType id="103" name="Coverage cumulated only" dstyle="0" dbkclr="0" clr="0" bkclr="14600107"/>
+	</COLORSYNTAX>
+</XMLConfigSettings>

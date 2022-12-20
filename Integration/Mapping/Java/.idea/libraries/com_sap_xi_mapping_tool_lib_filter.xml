@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.sap.xi.mapping.tool.lib.filter">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/com.sap.xi.mapping.tool.lib.filter.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

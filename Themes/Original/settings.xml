@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="settings.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>General settings</Type>
+		<Desc>General settings for AB4Editor control</Desc>
+	</FILEINFO>
+	<General>
+		<UndoAfterSave>1</UndoAfterSave>
+		<Autosave>1</Autosave>
+		<R3AutoSave>1</R3AutoSave>
+		<LocalAutoSave>0</LocalAutoSave>
+		<TimeSave>15</TimeSave>
+		<ProgLanguage>TEXT</ProgLanguage>
+		<LangDetermin>1</LangDetermin>
+		<SaveOnExit>0</SaveOnExit>
+	</General>
+	<Fonts_and_Colors>
+		<Font>
+			<Name>Courier</Name>
+			<Size>14</Size>
+			<OnlyMonospaced>1</OnlyMonospaced>
+			<CharSet>0</CharSet></Font>
+	</Fonts_and_Colors>
+	<Code_Completion>
+		<AutoCompletion>1</AutoCompletion>
+		<AutoOpen>0</AutoOpen>
+		<TimeOpen>1500</TimeOpen>
+		<UseExternalDict>0</UseExternalDict>
+		<UseLocalDict>1</UseLocalDict>
+		<QuickInfo>1</QuickInfo>
+		<CodeHints>1</CodeHints>
+		<KKCharsNum>2</KKCharsNum>
+		<AutoHideToolTip>1</AutoHideToolTip>
+		<AutoHideDelay>3000</AutoHideDelay>
+		<UseSimpleAutocomp>1</UseSimpleAutocomp>
+		<CurrentScope>1</CurrentScope>
+		<Transparency>100</Transparency>
+		<HoveringDelay>500</HoveringDelay>
+		<HoveringInfo>1</HoveringInfo>
+		<CodeHintAgreeByReturn>0</CodeHintAgreeByReturn>
+	</Code_Completion>
+	<Pretty_Print>
+		<OperandCase>1</OperandCase>
+		<AutoBrace>0</AutoBrace>
+		<AutoIndent>1</AutoIndent>
+		<AutoCorrectCaps>0</AutoCorrectCaps>
+		<Autocorrect>0</Autocorrect>
+		<TabSize>2</TabSize>
+		<TabMode>1</TabMode>
+		<TrimSpace>1</TrimSpace>
+		<SurSelect>1</SurSelect>
+		<DoubleRate>1</DoubleRate>
+		<SmartTab>1</SmartTab>
+		<FrmtAfterPaste>0</FrmtAfterPaste>
+		<OptimalFill>0</OptimalFill>
+		<TabsToSpacesOnSave>1</TabsToSpacesOnSave>
+		<VirtualSpaces>0</VirtualSpaces></Pretty_Print>
+	<Keyboard>
+		<KeySchema>SAPGUI</KeySchema>
+	</Keyboard>
+	<Display>
+		<SelectMargin>1</SelectMargin>
+		<LineNumbers>1</LineNumbers>
+		<IndicatMargin>1</IndicatMargin>
+		<VertSB>1</VertSB>
+		<HorizSB>1</HorizSB>
+		<StatusBar>1</StatusBar>
+		<WordWrap>0</WordWrap>
+		<PageWidth>255</PageWidth>
+		<HlightCurLine>1</HlightCurLine>
+		<ViewSpace>0</ViewSpace>
+		<ViewPageWidth>1</ViewPageWidth>
+		<StructureSeparators>1</StructureSeparators>
+		<SmoothScroll>1</SmoothScroll>
+		<SmoothScrollFactor>4</SmoothScrollFactor>
+		<ViewChangedLines>1</ViewChangedLines>
+	</Display>
+	<Print>
+		<LeftMargin>1000</LeftMargin>
+		<RightMargin>0</RightMargin>
+		<TopMargin>0</TopMargin>
+		<BottomMargin>0</BottomMargin>
+		<PrintLN>1</PrintLN>
+		<PrintWW>1</PrintWW>
+		<HeaderText>Page : %Page% / %TotalPages%</HeaderText>
+		<HeaderStyle>1</HeaderStyle>
+		<FooterText>File : %FileName%.  Date: %Date%</FooterText>
+		<FooterStyle>1</FooterStyle>
+	</Print>
+	<FindReplace>
+		<SearchFlags>0</SearchFlags>
+		<MatchCase>0</MatchCase><MatchWholeWord>0</MatchWholeWord><RegExp>0</RegExp><DirectionUp>0</DirectionUp><SearchHiddenText>0</SearchHiddenText><ScopeSelection>0</ScopeSelection><IncrementalSearch>0</IncrementalSearch></FindReplace>
+</XMLConfigSettings>

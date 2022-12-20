@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_user.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangUser</Type>
+		<Language>GML</Language>
+		<Desc>User specific settings for GML scripts</Desc>
+	</FILEINFO>
+	<EXPANDS>
+		<Expand key="///">
+			<Descr>/////////.......</Descr>
+			<Text>////////////////////////////////////////////////////////////////////////</Text>
+		</Expand>
+		<Expand key="do">
+			<Descr>do {§} while ();</Descr>
+			<Text>do {\n\n} while ( | );</Text>
+		</Expand>
+		<Expand key="/**">
+			<Descr>/**...§...**/</Descr>
+			<Text>/*************************************************\n*  |\n*************************************************/</Text>
+		</Expand>
+		<Expand key="ife">
+			<Descr>if () {§}else{§}</Descr>
+			<Text>if ( | )\n{\n}\nelse\n{\n}</Text>
+		</Expand>
+		<Expand key="method">
+			<Descr>method (§)</Descr>
+			<Text>&lt;@doc&gt;\n    Description\n   &lt;param name="" type=""&gt;Description&lt;/param&gt;\n   &lt;return type=""&gt; Description &lt;/return&gt;   \n&lt;/doc@&gt;\nmethod %Method name% ( | )\n\nend //%Method name%</Text>
+		</Expand>
+		<Expand key="for">
+			<Descr>for (var in ) { § }</Descr>
+			<Text>for (var | in )\n{\n\n}</Text>
+		</Expand>
+		<Expand key="try">
+			<Descr>try {} catch (e) {}</Descr>
+			<Text>try\n{\n|\n}\ncatch (e)\n{\n}\n</Text>
+		</Expand>
+		<Expand key="while">
+			<Descr>while() {§};</Descr>
+			<Text>while ( | ) {\n\n}</Text>
+		</Expand>
+		<Expand key="if">
+			<Descr>if () {§}</Descr>
+			<Text>if ( | )\n{\n\n}</Text>
+		</Expand>
+	</EXPANDS>
+</XMLConfigSettings>

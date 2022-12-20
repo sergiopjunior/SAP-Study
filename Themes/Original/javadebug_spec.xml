@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>SAP</Author>
+		<Type>LangSpec</Type>
+		<Language>javadebug</Language>
+		<Desc>Language specification for Java classes for VMC debugging purpose. Not for editing Java source</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.java</FilePattern>
+		<CaseSensitive>1</CaseSensitive>
+		<OpenClose>()[]{}''""/**/</OpenClose>
+		<Delimiters>,;.?:()[]</Delimiters>
+		<WrapBy>(),</WrapBy>
+		<LineEnd>;</LineEnd>
+		<EscapeChar>\</EscapeChar>
+		<Operators>?%-+/&amp;*=&lt;&gt;|!~^</Operators>
+		<Words>0-9a-Z_</Words>
+		<Numbers>-+0-9a-fA-F.xXUL_</Numbers>
+		<WrapCol>0</WrapCol>
+		<HierarchySeparator>
+			<Separator id="1" text="."/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<FORMAT>
+		<DefaultIndent>4</DefaultIndent>
+		<FormatWords>
+			<FormatWord word="public" indent="4" next_line="1" till_next="1"/>
+			<FormatWord word="private" indent="4" next_line="1" till_next="1"/>
+			<FormatWord word="protected" indent="4" next_line="1" till_next="1"/>
+			<FormatWord word="if" indent="4" next_line="1"/>
+			<FormatWord word="else" indent="4" next_line="1"/>
+			<FormatWord word="while" indent="4" next_line="1"/>
+			<FormatWord word="case" indent="4" next_line="1"/>
+			<FormatWord word="for" indent="4" next_line="1"/>
+		</FormatWords>
+	</FORMAT>
+	<STRUCTURES>
+		<Structure open="{" close="}"/>
+	</STRUCTURES>
+	<COLORSYNTAX>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="-1"/>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="3" name="Inactive Selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="9342520"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="15918553"/>
+		<TextType id="6" name="Error" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="65535" bkclr="-1"/>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="55295" bkclr="139"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="16250871"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="139"/>
+		<TextType id="11" name="Changed and Saved indicator" dstyle="1" dbkclr="1" clr="12895487"/>
+		<TextType id="21" name="Text Highlights" bold="1" italic="0" underline="0" clr="0" bkclr="-1"/>
+		<TextType id="22" name="Text Highlights Error" bold="1" italic="0" underline="0" clr="255" bkclr="-1"/>
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="-1" bkclr="-1"/>
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="1" italic="1" underline="0" clr="12632256" bkclr="-1">
+			<Conditions>
+				<Condition start="//" end="\n"/>
+				<Condition start="/*" end="*/"/>
+			</Conditions>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12623485" bkclr="-1"/>
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+			<Conditions>
+				<Condition start="&quot;" end="&quot;"/>
+			</Conditions>
+		</TextType>
+		<TextType id="34" name="Char" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="37632" bkclr="-1">
+			<Conditions>
+				<Condition start="'" end="'"/>
+			</Conditions>
+		</TextType>
+		<TextType id="38" name="Documentation" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="11838051" bkclr="-1">
+			<Conditions>
+				<Condition start="&lt;@" end="@&gt;"/>
+			</Conditions>
+		</TextType>
+		<TextType id="51" name="Keywords" dstyle="0" dbkclr="0" ImageIdx="13" bold="1" italic="0" underline="0" clr="9109504" bkclr="-1">
+			<Keywords>
+				<Keyword text="abstract"/>
+				<Keyword text="assert"/>
+				<Keyword text="boolean"/>
+				<Keyword text="break"/>
+				<Keyword text="byte"/>
+				<Keyword text="case"/>
+				<Keyword text="catch"/>
+				<Keyword text="char"/>
+				<Keyword text="class"/>
+				<Keyword text="const"/>
+				<Keyword text="continue"/>
+				<Keyword text="default"/>
+				<Keyword text="do"/>
+				<Keyword text="double"/>
+				<Keyword text="else"/>
+				<Keyword text="enum"/>
+				<Keyword text="extends"/>
+				<Keyword text="final"/>
+				<Keyword text="finally"/>
+				<Keyword text="float"/>
+				<Keyword text="for"/>
+				<Keyword text="goto"/>
+				<Keyword text="if"/>
+				<Keyword text="implements"/>
+				<Keyword text="import"/>
+				<Keyword text="instanceof"/>
+				<Keyword text="int"/>
+				<Keyword text="interface"/>
+				<Keyword text="long"/>
+				<Keyword text="native"/>
+				<Keyword text="new"/>
+				<Keyword text="package"/>
+				<Keyword text="private"/>
+				<Keyword text="protected"/>
+				<Keyword text="public"/>
+				<Keyword text="return"/>
+				<Keyword text="short"/>
+				<Keyword text="static"/>
+				<Keyword text="strictfp"/>
+				<Keyword text="super"/>
+				<Keyword text="switch"/>
+				<Keyword text="synchronized"/>
+				<Keyword text="this"/>
+				<Keyword text="throw"/>
+				<Keyword text="throws"/>
+				<Keyword text="transient"/>
+				<Keyword text="try"/>
+				<Keyword text="void"/>
+				<Keyword text="volatile"/>
+				<Keyword text="while"/>
+			</Keywords>
+		</TextType>
+		<TextType id="52" name="Data Types" dstyle="0" dbkclr="0" ImageIdx="10" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1">
+			<Keywords>
+				<Keyword text="boolean"/>
+				<Keyword text="byte"/>
+				<Keyword text="char"/>
+				<Keyword text="double"/>
+				<Keyword text="float"/>
+				<Keyword text="int"/>
+				<Keyword text="long"/>
+				<Keyword text="short"/>
+			</Keywords>
+		</TextType>
+		<TextType id="53" name="Constants" dstyle="0" dbkclr="0" ImageIdx="7" bold="0" italic="0" underline="0" clr="16711680" bkclr="-1">
+			<Keywords>
+				<Keyword text="false"/>
+				<Keyword text="null"/>
+				<Keyword text="true"/>
+			</Keywords>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>
