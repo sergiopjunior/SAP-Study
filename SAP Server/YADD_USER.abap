@@ -8,6 +8,8 @@ REPORT yadd_user.
 " Constants
 CONSTANTS gc_success(1) TYPE c VALUE 'S' ##NEEDED.
 CONSTANTS gc_error(1) TYPE c VALUE 'E' ##NEEDED.
+CONSTANTS gc_female TYPE TSAD3-title VALUE '0001' ##NEEDED.
+CONSTANTS gc_male TYPE TSAD3-title VALUE '0002' ##NEEDED.
 
 " Workareas
 DATA wa_customer TYPE ycustomer ##NEEDED.
@@ -21,6 +23,7 @@ SELECTION-SCREEN: BEGIN OF BLOCK b_main WITH FRAME TITLE TEXT-000.
 PARAMETER p_fname TYPE ycustomer-first_name OBLIGATORY.
 PARAMETER p_lname TYPE ycustomer-last_name.
 PARAMETER p_bdate TYPE ycustomer-bdate.
+PARAMETER p_gender TYPE ycustomer-gender.
 PARAMETER p_cnpj TYPE yaddress-cnpj.
 PARAMETER p_cpf TYPE yaddress-cpf.
 PARAMETER p_adname TYPE yaddress-name.
@@ -56,9 +59,11 @@ FORM zf_create_record .
   wa_customer-first_name = p_fname.
   wa_customer-last_name = p_lname.
   wa_customer-bdate = p_bdate.
+  wa_customer-gender = p_gender.
 
   wa_address-cnpj = p_cnpj.
   wa_address-cpf = p_cpf.
+  wa_address-title = COND #( WHEN p_gender = 'M' THEN gc_male ELSE gc_female ).
   wa_address-name = p_adname.
   wa_address-telf1 = p_telf1.
   wa_address-telf2 = p_telf2.

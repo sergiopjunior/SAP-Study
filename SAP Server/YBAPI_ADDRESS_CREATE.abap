@@ -13,6 +13,7 @@ FUNCTION ybapi_address_create.
 *"      ADDRNR_CREATION_ERROR
 *"      INVALID_IDENTITY_DOCUMENT
 *"      ERROR_SAVING_RECORD
+*"      INVALID_ADDRESS_TYPE
 *"----------------------------------------------------------------------
   IF address-country IS INITIAL.
     RAISE country_missing.
@@ -22,6 +23,11 @@ FUNCTION ybapi_address_create.
     RAISE lang_missing.
   ELSEIF address-cnpj IS INITIAL AND address-city IS INITIAL.
     RAISE invalid_identity_document.
+  ELSE.
+    SELECT SINGLE title FROM tsad3 INTO @DATA(lv_title) WHERE title = @address-title.
+    IF lv_title IS INITIAL.
+      RAISE invalid_address_type.
+    ENDIF.
   ENDIF.
 
   IF address-addrnr IS INITIAL.
