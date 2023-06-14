@@ -1,0 +1,5 @@
+applications:
+- name: py_test01
+  random-route: true
+  path: ./
+  memory: 128M

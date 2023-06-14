@@ -1,0 +1,117 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="p" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyChainedComparisonsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoreConstantInTheMiddle" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="win32gui" />
+            <item index="1" class="java.lang.String" itemvalue="pygame" />
+            <item index="2" class="java.lang.String" itemvalue="numpy" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E402" />
+          <option value="E722" />
+          <option value="E303" />
+          <option value="E501" />
+          <option value="E302" />
+          <option value="E301" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N812" />
+          <option value="N801" />
+          <option value="N802" />
+          <option value="N803" />
+          <option value="N813" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="filter" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="cv2.*" />
+          <option value="win32ui.*" />
+          <option value="win32api.GetSystemMetrics" />
+          <option value="win32gui.GetWindowDC" />
+          <option value="win32gui.GetDesktopWindow" />
+          <option value="win32gui.DeleteObject" />
+          <option value="win32gui.ReleaseDC" />
+          <option value="win32gui.GetWindowRect" />
+          <option value="win32gui.*" />
+          <option value="win32api.*" />
+          <option value="os._exit" />
+          <option value="python_net.*" />
+          <option value="clr" />
+          <option value="dict.__add__" />
+          <option value="pygame.*" />
+          <option value="System" />
+          <option value="keyboard" />
+          <option value="requests.models.Response.__getitem__" />
+          <option value="gui.opengl.overlay.glInitGl46VERSION" />
+          <option value="gui.opengl.overlay.*" />
+          <option value="champions.ChampionStats.__getitem__" />
+          <option value="PySide6.GUI.main.*" />
+          <option value="PySide6.*" />
+          <option value="PySideTest.GUI.windows.base.*" />
+          <option value="PySideTest.GUI.main.*" />
+          <option value="GUI.Menu.base.*" />
+          <option value="GUI.Menu.ui_window.*" />
+          <option value="GUI.Menu.menu.*" />
+          <option value="main.*" />
+          <option value="numpy" />
+          <option value="test.*" />
+          <option value="Modules.window.*" />
+          <option value="types.ModuleType.*" />
+          <option value="GUI.Menu.test_menu.*" />
+          <option value="MachineLearning.transfer.matplotlib" />
+          <option value="GUI.OpenGL.overlay.*" />
+          <option value="win32con" />
+          <option value="glfw" />
+          <option value="win32process" />
+          <option value="GUI.CodeEditor.code_editor.*" />
+          <option value="GUI.main_window.*" />
+          <option value="GUI.CodeEditor.CodeArea.*" />
+          <option value="grabber.*" />
+          <option value="discord" />
+          <option value="torch.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
