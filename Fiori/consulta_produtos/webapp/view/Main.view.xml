@@ -1,0 +1,86 @@
+<mvc:View controllerName="consultaprodutos.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" height="100%" width="100%"
+    xmlns="sap.m"
+    xmlns:table="sap.ui.table"
+    xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar">
+    <App id="consultaProdutos">
+        <pages>
+            <Page id="page" title="{i18n>title}">
+                <content>
+                    <f:DynamicPage id="dynamicPage" fitContent="true">
+                        <f:header>
+                            <f:DynamicPageHeader id="_IDGenDynamicPageHeader1">
+                                <f:content>
+                                    <fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch">
+                                        <fb:filterGroupItems>
+                                            <fb:FilterGroupItem id="_IDGenFilterGroupItem1" name="product_id" label="ID Produto" groupName="Group1" visibleInFilterBar="true">
+                                                <fb:control>
+                                                    <MultiComboBox id="_IDGenMultiComboBox1" name="product_id" selectionChange=".onSelectionChange" items="{
+															path: '/products',
+															templateShareable: true
+														}">
+                                                        <core:Item id="_IDGenItem1" key="{product_id}" text="{product_id} - {description}" />
+                                                    </MultiComboBox>
+                                                </fb:control>
+                                            </fb:FilterGroupItem>
+                                        </fb:filterGroupItems>
+                                    </fb:FilterBar>
+                                </f:content>
+                            </f:DynamicPageHeader>
+                        </f:header>
+                        <f:content>
+                            <table:TreeTable id="tbl_products" alternateRowColors="true" enableCellFilter="true" selectionMode="Single" rowActionCount="2" rows="{/products}">
+                                <table:extension>
+                                    <OverflowToolbar id="_IDGenOverflowToolbar1" style="Clear">
+                                        <Title id="title" text="Produtos" />
+                                        <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                                        <Button id="_IDGenButton1" text="Collapse all" press="onCollapseAll"/>
+                                        <Button id="_IDGenButton2" text="Collapse selection" press="onCollapseSelection"/>
+                                        <Button id="_IDGenButton3" text="Expand first level" press="onExpandFirstLevel"/>
+                                        <Button id="_IDGenButton4" text="Expand selection" press="onExpandSelection"/>
+                                    </OverflowToolbar>
+                                </table:extension>
+                                <table:columns>
+                                    <table:Column id="cl_product_id" hAlign="Center" width="25%" sortProperty="product_id" filterProperty="product_id" defaultFilterOperator="StartsWith">
+                                        <Label id="_IDGenLabel1" text="Código"/>
+                                        <table:template>
+                                            <Text id="_IDGenText1" text="{= typeof ${armazem_id} !== 'undefined' ? ${armazem_id} : ${product_id}}" wrapping="false" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column id="cl_description" hAlign="Center" width="100%" filterProperty="description" sortProperty="description" defaultFilterOperator="StartsWith">
+                                        <Label id="_IDGenLabel2" text="Material"/>
+                                        <table:template>
+                                            <Text id="_IDGenText2" text="{description}" wrapping="false" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column id="cl_qtde" hAlign="Center" width="25%" filterProperty="qtde" sortProperty="qtde" defaultFilterOperator="StartsWith">
+                                        <Label id="_IDGenLabel4" text="Qtde"/>
+                                        <table:template>
+                                            <Text id="_IDGenText4" text="{qtde}" wrapping="false" visible="{= !!${qtde}}"/>
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column id="cl_amount" hAlign="Center" width="25%" filterProperty="amount" sortProperty="amount" defaultFilterOperator="StartsWith">
+                                        <Label id="_IDGenLabel5" text="Total"/>
+                                        <table:template>
+                                            <!-- <u:Currency id="_IDGenCurrency1" value="{amount}" currency="BRL" visible="{= !!${amount}}"/> -->
+                                            <Link press=".openDetails" id="_IDGenLink1" text="{formatter: '.formatAmount', parts: [{path: 'amount'}, {path: 'curr'}]}" href="{path: 'amount', formatter: '.formatAmountLink'}" target="_blank" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column id="cl_status" hAlign="Center" width="25%" filterProperty="active" sortProperty="active">
+                                        <Label id="_IDGenLabel3" text="Ativo"/>
+                                        <table:template>
+                                            <CheckBox id="_IDGenCheckBox1" selected="{= ${active}}" enabled="false" visible="{= typeof ${active} !== 'undefined'}"/>
+                                        </table:template>
+                                    </table:Column>
+                                </table:columns>
+                            </table:TreeTable>
+                        </f:content>
+                    </f:DynamicPage>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

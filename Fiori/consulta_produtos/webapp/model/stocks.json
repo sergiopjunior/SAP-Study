@@ -1,0 +1,11 @@
+[
+    {
+        "armazem_id": "AA",
+        "description": "Armazém A",
+        "curr": "BRL"
+    },
+    {
+        "armazem_id": "AB",
+        "description": "Armazém B"
+    }
+]

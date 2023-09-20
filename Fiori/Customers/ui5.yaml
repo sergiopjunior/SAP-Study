@@ -1,7 +1,0 @@
-specVersion: '2.6'
-metadata:
-  name: customers
-type: application
-framework:
-  name: SAPUI5
-  version: "1.108.2"
