@@ -1,28 +1,26 @@
-FUNCTION ybapi_address_create.
+FUNCTION bapi_address_create.
 *"----------------------------------------------------------------------
 *"*"Local Interface:
 *"  IMPORTING
-*"     VALUE(ADDRESS) TYPE  YADDRESS
+*"     VALUE(ADDRESS) TYPE  ADDRESS
 *"  EXPORTING
-*"     VALUE(ADDRNR) TYPE  YADDRESS-ADDRNR
+*"     VALUE(ADDRNR) TYPE  ADDRESS-ADDRNR
 *"  EXCEPTIONS
 *"      ADDRESS_NOT_FOUND
 *"      COUNTRY_MISSING
 *"      REGION_MISSING
 *"      LANG_MISSING
 *"      ADDRNR_CREATION_ERROR
-*"      INVALID_IDENTITY_DOCUMENT
 *"      ERROR_SAVING_RECORD
 *"      INVALID_ADDRESS_TYPE
 *"----------------------------------------------------------------------
+
   IF address-country IS INITIAL.
     RAISE country_missing.
   ELSEIF address-region IS INITIAL.
     RAISE region_missing.
   ELSEIF address-lang IS INITIAL.
     RAISE lang_missing.
-  ELSEIF address-cnpj IS INITIAL AND address-city IS INITIAL.
-    RAISE invalid_identity_document.
   ELSE.
     SELECT SINGLE title FROM tsad3 INTO @DATA(lv_title) WHERE title = @address-title.
     IF lv_title IS INITIAL.
@@ -34,7 +32,7 @@ FUNCTION ybapi_address_create.
     CALL FUNCTION 'NUMBER_GET_NEXT'
       EXPORTING
         nr_range_nr             = '01'
-        object                  = 'YADDRNR'
+        object                  = 'ADDRNR'
       IMPORTING
         number                  = address-addrnr
       EXCEPTIONS
@@ -50,7 +48,7 @@ FUNCTION ybapi_address_create.
       RAISE addrnr_creation_error.
     ENDIF.
 
-    INSERT yaddress FROM address.
+    INSERT address FROM address.
 
     IF sy-subrc = 0.
       COMMIT WORK.
@@ -60,13 +58,13 @@ FUNCTION ybapi_address_create.
       RAISE error_saving_record.
     ENDIF.
   ELSE.
-    SELECT SINGLE addrnr FROM yaddress INTO @DATA(lv_address) WHERE addrnr = @address-addrnr.
+    SELECT SINGLE addrnr FROM address INTO @DATA(lv_address) WHERE addrnr = @address-addrnr.
 
     IF sy-subrc <> 0.
       RAISE address_not_found.
     ENDIF.
 
-    MODIFY yaddress FROM address.
+    MODIFY address FROM address.
 
     IF sy-subrc = 0.
       COMMIT WORK.

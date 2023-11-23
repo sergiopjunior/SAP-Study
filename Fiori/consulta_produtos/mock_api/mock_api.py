@@ -4,11 +4,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app) 
 
-@app.route('/products', methods=['GET'])
-def get_products():
-    products = [
+@app.route('/materials', methods=['GET'])
+def get_materials():
+    materials = [
         {
-            "product_id": "100001",
+            "material_id": "100001",
             "description": "Produto A",
             "active": True,
             "qtde": 9,
@@ -32,7 +32,7 @@ def get_products():
             ]
         },
         {
-            "product_id": "100002",
+            "material_id": "100002",
             "description": "Produto B",
             "active": False,
             "qtde": 3,
@@ -56,7 +56,7 @@ def get_products():
             ]
         }
     ]
-    return jsonify({"products": products})
+    return jsonify({"materials": materials})
 
 if __name__ == '__main__':
     app.run(debug=True)

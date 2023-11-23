@@ -3,38 +3,39 @@ sap.ui.define([
     'sap/ui/model/Filter',
     "sap/m/library",
     'sap/ui/model/FilterOperator',
-    "sap/ui/model/json/JSONModel"
+    "sap/ui/model/json/JSONModel",
+    'consultaprodutos/services/callServices'
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, Filter, FilterOperator, library, JSONModel) {
+    function (Controller, Filter, FilterOperator, library, JSONModel, callServices) {
         "use strict";
+        var oCallServices = new callServices();
 
-        var urlObject = library.URLHelper;
-        var url = "http://localhost:5000/products"
         return Controller.extend("consultaprodutos.controller.Main", {
             onInit: function () {
                 this.oFilterBar = this.getView().byId("filterbar");
-                this.getProducts();
+
+                let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.getRoute("RouteMain").attachMatched(this._onRouteMatched, this);             
             },
 
-            getProducts: async function () {
-                //sap.ui.core.BusyIndicator.show();
-                let productModel = new JSONModel({ products: [] });
-                let parameters = {
-                    url: url,
-                    method: "GET",
-                    async: false,
-                    crossDomain: true
-                };
+            _onRouteMatched: function (oEvent) {
+                this.getMaterials();
+            },
 
-                $.ajax(parameters).done(function (response) {
-                    productModel.oData = response;       
-                    this.getView().setModel(productModel);        
-                }.bind(this)).fail(function(){
-                    //alert("Erro!");
-                });
+            getMaterials: async function () {
+                sap.ui.core.BusyIndicator.show();
+
+                let response = await oCallServices.getMaterialList(this.oModel)
+
+                if (response) {
+                    let materialsModel = new JSONModel({ materials: [] });
+                    materialsModel.oData = response
+            
+                    this.getView().setModel(materialsModel);  
+                }
 
                 //sap.ui.getCore().setModel(productModel, 'productmodel');       
                 sap.ui.core.BusyIndicator.hide();
@@ -66,26 +67,26 @@ sap.ui.define([
                     return aResult;
                 }, []);
 
-                this.getView().byId("tbl_products").getBinding("rows").filter(aTableFilters);
+                this.getView().byId("tbl_materials").getBinding("rows").filter(aTableFilters);
             },
 
             onCollapseAll: function () {
-                let oTreeTable = this.byId("tbl_products");
+                let oTreeTable = this.byId("tbl_materials");
                 oTreeTable.collapseAll();
             },
 
             onCollapseSelection: function () {
-                let oTreeTable = this.byId("tbl_products");
+                let oTreeTable = this.byId("tbl_materials");
                 oTreeTable.collapse(oTreeTable.getSelectedIndices());
             },
 
             onExpandFirstLevel: function () {
-                let oTreeTable = this.byId("tbl_products");
+                let oTreeTable = this.byId("tbl_materials");
                 oTreeTable.expandToLevel(1);
             },
 
             onExpandSelection: function () {
-                let oTreeTable = this.byId("tbl_products");
+                let oTreeTable = this.byId("tbl_materials");
                 oTreeTable.expand(oTreeTable.getSelectedIndices());
             },
 
@@ -104,7 +105,8 @@ sap.ui.define([
             },
 
             openDetails: function(){
-                alert("Test");
+                let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.navTo( "RouteMaterialHandlingList" )
             }
         });
     });

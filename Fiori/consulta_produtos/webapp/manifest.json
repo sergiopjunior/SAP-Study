@@ -93,9 +93,13 @@
           ]
         },
         {
-          "pattern": "list",
-          "name": "list",
-          "target": "list"
+          "name": "RouteMaterialHandlingList",
+          "pattern": "MaterialHandlingList",
+          "titleTarget": "",
+          "greedy": false,
+          "target": [
+            "TargetMaterialHandlingList"
+          ]
        }
       ],
       "targets": {
@@ -106,10 +110,12 @@
           "viewId": "Main",
           "viewName": "Main"
         },
-        "list": {
-          "viewId": "list",
-          "viewName": "List",
-          "viewLevel": 2
+        "TargetMaterialHandlingList": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "MaterialHandlingList",
+          "viewName": "MaterialHandlingList"
        }
       }
     },

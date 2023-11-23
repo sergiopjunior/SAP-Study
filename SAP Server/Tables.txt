@@ -1,0 +1,3 @@
+TAPLP - Applications Directory for Programs, Function Modules, DBs
+TAPLT - Program Application Long Texts
+TPGP - ABAP/4 Authorization Groups

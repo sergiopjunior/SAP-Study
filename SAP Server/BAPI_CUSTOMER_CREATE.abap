@@ -1,25 +1,25 @@
-FUNCTION ybapi_customer_create.
+FUNCTION bapi_customer_create.
 *"----------------------------------------------------------------------
 *"*"Local Interface:
 *"  IMPORTING
-*"     VALUE(CUSTOMER) TYPE  YCUSTOMER
-*"     VALUE(ADDRESS) TYPE  YADDRESS
+*"     VALUE(CUSTOMER) TYPE  CUSTOMER OPTIONAL
+*"     VALUE(ADDRESS) TYPE  ADDRESS OPTIONAL
 *"  EXPORTING
-*"     VALUE(CUST_NBR) TYPE  YCUSTOMER-CUST_NBR
+*"     VALUE(CUSTNR) TYPE  CUSTOMER-CUSTNR
 *"  EXCEPTIONS
 *"      INCONSISTENT_ADDRESS_DATA
 *"      EMPTY_NAME
-*"      CUST_NBR_CREATION_ERROR
+*"      CUSTNR_CREATION_ERROR
 *"      ERROR_SAVING_RECORD
 *"      CUSTOMER_NOT_FOUND
 *"----------------------------------------------------------------------
 
-  IF customer-first_name IS INITIAL.
+  IF customer-name IS INITIAL.
     RAISE empty_name.
   ENDIF.
 
-  IF customer-cust_nbr IS INITIAL.
-    CALL FUNCTION 'YBAPI_ADDRESS_CREATE'
+  IF customer-custnr IS INITIAL.
+    CALL FUNCTION 'BAPI_ADDRESS_CREATE'
       EXPORTING
         address                   = address
       IMPORTING
@@ -41,7 +41,7 @@ FUNCTION ybapi_customer_create.
         nr_range_nr             = '01'
         object                  = 'YCUSTNR'
       IMPORTING
-        number                  = customer-cust_nbr
+        number                  = customer-custnr
       EXCEPTIONS
         interval_not_found      = 1
         number_range_not_intern = 2
@@ -52,31 +52,31 @@ FUNCTION ybapi_customer_create.
         buffer_overflow         = 7
         OTHERS                  = 8.
     IF sy-subrc <> 0.
-      RAISE cust_nbr_creation_error.
+      RAISE custnr_creation_error.
     ENDIF.
 
-    INSERT ycustomer FROM customer.
+    INSERT customer FROM customer.
 
     IF sy-subrc = 0.
       COMMIT WORK.
-      cust_nbr = customer-cust_nbr.
+      custnr = customer-custnr.
     ELSE.
       ROLLBACK WORK.
       RAISE error_saving_record.
     ENDIF.
   ELSE.
-    SELECT SINGLE cust~cust_nbr,
+    SELECT SINGLE cust~custnr,
                     adrc~addrnr
-      FROM ycustomer AS cust
-      LEFT JOIN yaddress AS adrc ON adrc~addrnr = @customer-addrnr
+      FROM customer AS cust
+      LEFT JOIN address AS adrc ON adrc~addrnr = @customer-addrnr
       INTO @DATA(lw_customer)
-      WHERE cust~cust_nbr = @customer-cust_nbr.
+      WHERE cust~custnr = @customer-custnr.
 
     IF sy-subrc <> 0.
       RAISE customer_not_found.
     ENDIF.
 
-    CALL FUNCTION 'YBAPI_ADDRESS_CREATE'
+    CALL FUNCTION 'BAPI_ADDRESS_CREATE'
       EXPORTING
         address                   = address
       IMPORTING
@@ -93,11 +93,11 @@ FUNCTION ybapi_customer_create.
       RAISE inconsistent_address_data.
     ENDIF.
 
-    MODIFY ycustomer FROM customer.
+    MODIFY customer FROM customer.
 
     IF sy-subrc = 0.
       COMMIT WORK.
-      cust_nbr = customer-cust_nbr.
+      custnr = customer-custnr.
     ELSE.
       ROLLBACK WORK.
       RAISE error_saving_record.

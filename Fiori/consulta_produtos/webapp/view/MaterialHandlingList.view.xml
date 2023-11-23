@@ -1,14 +1,16 @@
 <mvc:View
-	controllerName="consultaprodutos.controller.List"
+	controllerName="consultaprodutos.controller.MaterialHandlingList"
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
-	<List id="productList" binding="{/ProductCollection}">
+	<List id="MaterialHandlingList" binding="{/MaterialHandlingList}">
 		<headerToolbar>
 			<OverflowToolbar>
-				<Title text="Products" level="H2" />
+				<Title text="Movimentação de Materiais" level="H2" />
+				<!--
 				<ToolbarSpacer />
 				<Text id="product_count" text="Total: {/ProductCollectionStats/Counts/Total}"/>
+				-->
 				<Button
 					icon="sap-icon://settings"
 					press="handleButtonPress" />
@@ -20,20 +22,6 @@
 			icon="{0/ProductPicUrl}"
 			iconDensityAware="false"
 			iconInset="false"
-			type="Navigation" />
-		<StandardListItem
-			title="{1/Name}"
-			description="{1/ProductId}"
-			icon="{1/ProductPicUrl}"
-			iconDensityAware="false"
-			iconInset="false"
-			type="Navigation" />
-		<StandardListItem
-			title="{2/Name}"
-			description="{2/ProductId}"
-			icon="{2/ProductPicUrl}"
-			iconDensityAware="false"
-			iconInset="false" 
 			type="Navigation" />
 	</List>
 </mvc:View>
