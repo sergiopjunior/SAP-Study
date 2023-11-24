@@ -1,0 +1,39 @@
+<mvc:View
+	controllerName="consultaprodutos.controller.List"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<List id="productList" binding="{/ProductCollection}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="Products" level="H2" />
+				<ToolbarSpacer />
+				<Text id="product_count" text="Total: {/ProductCollectionStats/Counts/Total}"/>
+				<Button
+					icon="sap-icon://settings"
+					press="handleButtonPress" />
+			</OverflowToolbar>
+		</headerToolbar>
+		<StandardListItem
+			title="{0/Name}"
+			description="{0/ProductId}"
+			icon="{0/ProductPicUrl}"
+			iconDensityAware="false"
+			iconInset="false"
+			type="Navigation" />
+		<StandardListItem
+			title="{1/Name}"
+			description="{1/ProductId}"
+			icon="{1/ProductPicUrl}"
+			iconDensityAware="false"
+			iconInset="false"
+			type="Navigation" />
+		<StandardListItem
+			title="{2/Name}"
+			description="{2/ProductId}"
+			icon="{2/ProductPicUrl}"
+			iconDensityAware="false"
+			iconInset="false" 
+			type="Navigation" />
+	</List>
+</mvc:View>

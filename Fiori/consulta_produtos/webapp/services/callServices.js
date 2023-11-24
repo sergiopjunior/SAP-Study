@@ -7,13 +7,14 @@ sap.ui.define([
 	JSONModel
 ) {
 	"use strict";
+
 	return BaseObject.extend("consultaprodutos.services.sapGWService", {
 		/**
 		* 
 		* @returns 
 		*/
 
-        getMaterialList: function (oModel) {
+        getMaterialList: function (oModel) { 
             return new Promise(async (resolve) => {
                 let parameters = {
                     url: "http://localhost:5000/materials",
@@ -25,7 +26,6 @@ sap.ui.define([
                 $.ajax(parameters).done(function (response) {
                     resolve(response)      
                 }.bind(this)).fail(function(){
-                    MessageBox("Erro ao recuperar lista de materiais.")
                     resolve(null) 
                 })
             })

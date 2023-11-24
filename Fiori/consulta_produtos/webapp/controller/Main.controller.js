@@ -4,12 +4,13 @@ sap.ui.define([
     "sap/m/library",
     'sap/ui/model/FilterOperator',
     "sap/ui/model/json/JSONModel",
-    'consultaprodutos/services/callServices'
+    'consultaprodutos/services/callServices',
+    "sap/m/MessageBox"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, Filter, FilterOperator, library, JSONModel, callServices) {
+    function (Controller, Filter, FilterOperator, MessageBox, JSONModel, callServices) {
         "use strict";
         var oCallServices = new callServices();
 
@@ -29,16 +30,24 @@ sap.ui.define([
                 sap.ui.core.BusyIndicator.show();
 
                 let response = await oCallServices.getMaterialList(this.oModel)
-
                 if (response) {
-                    let materialsModel = new JSONModel({ materials: [] });
+                    let materialsModel = new JSONModel(
+                        {
+                            d: { 
+                                results: [] 
+                            }
+                        }
+                    );
                     materialsModel.oData = response
-            
+
+                    // sap.ui.getCore().setModel(materialsModel, 'materialsmodel'); 
                     this.getView().setModel(materialsModel);  
                 }
-
-                //sap.ui.getCore().setModel(productModel, 'productmodel');       
-                sap.ui.core.BusyIndicator.hide();
+                // else {
+                //     MessageBox.error("Erro ao recuperar lista de materiais.")
+                // }
+                
+               sap.ui.core.BusyIndicator.hide();
             },
 
             onSelectionChange: function (oEvent) {
