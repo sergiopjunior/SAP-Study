@@ -16,12 +16,12 @@ def get_materials():
     payload = {}
     headers = {
         'Authorization': 'Basic U01FTEdFUzpJbmZpbml0QDAx',
-        'Cookie': 'SAP_SESSIONID_NPL_100=4siIbRM0o5LaF90ekUKcONS1NAWK6hHultYvCOgqwEs%3d; sap-usercontext=sap-client=100'
+        "Content-Type": "application/json",
     }
 
     response = requests.request("GET", host + resource + query, headers=headers, data=payload)
 
-    return response.json()
+    return response.content, response.status_code
 
 
 if __name__ == '__main__':

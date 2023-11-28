@@ -15,12 +15,18 @@ sap.ui.define([
 		*/
 
         getMaterialList: function (oModel) { 
+            let resource = "/sap/opu/odata/sap/ZCDS_SP_MATERIAL_CDS/ZCDS_SP_MATERIAL"
+            let query = "?$select=matnr,matty,mbrsh,price,maktx&$format=json"
+
             return new Promise(async (resolve) => {
                 let parameters = {
-                    url: "http://localhost:5000/materials",
+                    url: oModel.sServiceUrl + resource + query,
                     method: "GET",
-                    async: false,
-                    crossDomain: true
+                    async: true,
+                    crossDomain: true,
+                    headers: {
+                        'Authorization': 'Basic U01FTEdFUzpJbmZpbml0QDAx',
+                    }
                 };
 
                 $.ajax(parameters).done(function (response) {

@@ -16,18 +16,19 @@ sap.ui.define([
 
         return Controller.extend("consultaprodutos.controller.Main", {
             onInit: function () {
-                this.oFilterBar = this.getView().byId("filterbar");
+                this.oModel = this.getOwnerComponent().getModel("mainService")
+                this.oFilterBar = this.getView().byId("filterbar")
 
-                let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.getRoute("RouteMain").attachMatched(this._onRouteMatched, this);             
+                let oRouter = sap.ui.core.UIComponent.getRouterFor(this)
+                oRouter.getRoute("RouteMain").attachMatched(this._onRouteMatched, this);            
             },
 
             _onRouteMatched: function (oEvent) {
-                this.getMaterials();
+                this.getMaterials()
             },
 
             getMaterials: async function () {
-                sap.ui.core.BusyIndicator.show();
+                sap.ui.core.BusyIndicator.show()
 
                 let response = await oCallServices.getMaterialList(this.oModel)
                 if (response) {

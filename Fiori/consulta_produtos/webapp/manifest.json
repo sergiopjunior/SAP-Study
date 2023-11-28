@@ -14,7 +14,17 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.11.0",
       "toolsId": "2171589e-5022-47a4-8afe-4f86ddc6edec"
-    }
+    },
+    "dataSources": {
+			"mainService": {
+				"uri": "http://infinitfytraining.ddns.net:5001",
+				"type": "OData",
+				"settings": {
+          "annotations": [],
+					"odataVersion": "2.0"
+				}
+			}
+		}
   },
   "sap.ui": {
     "technology": "UI5",
@@ -58,14 +68,10 @@
           "bundleName": "consultaprodutos.i18n.i18n"
         }
       },
-     "products2": {
-      "type": "sap.ui.model.json.JSONModel",
-      "uri": "model/products.json"
-     },
-     "stocks": {
-      "type": "sap.ui.model.json.JSONModel",
-      "uri": "model/stocks.json"
-     }
+      "mainService": {
+        "dataSource": "mainService",
+        "preload": true
+      }
     },
     "resources": {
       "css": [
