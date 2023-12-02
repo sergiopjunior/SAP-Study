@@ -39,7 +39,38 @@ sap.ui.define([
                             }
                         }
                     );
-                    materialsModel.oData = response
+                    var transformedJson = {
+                        "d": {
+                            "total": response.d.results.length,
+                            "results": response.d.results.map(item => {
+                                var totalQuantity = item.to_stock.results.reduce((total, stockItem) => total + stockItem.quantity, 0);
+
+                                return {
+                                    "active": item.active,
+                                    "brandnr": item.brandnr,
+                                    "maktx": item.maktx,
+                                    "matkl": item.matkl,
+                                    "matnr": item.matnr,
+                                    "matty": item.matty,
+                                    "mbrsh": item.mbrsh,
+                                    "quantity": totalQuantity,
+                                    "price": parseFloat(item.price * totalQuantity),
+                                    "to_stock": item.to_stock.results.map(stockItem => {
+                                        return {
+                                            "whnr": stockItem.whnr,
+                                            "matnr": stockItem.matnr,
+                                            "last_inmove": stockItem.last_inmove,
+                                            "last_outmove": stockItem.last_outmove,
+                                            "quantity": stockItem.quantity,                                            
+                                            "warehouse": stockItem.warehouse,
+                                            "price": parseFloat(item.price * stockItem.quantity),
+                                        };
+                                    })
+                                };
+                            })
+                        }
+                    };
+                    materialsModel.oData = transformedJson
 
                     // sap.ui.getCore().setModel(materialsModel, 'materialsmodel'); 
                     this.getView().setModel(materialsModel);  
@@ -109,14 +140,17 @@ sap.ui.define([
                 return `${amount} ${currencySymbols[currencyCode] || currencyCode}`;
             },
 
-            formatAmountLink: function (amount) {
-                let url = "#";
+            formatDeatilstLink: function (matnr) {
+                let url = `#/MaterialHandlingPage/${matnr}/warehouse`
                 return url;
             },
 
-            openDetails: function(){
-                let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.navTo( "RouteMaterialHandlingList" )
+            openDetails: function(oEvent){
+                let material = oEvent.getSource().data("matnr") || "0"
+                let warehouse = oEvent.getSource().data("whnr") || "0"
+
+                let oRouter = this.getOwnerComponent().getRouter()
+                oRouter.navTo("RouteMaterialHandlingPage", {material: material, warehouse: warehouse})
             }
         });
     });

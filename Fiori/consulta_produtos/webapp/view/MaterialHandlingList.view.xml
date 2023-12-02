@@ -1,27 +1,114 @@
 <mvc:View
 	controllerName="consultaprodutos.controller.MaterialHandlingList"
+	xmlns="sap.m"
+	xmlns:table="sap.ui.table"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" height="100%"
 	xmlns:l="sap.ui.layout"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
-	<List id="MaterialHandlingList" binding="{/MaterialHandlingList}">
-		<headerToolbar>
-			<OverflowToolbar>
-				<Title text="Movimentação de Materiais" level="H2" />
-				<!--
-				<ToolbarSpacer />
-				<Text id="product_count" text="Total: {/ProductCollectionStats/Counts/Total}"/>
-				-->
-				<Button
-					icon="sap-icon://settings"
-					press="handleButtonPress" />
-			</OverflowToolbar>
-		</headerToolbar>
-		<StandardListItem
-			title="{0/Name}"
-			description="{0/ProductId}"
-			icon="{0/ProductPicUrl}"
-			iconDensityAware="false"
-			iconInset="false"
-			type="Navigation" />
-	</List>
+	xmlns:u="sap.ui.unified"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:f="sap.f">
+	<App>
+		<pages>
+			<Page id="main" class="sapUiSizeCompact">
+				<customHeader>
+					<f:ShellBar
+						title="{i18n>appTitle}"
+						secondTitle="Movimentação de Material"
+						homeIcon="../image/Logo.png"
+						showNavButton="true"
+						navButtonPressed="handleNavigationBack"
+					/>
+				</customHeader>
+				<content>
+					<f:DynamicPage id="dynamicPage" fitContent="true">
+						<f:header>
+                            <f:DynamicPageHeader id="_IDGenDynamicPageHeader1">
+                                <f:content>
+                                </f:content>
+                            </f:DynamicPageHeader>
+                        </f:header>
+						<f:content>
+							<table:Table id="materialHandlingTable"
+								         alternateRowColors="true"
+								         enableCellFilter="true"
+								         selectionMode="None"
+								         rowActionCount="1"
+										 visibleRowCount="{/d/total}"
+								         rows="{/d/results/to_handling}">
+								<table:extension>
+									<OverflowToolbar style="Clear">
+										<Title id="title" text="Movimentos ({/d/total}) - Material {/d/results/matnr} - {/d/results/maktx}"/>
+										<ToolbarSpacer/>
+									</OverflowToolbar>
+								</table:extension>
+								<table:columns>
+									<table:Column id="movnr" hAlign="Center" width="20%" sortProperty="movnr" 
+											      filterProperty="movnr" defaultFilterOperator="StartsWith">
+										<Label text="Nª Movimento"/>
+										<table:template>
+											<Text text="{movnr}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="whnr" hAlign="Center" width="15%" sortProperty="whnr" 
+											      filterProperty="whnr" defaultFilterOperator="StartsWith">
+										<Label text="Cod. Armazém"/>
+										<table:template>
+											<Text text="{whnr}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="docnr" hAlign="Center" width="15%" sortProperty="docnr" 
+											      filterProperty="docnr" defaultFilterOperator="StartsWith">
+										<Label text="Nª Documento"/>
+										<table:template>
+											<Text text="{docnr}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="erdat" hAlign="Center" width="10%" sortProperty="erdat" 
+											      filterProperty="erdat" defaultFilterOperator="StartsWith">
+										<Label text="Data do Movimento"/>
+										<table:template>
+											<Text text="{erdat}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="movtyp" hAlign="Center" width="15%" sortProperty="movtyp" 
+											      filterProperty="movtyp" defaultFilterOperator="StartsWith">
+										<Label text="Tipo de Movimento"/>
+										<table:template>
+											<Text text="{= ${movtyp} === 'I' ? 'Entrada' : 'Saída'}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="quantity" hAlign="Center" width="5%" sortProperty="quantity" 
+											      filterProperty="quantity" defaultFilterOperator="StartsWith">
+										<Label text="Qtde"/>
+										<table:template>
+											<Text text="{quantity}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="price" hAlign="Center" width="15%" sortProperty="price" 
+											      filterProperty="price" defaultFilterOperator="StartsWith">
+										<Label text="Valor"/>
+										<table:template>
+											<u:Currency id="_IDGenCurrency1" value="{price}" currency="BRL" visible="{= !!${price}}"/>
+										</table:template>
+									</table:Column>
+								</table:columns>
+								<table:rowActionTemplate>
+									<table:RowAction>
+										<table:items>
+											<table:RowActionItem type="Navigation"
+												                 icon="sap-icon://feeder-arrow"
+												                 press="onEditPress"/>
+										</table:items>
+									</table:RowAction>
+								</table:rowActionTemplate>
+							</table:Table>
+						</f:content>
+					</f:DynamicPage>
+				</content>
+				<footer>
+				</footer>
+			</Page>
+		</pages>
+	</App>
 </mvc:View>

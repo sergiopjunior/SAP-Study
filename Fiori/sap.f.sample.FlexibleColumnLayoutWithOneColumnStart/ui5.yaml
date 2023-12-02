@@ -1,8 +1,0 @@
-specVersion: '3.0'
-metadata:
-  name: "sap-f-sample--flexible-column-layout-with-one-column-start"
-type: application
-resources:
-  configuration:
-    paths:
-      webapp: .

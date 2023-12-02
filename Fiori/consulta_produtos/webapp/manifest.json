@@ -54,7 +54,8 @@
         "sap.ui.comp": {},
         "sap.ui.generic.app": {},
         "sap.ui.table": {},
-        "sap.ushell": {}
+        "sap.ushell": {},
+        "sap.ui.webc.main": {}
       }
     },
     "contentDensities": {
@@ -99,6 +100,15 @@
           ]
         },
         {
+          "name": "RouteMaterialHandlingPage",
+          "pattern": "MaterialHandlingPage/{material}/{warehouse}",
+          "titleTarget": "",
+          "greedy": false,
+          "target": [
+            "TargetMaterialHandlingPage"
+          ]
+        },
+        {
           "name": "RouteMaterialHandlingList",
           "pattern": "MaterialHandlingList",
           "titleTarget": "",
@@ -116,6 +126,13 @@
           "viewId": "Main",
           "viewName": "Main"
         },
+        "TargetMaterialHandlingPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "MaterialHandlingPage",
+          "viewName": "MaterialHandlingPage"
+       },
         "TargetMaterialHandlingList": {
           "viewType": "XML",
           "transition": "slide",

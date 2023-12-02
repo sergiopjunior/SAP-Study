@@ -5,10 +5,17 @@
     xmlns:u="sap.ui.unified"
     xmlns:core="sap.ui.core"
     xmlns:f="sap.f"
-    xmlns:fb="sap.ui.comp.filterbar">
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
     <App id="consultaProdutos">
         <pages>
             <Page id="page" title="{i18n>title}">
+                <customHeader>
+					<f:ShellBar
+						title="{i18n>appTitle}"
+						homeIcon="../image/Logo.png"
+					/>
+				</customHeader>
                 <content>
                     <f:DynamicPage id="dynamicPage" fitContent="true">
                         <f:header>
@@ -32,10 +39,16 @@
                             </f:DynamicPageHeader>
                         </f:header>
                         <f:content>
-                            <table:TreeTable id="tbl_materials" alternateRowColors="true" enableCellFilter="true" selectionMode="Single" rowActionCount="2" rows="{/d/results}">
+                            <table:TreeTable id="tbl_materials" 
+                                             alternateRowColors="true" 
+                                             enableCellFilter="true" 
+                                             selectionMode="Single" 
+                                             rowActionCount="2" 
+                                             visibleRowCount="20"
+                                             rows="{/d/results}">
                                 <table:extension>
                                     <OverflowToolbar id="_IDGenOverflowToolbar1" style="Clear">
-                                        <Title id="title" text="Materiais" />
+                                        <Title id="title" text="Materiais ({/d/total})" />
                                         <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
                                         <Button id="_IDGenButton1" text="Collapse all" press="onCollapseAll"/>
                                         <Button id="_IDGenButton2" text="Collapse selection" press="onCollapseSelection"/>
@@ -44,35 +57,35 @@
                                     </OverflowToolbar>
                                 </table:extension>
                                 <table:columns>
-                                    <table:Column id="cl_matnr" hAlign="Center" width="25%" sortProperty="matnr" filterProperty="matnr" defaultFilterOperator="StartsWith">
+                                    <table:Column id="cl_matnr" hAlign="Center" width="15%" sortProperty="matnr" filterProperty="matnr" defaultFilterOperator="StartsWith">
                                         <Label id="_IDGenLabel1" text="Código"/>
                                         <table:template>
-                                            <Text id="_IDGenText1" text="{= typeof ${armazem_id} !== 'undefined' ? ${armazem_id} : ${matnr}}" wrapping="false" />
+                                            <Text id="_IDGenText1" text="{= typeof ${whnr} !== 'undefined' ? ${whnr} : ${matnr}}" wrapping="false" />
                                         </table:template>
                                     </table:Column>
-                                    <table:Column id="cl_maktx" hAlign="Center" width="100%" filterProperty="maktx" sortProperty="maktx" defaultFilterOperator="StartsWith">
+                                    <table:Column id="cl_maktx" hAlign="Left" width="70%" filterProperty="maktx" sortProperty="maktx" defaultFilterOperator="StartsWith">
                                         <Label id="_IDGenLabel2" text="Material"/>
                                         <table:template>
-                                            <Text id="_IDGenText2" text="{maktx}" wrapping="false" />
+                                            <Text id="_IDGenText2" text="{= typeof ${maktx} !== 'undefined' ? ${maktx} : ${warehouse} }" wrapping="false" />
                                         </table:template>
                                     </table:Column>
-                                    <table:Column id="cl_qtde" hAlign="Center" width="25%" filterProperty="qtde" sortProperty="qtde" defaultFilterOperator="StartsWith">
+                                    <table:Column id="cl_qtde" hAlign="Center" width="5%" filterProperty="quantity" sortProperty="quantity" defaultFilterOperator="StartsWith">
                                         <Label id="_IDGenLabel4" text="Qtde"/>
                                         <table:template>
-                                            <Text id="_IDGenText4" text="{qtde}" wrapping="false" visible="{= !!${qtde}}"/>
+                                            <Link press=".openDetails" app:matnr="{matnr}" app:whnr="{whnr}" id="_IDGenLink1" text="{quantity}" visible="{= !!${quantity}}" />
                                         </table:template>
                                     </table:Column>
-                                    <table:Column id="cl_price" hAlign="Center" width="25%" filterProperty="price" sortProperty="price" defaultFilterOperator="StartsWith">
+                                    <table:Column id="cl_price" hAlign="Center" width="15%" filterProperty="price" sortProperty="price" defaultFilterOperator="StartsWith">
                                         <Label id="_IDGenLabel5" text="Total"/>
                                         <table:template>
-                                            <!-- <u:Currency id="_IDGenCurrency1" value="{price}" currency="BRL" visible="{= !!${price}}"/> -->
-                                            <Link press=".openDetails" id="_IDGenLink1" text="{formatter: '.formatprice', parts: [{path: 'price'}, {path: 'curr'}]}" href="{path: 'dummy', formatter: '.formatpriceLink'}" target="_blank" />
+                                            <u:Currency id="_IDGenCurrency1" value="{price}" currency="BRL" visible="{= !!${price}}"/>
+                                            <!--<Link press=".openDetails" id="_IDGenLink1" text="{formatter: '.formatAmount', parts: [{path: 'price'}, 'BRL']}" href="{path: 'dummy', formatter: '.formatpriceLink'}" target="_blank" />-->
                                         </table:template>
                                     </table:Column>
                                     <table:Column id="cl_status" hAlign="Center" width="25%" filterProperty="active" sortProperty="active">
                                         <Label id="_IDGenLabel3" text="Ativo"/>
                                         <table:template>
-                                            <CheckBox id="_IDGenCheckBox1" selected="{= ${active}}" enabled="false" visible="{= typeof ${active} !== 'undefined'}"/>
+                                            <CheckBox id="_IDGenCheckBox1" selected="{= ${active} === 'X' ? true : false}" enabled="false" visible="{= typeof ${active} !== 'undefined'}"/>
                                         </table:template>
                                     </table:Column>
                                 </table:columns>

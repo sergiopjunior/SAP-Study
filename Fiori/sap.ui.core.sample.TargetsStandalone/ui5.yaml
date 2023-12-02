@@ -1,8 +1,0 @@
-specVersion: '3.0'
-metadata:
-  name: "sap-ui-core-sample--targets-standalone"
-type: application
-resources:
-  configuration:
-    paths:
-      webapp: .
