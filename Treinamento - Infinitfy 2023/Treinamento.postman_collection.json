@@ -1,0 +1,585 @@
+{
+	"info": {
+		"_postman_id": "68150e16-ee6b-4a7c-8b20-670be2da8340",
+		"name": "Treinamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19301859"
+	},
+	"item": [
+		{
+			"name": "CPI",
+			"item": [
+				{
+					"name": "Materiais",
+					"item": [
+						{
+							"name": "GetMateriais",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{cpi_url}}/sp_odata_material_test"
+							},
+							"response": []
+						},
+						{
+							"name": "DummyJson",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "valor",
+										"value": "10",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"produto\": 1,\r\n        \"qtde\": 2\r\n    }  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{cpi_url}}/sm_get_products"
+							},
+							"response": [
+								{
+									"name": "DummyJson",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "valor",
+												"value": "10",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\": {\r\n        \"produto\": 1,\r\n        \"qtde\": 2\r\n    }  \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{mock_server_url}}/sm_get_products"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "cache-control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json"
+										},
+										{
+											"key": "date",
+											"value": "Tue, 05 Dec 2023 23:39:05 GMT"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "sap_messageprocessinglogid",
+											"value": "AGVvtJnrHA9gfC79vxBR8YhJ68jE"
+										},
+										{
+											"key": "sap_mplcorrelationid",
+											"value": "AGVvtJlU4wQOrMOX9Lhg7Lbe0xCP"
+										},
+										{
+											"key": "sap_pregeneratedmplid",
+											"value": "AGVvtJlU_StqMgiuz7OEjX2Vgs5U"
+										},
+										{
+											"key": "server",
+											"value": "SAP"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-correlationid",
+											"value": "7744ac57-b86b-4c59-6e4f-3fde852f1756"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-vcap-request-id",
+											"value": "7744ac57-b86b-4c59-6e4f-3fde852f1756"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000; includeSubDomains; preload;"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"results\": [\n        {\n            \"produto_id\": \"1\",\n            \"quantidade\": 2,\n            \"valor\": \"/sm_get_products\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Aeroportos",
+					"item": [
+						{
+							"name": "GetVoosInfo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<Voo>\r\n    <connid>>17</connid>\r\n</Voo>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": "{{cpi_url}}/sm_get_voos_info"
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"password": "{{client_secret}}",
+					"username": "{{client_id}}"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "dummyjson",
+			"item": [
+				{
+					"name": "GetProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{dummy_url}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{dummy_url}}/products/1"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Mockaroo",
+			"item": [
+				{
+					"name": "GetMaterials",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{mockaroo_url}}/materials.json"
+					},
+					"response": []
+				},
+				{
+					"name": "GetMaterials Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{mockaroo_url}}/material.json?matnr=1",
+							"host": [
+								"{{mockaroo_url}}"
+							],
+							"path": [
+								"material.json"
+							],
+							"query": [
+								{
+									"key": "matnr",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"in": "query",
+					"value": "{{mockaroo_key}}",
+					"key": "key"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "MockServer",
+			"item": [
+				{
+					"name": "DummyJson",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"produto\": 1,\r\n        \"qtde\": 2\r\n    }  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{mock_server_url}}/sm_get_products"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backend",
+			"item": [
+				{
+					"name": "ZCDS_SP_MAT_CDS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{erp_url}}/sap/opu/odata/sap/ZCDS_SP_MAT_CDS/ZCDS_SP_MAT?$format=json&$filter=matnr ge '10' and matnr le '20'&$orderby=matnr desc",
+							"host": [
+								"{{erp_url}}"
+							],
+							"path": [
+								"sap",
+								"opu",
+								"odata",
+								"sap",
+								"ZCDS_SP_MAT_CDS",
+								"ZCDS_SP_MAT"
+							],
+							"query": [
+								{
+									"key": "$format",
+									"value": "json"
+								},
+								{
+									"key": "$filter",
+									"value": "matnr ge '10' and matnr le '20'"
+								},
+								{
+									"key": "$orderby",
+									"value": "matnr desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ZCDS_SP_MATERIAL_CDS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{erp_url}}/sap/opu/odata/sap/ZCDS_SP_MATERIAL_CDS/ZCDS_SP_MATERIAL?$format=json",
+							"host": [
+								"{{erp_url}}"
+							],
+							"path": [
+								"sap",
+								"opu",
+								"odata",
+								"sap",
+								"ZCDS_SP_MATERIAL_CDS",
+								"ZCDS_SP_MATERIAL"
+							],
+							"query": [
+								{
+									"key": "$format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ZCDS_VOOS_INFO_CDS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{erp_url}}/sap/opu/odata/sap/ZCDS_VOOS_INFO_CDS/ZCDS_VOOS_INFO?$format=json",
+							"host": [
+								"{{erp_url}}"
+							],
+							"path": [
+								"sap",
+								"opu",
+								"odata",
+								"sap",
+								"ZCDS_VOOS_INFO_CDS",
+								"ZCDS_VOOS_INFO"
+							],
+							"query": [
+								{
+									"key": "$format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"password": "{{erp_pass}}",
+					"username": "{{erp_user}}"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "sb-b84d87f0-a0d0-4e82-bae2-ab0abfdc1289!b217097|it-rt-infinitfy-dev-9ay5fm1g!b26655",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "aebab5ed-6a4a-46b8-b85c-e442cb3dc650$reaKFtnsQuymGkGeVVu-0EkUi_wU8FSUva5T05ck-pI=",
+			"type": "string"
+		},
+		{
+			"key": "cpi_url",
+			"value": "https://infinitfy-dev-9ay5fm1g.it-cpitrial05-rt.cfapps.us10-001.hana.ondemand.com/http",
+			"type": "string"
+		},
+		{
+			"key": "dummy_url",
+			"value": "https://dummyjson.com",
+			"type": "string"
+		},
+		{
+			"key": "mockaroo_url",
+			"value": "https://my.api.mockaroo.com",
+			"type": "string"
+		},
+		{
+			"key": "mockaroo_key",
+			"value": "f3e611e0",
+			"type": "string"
+		},
+		{
+			"key": "mock_server_url",
+			"value": "https://a05e4350-d701-4b9b-89fc-9f19170e48ae.mock.pstmn.io",
+			"type": "string"
+		},
+		{
+			"key": "erp_url",
+			"value": "infinitfytraining.ddns.net:8000",
+			"type": "string"
+		},
+		{
+			"key": "erp_user",
+			"value": "INFINIT",
+			"type": "string"
+		},
+		{
+			"key": "erp_pass",
+			"value": "123456",
+			"type": "string"
+		}
+	]
+}
