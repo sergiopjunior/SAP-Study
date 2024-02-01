@@ -108,7 +108,7 @@ sap.ui.define([
                     return aResult;
                 }, []);
 
-                this.getView().byId("tbl_materials").getBinding("rows").filter(aTableFilters);
+                this.getView().byId("tbl_materials").getBinding("rows").filters(aTableFilters);
             },
 
             onCollapseAll: function () {
