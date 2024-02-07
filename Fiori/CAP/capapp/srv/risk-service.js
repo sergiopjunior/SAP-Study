@@ -1,4 +1,3 @@
-
 const cds = require('@sap/cds')
 const prio_descr = ["low", "medium", "high"];
 
