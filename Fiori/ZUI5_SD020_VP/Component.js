@@ -1,0 +1,1 @@
+sap.ui.define(["sap/suite/ui/generic/template/lib/AppComponent"],function(e){return e.extend("atem.sd020.zui5_sd020_vp.Component",{metadata:{manifest:"json"}})});

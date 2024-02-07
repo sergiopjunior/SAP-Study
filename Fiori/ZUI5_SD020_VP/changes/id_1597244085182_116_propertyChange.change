@@ -1,0 +1,43 @@
+{
+	"fileName": "id_1597244085182_116_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "atem.sd020.zui5_sd020_vp.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "text",
+		"newValue": "Cliente"
+	},
+	"selector": {
+		"id": "atem.sd020.zui5_sd020_vp::sap.suite.ui.generic.template.ListReport.view.ListReport::ZCDS_SD020_VD_PARAM--listReport-parid-header",
+		"type": "sap.m.Label",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/atem.sd020.zui5_sd020_vp/changes/",
+	"projectId": "atem.sd020.zui5_sd020_vp",
+	"creation": "2020-08-12T15:02:34.793Z",
+	"originalLanguage": "PT",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.71.19",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

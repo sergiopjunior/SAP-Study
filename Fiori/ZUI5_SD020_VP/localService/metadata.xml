@@ -1,0 +1,480 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://gateway.hec.atem.com.br:80/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://gateway.hec.atem.com.br:80/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://gateway.hec.atem.com.br:80/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://gateway.hec.atem.com.br:80/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://gateway.hec.atem.com.br:80/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZCDS_SD020_VD_PARAM_CDS" xml:lang="pt" sap:schema-version="1">
+			<EntityType Name="IBRCFOPCATTType" sap:content-version="1">
+				<Key><PropertyRef Name="LANGUAGE"/><PropertyRef Name="BR_CFOPCATEGORY"/></Key><Property Name="LANGUAGE" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Código de idioma"/><Property Name="BR_CFOPCATEGORY" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase"
+					sap:label="Categoria CFOP do material"/><Property Name="BR_CFOPCATEGORYDESC" Type="Edm.String" MaxLength="60" sap:label="Categoria CFOP"/></EntityType>
+			<EntityType Name="I_AddressType" sap:label="Endereço" sap:content-version="1">
+				<Key><PropertyRef Name="AddressID"/></Key><Property Name="AddressID" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Nº endereço"/><Property Name="CareOfName" Type="Edm.String" MaxLength="40" sap:label="C/o" sap:quickinfo="Nome c/o"/><Property Name="AdditionalStreetSuffixName" Type="Edm.String" MaxLength="40" sap:label="Rua 5"/><Property Name="CorrespondenceLanguage" Type="Edm.String" MaxLength="2" sap:label="Código de idioma"/><Property Name="PrfrdCommMediumType" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Meio de comunicação"
+					sap:quickinfo="Meio comunicação (chave) (administração endereços central)"/><Property Name="POBox" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Caixa postal"/><Property Name="POBoxIsWithoutNumber" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Caixa postal sem nº"
+					sap:quickinfo="Código: indicação de caixa postal sem nº"/><Property Name="POBoxPostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="CEP CxPostal"
+					sap:quickinfo="Código postal da cx.postal"/><Property Name="POBoxLobbyName" Type="Edm.String" MaxLength="40" sap:label="Agência caixa postal"
+					sap:quickinfo="Agência da caixa postal (PO Box Lobby)"/><Property Name="POBoxDeviatingCityName" Type="Edm.String" MaxLength="40" sap:label="Localidade cx.postal"
+					sap:quickinfo="Localidade da caixa postal"/><Property Name="POBoxDeviatingRegion" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Região para CP"
+					sap:quickinfo="Região para a caixa postal (país, estado, província, ...)"/><Property Name="POBoxDeviatingCountry" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="País da caixa postal"/><Property Name="DeliveryServiceTypeCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Tp.serv.entrega"
+					sap:quickinfo="Tipo do serviço de entrega"/><Property Name="DeliveryServiceNumber" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Nº serviço entrega"
+					sap:quickinfo="Nº do serviço de entrega"/><Property Name="AddressTimeZone" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Fuso horário"
+					sap:quickinfo="Fuso horário do endereço"/><Property Name="FullName" Type="Edm.String" MaxLength="80" sap:label="Nome completo"
+					sap:quickinfo="Nome completo parte (PN, unid.organizacional, endereço doc.)"/><Property Name="CityName" Type="Edm.String" MaxLength="40" sap:label="Cidade"/><Property Name="District" Type="Edm.String" MaxLength="40" sap:label="Bairro"/><Property Name="CityCode" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Nº da localidade"
+					sap:quickinfo="Codificação da localidade para file de localidades e ruas"/><Property Name="HomeCityName" Type="Edm.String" MaxLength="40" sap:label="Local.resid.difer."
+					sap:quickinfo="Localidade de residência (diferente da localidade postal)"/><Property Name="PostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Código postal"
+					sap:quickinfo="Código postal da localidade"/><Property Name="CompanyPostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Cód.postal empresa"
+					sap:quickinfo="Código postal da empresa (para clientes importantes)"/><Property Name="StreetName" Type="Edm.String" MaxLength="60" sap:label="Rua"/><Property Name="StreetPrefixName" Type="Edm.String" MaxLength="40" sap:label="Rua 2"/><Property Name="AdditionalStreetPrefixName" Type="Edm.String" MaxLength="40" sap:label="Rua 3"/><Property Name="StreetSuffixName" Type="Edm.String" MaxLength="40" sap:label="Rua 4"/><Property Name="HouseNumber" Type="Edm.String" MaxLength="10" sap:label="Nº"/><Property Name="HouseNumberSupplementText" Type="Edm.String" MaxLength="10" sap:label="Suplemento" sap:quickinfo="Complemento do nº"/><Property Name="Building" Type="Edm.String" MaxLength="20" sap:label="Sigla edifício" sap:quickinfo="Edifício (nº ou sigla)"/><Property Name="Floor" Type="Edm.String" MaxLength="10" sap:label="Andar" sap:quickinfo="Andar do edifício"/><Property Name="RoomNumber" Type="Edm.String" MaxLength="10" sap:label="Nº sala" sap:quickinfo="Nº morada, apartamento ou sala"/><Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Chave do país"/><Property Name="Region" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Região"
+					sap:quickinfo="Região (estado federal, estado federado, província, condado)"/><Property Name="County" Type="Edm.String" MaxLength="40" sap:label="Distrito"/><Property Name="CountyCode" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Código de município"
+					sap:quickinfo="Código para município"/><Property Name="FormOfAddress" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Forma de tratamento"
+					sap:quickinfo="Chave de forma de tratamento"/><Property Name="BusinessPartnerName1" Type="Edm.String" MaxLength="40" sap:label="Nome" sap:quickinfo="Nome 1"/><Property Name="BusinessPartnerName2" Type="Edm.String" MaxLength="40" sap:label="Nome 2"/><Property Name="Nation" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Versão de endereço"
+					sap:quickinfo="Código de versão para endereços internacionais"/><Property Name="PhoneNumber" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Telefone"
+					sap:quickinfo="Primeiro nº de telefone: código + nº"/><Property Name="FaxNumber" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Fax"
+					sap:quickinfo="Primeiro nº fax: código telefónico + nº"/><Property Name="SearchTerm1" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Termo de pesquisa 1"/><Property Name="SearchTerm2" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Termo de pesquisa 2"/><Property Name="StreetSearch" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Rua"
+					sap:quickinfo="Nome de rua em maiúsculas para ajuda de pesquisa"/><Property Name="CitySearch" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Local"
+					sap:quickinfo="Nome de localidade em maiúsculas para ajuda de pesquisa"/><Property Name="BusinessPartnerName3" Type="Edm.String" MaxLength="40" sap:label="Nome 3"/><Property Name="BusinessPartnerName4" Type="Edm.String" MaxLength="40" sap:label="Nome 4"/><Property Name="TaxJurisdiction" Type="Edm.String" MaxLength="15" sap:display-format="UpperCase" sap:label="Domicílio fiscal"/><Property Name="TransportZone" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Zona de transporte"
+					sap:quickinfo="Zona de transporte para a qual ou da qual é fornecido"/><Property Name="Person" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Nº pessoa"/></EntityType>
+			<EntityType Name="I_BR_CFOPTextType" sap:label="Visão auxiliar - texto CFOP item NF" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Language"/><PropertyRef Name="BR_CFOPCode"/></Key><Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Código de idioma"/><Property Name="BR_CFOPCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="CFOP" sap:quickinfo="Código e extensão CFOP"/><Property Name="BR_CFOPVersion" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative"/><Property Name="BR_CFOPDesc" Type="Edm.String" MaxLength="50" sap:label="Descrição" sap:quickinfo="Descrição do CFOP"/></EntityType>
+			<EntityType Name="I_CompanyCodeStdVHType" sap:label="Empresa" sap:content-version="1">
+				<Key><PropertyRef Name="CompanyCode"/></Key><Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="CompanyCodeName"
+					sap:label="Empresa"/><Property Name="CompanyCodeName" Type="Edm.String" MaxLength="25" sap:label="Nome da firma" sap:quickinfo="Denominação da firma ou empresa"/></EntityType>
+			<EntityType Name="I_Customer_to_BusinessPartnerType" sap:label="Relação entre cliente e parceiro de negócios" sap:content-version="1">
+				<Key><PropertyRef Name="BusinessPartnerUUID"/></Key><Property Name="BusinessPartnerUUID" Type="Edm.Guid" Nullable="false" sap:label="GUID PN" sap:quickinfo="GUID de um parceiro de negócios"/><Property Name="Customer" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Cliente" sap:quickinfo="Nº cliente"/><Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Grupo autorizações"
+					sap:quickinfo="Grupo de autorizações"/></EntityType>
+			<EntityType Name="I_Customer_VHType" sap:label="Entradas possíveis para cliente" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Customer"/></Key><Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="CustomerName"
+					sap:label="Cliente" sap:quickinfo="Nº cliente"/><Property Name="OrganizationBPName1" Type="Edm.String" MaxLength="35" sap:label="Nome 1"/><Property Name="OrganizationBPName2" Type="Edm.String" MaxLength="35" sap:label="Nome 2"/><Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="País" sap:quickinfo="Chave do país"/><Property Name="CityName" Type="Edm.String" MaxLength="35" sap:label="Cidade" sap:quickinfo="Local"/><Property Name="StreetName" Type="Edm.String" MaxLength="35" sap:label="Rua" sap:quickinfo="Rua e nº"/><Property Name="CustomerName" Type="Edm.String" MaxLength="80" sap:label="Nome do cliente"/><Property Name="CustomerAccountGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Grupo de contas"
+					sap:quickinfo="Grupo de contas do cliente"/><Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Autorização"
+					sap:quickinfo="Grupo autorizações"/><Property Name="IsBusinessPurposeCompleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase"
+					sap:label="Marcação objetivo concluído" sap:quickinfo="Código para objetivo empresarial cumprido"/></EntityType>
+			<EntityType Name="I_MaterialType" sap:label="Material" sap:content-version="1">
+				<Key><PropertyRef Name="Material"/></Key><Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:text="Material_Text"
+					sap:label="Material" sap:quickinfo="Nº do material"/><Property Name="Material_Text" Type="Edm.String" MaxLength="40" sap:label="Texto breve material" sap:quickinfo="Texto breve de material"
+					sap:creatable="false" sap:updatable="false"/><Property Name="MaterialType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Tipo de material"/><Property Name="MaterialGroup" Type="Edm.String" MaxLength="9" sap:display-format="UpperCase" sap:label="Grupo de mercadorias"/><Property Name="MaterialBaseUnit" Type="Edm.String" MaxLength="3" sap:text="to_BaseUnit/UnitOfMeasure_Text" sap:label="Unid.medida básica"
+					sap:quickinfo="Unidade de medida básica" sap:value-list="standard" sap:semantics="unit-of-measure"/><Property Name="MaterialGrossWeight" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="MaterialWeightUnit" sap:label="Peso bruto"/><Property Name="MaterialNetWeight" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="MaterialWeightUnit" sap:label="Peso líquido"/><Property Name="MaterialWeightUnit" Type="Edm.String" MaxLength="3" sap:text="to_WeightUnit/UnitOfMeasure_Text" sap:label="Unidade de peso"
+					sap:value-list="standard" sap:semantics="unit-of-measure"/><Property Name="MaterialManufacturerNumber" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Fabricante"
+					sap:quickinfo="Nº de um fabricante"/><Property Name="MaterialManufacturerPartNumber" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase"
+					sap:label="Nº peça fabricante" sap:quickinfo="Nº peça de fabricante"/><Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Grupo autorizações"
+					sap:quickinfo="Grupo de autorizações"/><Property Name="IsBatchManagementRequired" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="AdminLotObrig."
+					sap:quickinfo="Código para administração em lote obrigatória"/><Property Name="CrossPlantConfigurableProduct" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase"
+					sap:label="Mat.configuráv.geral" sap:quickinfo="Material configurável geral"/><Property Name="ProductCategory" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Ctg.material"/><Property Name="ProductCharacteristic1" Type="Edm.String" MaxLength="18" sap:label="Cor"
+					sap:quickinfo="Valor da característica para cores em variantes"/><Property Name="ProductCharacteristic2" Type="Edm.String" MaxLength="18" sap:label="Tamanho principal"
+					sap:quickinfo="Valor da característica p/tamanho principal em variantes"/><Property Name="ProductCharacteristic3" Type="Edm.String" MaxLength="18" sap:label="Tamanho secundário"
+					sap:quickinfo="Valor da característica p/tamanho secundário em variantes"/><Property Name="ProdCharc1InternalNumber" Type="Edm.String" MaxLength="30" sap:display-format="NonNegative" sap:label="Nºint.característica"
+					sap:quickinfo="Nº interno de característica para cores"/><Property Name="ProdCharc2InternalNumber" Type="Edm.String" MaxLength="30" sap:display-format="NonNegative" sap:label="Nºint.característica"
+					sap:quickinfo="Nº interno em características para tamanhos principais"/><Property Name="ProdCharc3InternalNumber" Type="Edm.String" MaxLength="30" sap:display-format="NonNegative" sap:label="Nºint.característica"
+					sap:quickinfo="Nº interno em características p/tamanhos secundários"/><NavigationProperty Name="to_BaseUnit" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"
+					FromRole="FromRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A" ToRole="ToRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"/><NavigationProperty Name="to_WeightUnit" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"
+					FromRole="FromRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227" ToRole="ToRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"/></EntityType>
+			<EntityType Name="I_PlantType" sap:label="Centro" sap:content-version="1">
+				<Key><PropertyRef Name="Plant"/></Key><Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="PlantName"
+					sap:label="Centro"/><Property Name="PlantName" Type="Edm.String" MaxLength="30" sap:label="Nome do centro"/><Property Name="ValuationArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Área de avaliação"/><Property Name="PlantCustomer" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Nº cliente do centro"
+					sap:value-list="standard"/><Property Name="PlantSupplier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Nº fornecedor centro"
+					sap:quickinfo="Número do fornecedor do centro" sap:value-list="standard"/><Property Name="FactoryCalendar" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Calendário fábrica"
+					sap:quickinfo="Chave do calendário de fábrica"/><Property Name="DefaultPurchasingOrganization" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Organiz.compras"
+					sap:quickinfo="Organização de compras"/><Property Name="SalesOrganization" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Organização vendas"
+					sap:quickinfo="Organização de vendas para faturamento interno"/><Property Name="AddressID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Endereço"/><Property Name="PlantCategory" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Ctg.centro"/><Property Name="DistributionChannel" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="CanDist p/FatInterno"
+					sap:quickinfo="Canal de distribuição para faturamento interno"/><Property Name="Division" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Set.ativ.fat.interno"
+					sap:quickinfo="Setor de atividade para faturamento interno"/><NavigationProperty Name="to_Address" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_6038730FDB68BB23A236C4E6A537C470"
+					FromRole="FromRole_assoc_6038730FDB68BB23A236C4E6A537C470" ToRole="ToRole_assoc_6038730FDB68BB23A236C4E6A537C470"/></EntityType>
+			<EntityType Name="I_PlantPurchasingOrganizationType" sap:label="Organizações de compras responsáveis para centro" sap:content-version="1">
+				<Key><PropertyRef Name="PurchasingOrganization"/><PropertyRef Name="Plant"/></Key><Property Name="PurchasingOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase"
+					sap:text="to_PurchasingOrganization/PurchasingOrganizationName" sap:label="Organiz.compras" sap:quickinfo="Organização de compras"
+					sap:value-list="standard"/><Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="to_Plant/PlantName"
+					sap:label="Centro" sap:value-list="standard"/><NavigationProperty Name="to_Plant" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_9D669526915513FFA02D433D156D8A45"
+					FromRole="FromRole_assoc_9D669526915513FFA02D433D156D8A45" ToRole="ToRole_assoc_9D669526915513FFA02D433D156D8A45"/><NavigationProperty Name="to_PurchasingOrganization" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_4548A0D0C8FF6327625D9BB569A41DAD"
+					FromRole="FromRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD" ToRole="ToRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD"/></EntityType>
+			<EntityType Name="I_PurchasingOrganizationType" sap:label="Organização de compras" sap:content-version="1">
+				<Key><PropertyRef Name="PurchasingOrganization"/></Key><Property Name="PurchasingOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase"
+					sap:text="PurchasingOrganizationName" sap:label="Organização de compras"/><Property Name="PurchasingOrganizationName" Type="Edm.String" MaxLength="20" sap:label="Nome orgiz.compras"
+					sap:quickinfo="Nome da organização de compras"/><Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Empresa"/></EntityType>
+			<EntityType Name="I_Supplier_VHType" sap:label="Entradas possíveis para fornecedor" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Supplier"/></Key><Property Name="Supplier" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="SupplierName"
+					sap:label="Fornecedor" sap:quickinfo="Nº conta do fornecedor"/><Property Name="SupplierName" Type="Edm.String" MaxLength="35" sap:label="Nome" sap:quickinfo="Nome 1"/><Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Autorização"
+					sap:quickinfo="Grupo autorizações"/><Property Name="SupplierAccountGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Grupo de contas"
+					sap:quickinfo="Grupo de contas do fornecedor"/><Property Name="IsBusinessPurposeCompleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Objetivo concluído"
+					sap:quickinfo="Código para objetivo empresarial cumprido"/></EntityType>
+			<EntityType Name="I_UnitOfMeasureType" sap:label="Unidade de medida" sap:content-version="1">
+				<Key><PropertyRef Name="UnitOfMeasure"/></Key><Property Name="UnitOfMeasure" Type="Edm.String" Nullable="false" MaxLength="3" sap:text="UnitOfMeasure_Text" sap:label="Unidade de medida"
+					sap:semantics="unit-of-measure"/><Property Name="UnitOfMeasure_Text" Type="Edm.String" MaxLength="30" sap:label="Texto unid.med."
+					sap:quickinfo="Texto relativo à unidade de medida (30 caracteres no máximo)" sap:creatable="false" sap:updatable="false"/><Property Name="UnitOfMeasureSAPCode" Type="Edm.String" MaxLength="3" sap:label="Código SAP interno"
+					sap:quickinfo="Unidade de medida, código SAP interno (nenhuma conversão)"/><Property Name="UnitOfMeasureISOCode" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase"
+					sap:text="to_ISOCode/UnitOfMeasureISOCode_Text" sap:label="Código ISO" sap:quickinfo="Cód.ISO unid.medida" sap:value-list="standard"/><Property Name="IsPrimaryUnitForISOCode" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Code primário"
+					sap:quickinfo="Campo de marcação para a conversão de code ISO em code int."/><Property Name="UnitOfMeasureNumberOfDecimals" Type="Edm.Int16" sap:label="Decimais p/arredond."
+					sap:quickinfo="Número de casas decimais para arredondamento"/><Property Name="UnitOfMeasureIsCommercial" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Unidade comercial"
+					sap:quickinfo="Código de unidade comercial"/><Property Name="UnitOfMeasureDimension" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"
+					sap:text="to_Dimension/UnitOfMeasureDimension_Text" sap:label="Dimensão" sap:quickinfo="Chave da dimensão" sap:value-list="standard"/><Property Name="SIUnitCnvrsnRateNumerator" Type="Edm.Int32" sap:label="Contador" sap:quickinfo="Numerador para a conversão em unidade SI"/><Property Name="SIUnitCnvrsnRateDenominator" Type="Edm.Int32" sap:label="Denominador"
+					sap:quickinfo="Denominador para a conversão em unidade SI"/><Property Name="SIUnitCnvrsnRateExponent" Type="Edm.Int16" sap:label="Exponente" sap:quickinfo="Expoente de 10 para conversão em unidade SI"/><Property Name="SIUnitCnvrsnAdditiveValue" Type="Edm.Decimal" Precision="9" Scale="6" sap:label="Constante aditiva"
+					sap:quickinfo="Constante aditiva para a conversão em unidade SI"/><Property Name="UnitOfMeasureDspExponent" Type="Edm.Int16" sap:label="Expoen.vírgula flut."
+					sap:quickinfo="Exp.10ª potência repres.vírg.flutuante"/><Property Name="UnitOfMeasureDspNmbrOfDcmls" Type="Edm.Int16" sap:label="Casas decimais"
+					sap:quickinfo="Núm.de casas decimais na representação de números"/><Property Name="UnitOfMeasureTemperature" Type="Edm.Double" sap:unit="UnitOfMeasureTemperatureUnit" sap:label="Valor temper."
+					sap:quickinfo="Valor de temperatura"/><Property Name="UnitOfMeasureTemperatureUnit" Type="Edm.String" MaxLength="3" sap:label="Unidade temperat."
+					sap:quickinfo="Unidade da temperatura" sap:semantics="unit-of-measure"/><Property Name="UnitOfMeasurePressure" Type="Edm.Double" sap:unit="UnitOfMeasurePressureUnit" sap:label="Valor de impressão"/><Property Name="UnitOfMeasurePressureUnit" Type="Edm.String" MaxLength="3" sap:label="Unidade de pressão" sap:semantics="unit-of-measure"/><NavigationProperty Name="to_Dimension" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_744267C89213C6F0BEAA53E2EB9C8F4F"
+					FromRole="FromRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F" ToRole="ToRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F"/><NavigationProperty Name="to_ISOCode" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_5E18390584266C106B459BC3FD3D3C50"
+					FromRole="FromRole_assoc_5E18390584266C106B459BC3FD3D3C50" ToRole="ToRole_assoc_5E18390584266C106B459BC3FD3D3C50"/></EntityType>
+			<EntityType Name="I_UnitOfMeasureDimensionType" sap:label="Dimensão da unidade de medida" sap:content-version="1">
+				<Key><PropertyRef Name="UnitOfMeasureDimension"/></Key><Property Name="UnitOfMeasureDimension" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="UpperCase"
+					sap:text="UnitOfMeasureDimension_Text" sap:label="Dimensão" sap:quickinfo="Chave da dimensão"/><Property Name="UnitOfMeasureDimension_Text" Type="Edm.String" MaxLength="20" sap:label="Texto da dimensão"
+					sap:quickinfo="Texto relativo à dimensão" sap:creatable="false" sap:updatable="false"/><Property Name="LengthExponent" Type="Edm.Int16" sap:label="Comprimento" sap:quickinfo="Expoente para o comprimento"/><Property Name="MassExponent" Type="Edm.Int16" sap:label="Massa" sap:quickinfo="Expoente para a massa"/><Property Name="TimeExponent" Type="Edm.Int16" sap:label="Tempo" sap:quickinfo="Expoente para o tempo"/><Property Name="ElectricCurrentExponent" Type="Edm.Int16" sap:label="Intensidade corrente"
+					sap:quickinfo="Expoente p/a intensidade da corrente elétrica"/><Property Name="TemperatureExponent" Type="Edm.Int16" sap:label="Temperatura" sap:quickinfo="Expoente para a temperatura"/><Property Name="MoleQuantityExponent" Type="Edm.Int16" sap:label="Quantidade molar" sap:quickinfo="Expoente para a quantidade molar"/><Property Name="LuminosityExponent" Type="Edm.Int16" sap:label="Intensidade luminosa" sap:quickinfo="Expoente para a intensidade luminosa"/><Property Name="UnitOFMeasureSiUnit" Type="Edm.String" MaxLength="3" sap:label="Unidade SI" sap:semantics="unit-of-measure"/><Property Name="HasUnitsWithTemperatureSpec" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Depend.temperatura"
+					sap:quickinfo="Código se existe unidade c/indic.temperatura para dimensão"/><Property Name="HasUnitsWithPressureSpec" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Dependente pressão"
+					sap:quickinfo="Cód.se também existe unidade c/indicação pressão p/dimensão"/></EntityType>
+			<EntityType Name="I_UnitOfMeasureISOCodeType" sap:label="Unidade de medida código ISO" sap:content-version="1">
+				<Key><PropertyRef Name="UnitOfMeasureISOCode"/></Key><Property Name="UnitOfMeasureISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase"
+					sap:text="UnitOfMeasureISOCode_Text" sap:label="Código ISO" sap:quickinfo="Cód.ISO unid.medida"/><Property Name="UnitOfMeasureISOCode_Text" Type="Edm.String" MaxLength="25" sap:label="Código ISO"
+					sap:quickinfo="Códigos ISO para denominação de unidades de medida" sap:creatable="false" sap:updatable="false"/></EntityType>
+			<EntityType Name="ZCDS_SD020_VD_PARAMType" sap:content-version="1">
+				<Key><PropertyRef Name="docnum"/><PropertyRef Name="itmnum"/><PropertyRef Name="bukrs"/><PropertyRef Name="werks"/></Key><Property Name="docnum" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="NonNegative" sap:label="Nº documento"/><Property Name="itmnum" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Nº item do documento"/><Property Name="bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:required-in-filter="true"
+					sap:text="bukrs_Text" sap:label="Empresa" sap:value-list="standard"/><Property Name="bukrs_Text" Type="Edm.String" MaxLength="25" sap:label="Nome da firma" sap:quickinfo="Denominação da firma ou empresa"
+					sap:creatable="false" sap:updatable="false"/><Property Name="werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:required-in-filter="true"
+					sap:label="Centro" sap:value-list="standard"/><Property Name="credat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:required-in-filter="true"
+					sap:label="Data de criação" sap:quickinfo="Criar data"/><Property Name="parid" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:required-in-filter="false"
+					sap:label="ID parceiro" sap:quickinfo="Identificação do parceiro (cliente, fornecedor, loc.negócio)" sap:value-list="standard"/><Property Name="name1" Type="Edm.String" MaxLength="35" sap:label="Nome" sap:quickinfo="Nome 1"/><Property Name="cgc" Type="Edm.String" MaxLength="18" sap:display-format="NonNegative" sap:label="Code CGC"/><Property Name="cpf" Type="Edm.String" MaxLength="14" sap:display-format="NonNegative" sap:label="NºCPF"/><Property Name="stras" Type="Edm.String" MaxLength="35" sap:label="Rua" sap:quickinfo="Rua e nº"/><Property Name="inco1" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Incoterms"
+					sap:quickinfo="Incoterms parte 1"/><Property Name="zterm" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Condições pgto."
+					sap:quickinfo="Chave de condições de pagamento"/><Property Name="hkunnr" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Client.superior"
+					sap:quickinfo="Nº conta da hierarquia de clientes superior"/><Property Name="name_client" Type="Edm.String" MaxLength="35" sap:label="Nome" sap:quickinfo="Nome 1"/><Property Name="form" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Formulário documento"
+					sap:quickinfo="Formulário do documento fiscal eletrônico"/><Property Name="model" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Modelo nota fiscal"
+					sap:quickinfo="Modelo da nota fiscal"/><Property Name="nfenum" Type="Edm.String" MaxLength="9" sap:display-format="UpperCase" sap:label="Nº da NF-e"
+					sap:quickinfo="Número de nota fiscal eletrônica"/><Property Name="series" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Séries"/><Property Name="nfnum" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:label="Nº NF" sap:quickinfo="Nº da nota fiscal"/><Property Name="nftot" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Val.total incl.imp."
+					sap:quickinfo="Valor total incluindo todos os impostos"/><Property Name="menge" Type="Edm.Decimal" Precision="13" Scale="3" sap:label="Quantidade"/><Property Name="meins" Type="Edm.String" MaxLength="3" sap:label="Unidade de medida" sap:quickinfo="Unidade de medida básica"
+					sap:semantics="unit-of-measure"/><Property Name="xped" Type="Edm.String" MaxLength="15" sap:display-format="UpperCase" sap:label="Pedido" sap:quickinfo="Nº do pedido"/><Property Name="matnr" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:required-in-filter="false" sap:label="Material"
+					sap:quickinfo="Nº do material" sap:value-list="standard"/><Property Name="maktx" Type="Edm.String" MaxLength="40" sap:label="Texto breve material" sap:quickinfo="Texto breve de material"/><Property Name="doctyp" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tipo de documento"/><Property Name="cfop" Type="Edm.String" MaxLength="10" sap:required-in-filter="false" sap:label="CFOP"
+					sap:quickinfo="Código e extensão CFOP" sap:value-list="standard"/><Property Name="natop" Type="Edm.String" MaxLength="60" sap:label="Natureza da Operação"/><Property Name="docdat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Data documento"
+					sap:quickinfo="Data do documento"/><Property Name="cretim" Type="Edm.Time" Precision="0" sap:label="Criado às:" sap:quickinfo="Hora da criação"/><Property Name="waerk" Type="Edm.String" MaxLength="5" sap:label="Moeda do documento" sap:quickinfo="Moeda do documento SD"
+					sap:semantics="currency-code"/><Property Name="refkey" Type="Edm.String" MaxLength="35" sap:display-format="UpperCase" sap:label="Ref.doc.origem"
+					sap:quickinfo="Referência ao documento de origem"/><Property Name="nome_motorista" Type="Edm.String" MaxLength="40"/><Property Name="carrier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Transportadora"
+					sap:quickinfo="TD Transportadora (nº conta fornecedor)"/><Property Name="cancel" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Estornado"/><Property Name="candat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Data de estorno"/><Property Name="fkart" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Tp.doc.faturamento"
+					sap:quickinfo="Tipo documento de faturamento"/><Property Name="vtext" Type="Edm.String" MaxLength="40" sap:label="Denominação"/><NavigationProperty Name="to_F4_cfop" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_B447C9CFCA995A2AC5D0C506AA6159FC"
+					FromRole="FromRole_assoc_B447C9CFCA995A2AC5D0C506AA6159FC" ToRole="ToRole_assoc_B447C9CFCA995A2AC5D0C506AA6159FC"/><NavigationProperty Name="to_f4_comp" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_75D4C48FCE006208849D6BB8FDA0A89D"
+					FromRole="FromRole_assoc_75D4C48FCE006208849D6BB8FDA0A89D" ToRole="ToRole_assoc_75D4C48FCE006208849D6BB8FDA0A89D"/><NavigationProperty Name="to_f4_matnr" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863"
+					FromRole="FromRole_assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863" ToRole="ToRole_assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863"/><NavigationProperty Name="to_f4_parid" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_022A2B29FD07455A62C095656B6D77AA"
+					FromRole="FromRole_assoc_022A2B29FD07455A62C095656B6D77AA" ToRole="ToRole_assoc_022A2B29FD07455A62C095656B6D77AA"/><NavigationProperty Name="to_f4_werks" Relationship="ZCDS_SD020_VD_PARAM_CDS.assoc_FBD49117D4F1B686C718605273C349F0"
+					FromRole="FromRole_assoc_FBD49117D4F1B686C718605273C349F0" ToRole="ToRole_assoc_FBD49117D4F1B686C718605273C349F0"/></EntityType>
+			<Association Name="assoc_B447C9CFCA995A2AC5D0C506AA6159FC" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType" Multiplicity="1" Role="FromRole_assoc_B447C9CFCA995A2AC5D0C506AA6159FC"/><End Type="ZCDS_SD020_VD_PARAM_CDS.IBRCFOPCATTType" Multiplicity="*" Role="ToRole_assoc_B447C9CFCA995A2AC5D0C506AA6159FC"/></Association>
+			<Association Name="assoc_75D4C48FCE006208849D6BB8FDA0A89D" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType" Multiplicity="1" Role="FromRole_assoc_75D4C48FCE006208849D6BB8FDA0A89D"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_CompanyCodeStdVHType" Multiplicity="0..1" Role="ToRole_assoc_75D4C48FCE006208849D6BB8FDA0A89D"/></Association>
+			<Association Name="assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType" Multiplicity="1" Role="FromRole_assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_MaterialType" Multiplicity="0..1" Role="ToRole_assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863"/></Association>
+			<Association Name="assoc_022A2B29FD07455A62C095656B6D77AA" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType" Multiplicity="1" Role="FromRole_assoc_022A2B29FD07455A62C095656B6D77AA"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_Customer_to_BusinessPartnerType" Multiplicity="*" Role="ToRole_assoc_022A2B29FD07455A62C095656B6D77AA"/></Association>
+			<Association Name="assoc_FBD49117D4F1B686C718605273C349F0" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType" Multiplicity="1" Role="FromRole_assoc_FBD49117D4F1B686C718605273C349F0"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_PlantPurchasingOrganizationType" Multiplicity="*" Role="ToRole_assoc_FBD49117D4F1B686C718605273C349F0"/></Association>
+			<Association Name="assoc_744267C89213C6F0BEAA53E2EB9C8F4F" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType" Multiplicity="1" Role="FromRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureDimensionType" Multiplicity="0..1" Role="ToRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F"><PropertyRef Name="UnitOfMeasureDimension"/></Principal>
+					<Dependent Role="FromRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F"><PropertyRef Name="UnitOfMeasureDimension"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_5E18390584266C106B459BC3FD3D3C50" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType" Multiplicity="1" Role="FromRole_assoc_5E18390584266C106B459BC3FD3D3C50"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureISOCodeType" Multiplicity="0..1" Role="ToRole_assoc_5E18390584266C106B459BC3FD3D3C50"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_assoc_5E18390584266C106B459BC3FD3D3C50"><PropertyRef Name="UnitOfMeasureISOCode"/></Principal>
+					<Dependent Role="FromRole_assoc_5E18390584266C106B459BC3FD3D3C50"><PropertyRef Name="UnitOfMeasureISOCode"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_B46BCF309A9B43CB25FCEFE1CC5B4227" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.I_MaterialType" Multiplicity="1" Role="FromRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType" Multiplicity="0..1" Role="ToRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"><PropertyRef Name="UnitOfMeasure"/></Principal>
+					<Dependent Role="FromRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"><PropertyRef Name="MaterialWeightUnit"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_EBF97F0698BDC76F1E3AF501F0F18E9A" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.I_MaterialType" Multiplicity="1" Role="FromRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType" Multiplicity="0..1" Role="ToRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"><PropertyRef Name="UnitOfMeasure"/></Principal>
+					<Dependent Role="FromRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"><PropertyRef Name="MaterialBaseUnit"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_9D669526915513FFA02D433D156D8A45" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.I_PlantPurchasingOrganizationType" Multiplicity="1"
+				Role="FromRole_assoc_9D669526915513FFA02D433D156D8A45"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_PlantType" Multiplicity="1" Role="ToRole_assoc_9D669526915513FFA02D433D156D8A45"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_assoc_9D669526915513FFA02D433D156D8A45"><PropertyRef Name="Plant"/></Principal>
+					<Dependent Role="FromRole_assoc_9D669526915513FFA02D433D156D8A45"><PropertyRef Name="Plant"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_4548A0D0C8FF6327625D9BB569A41DAD" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.I_PlantPurchasingOrganizationType" Multiplicity="1"
+				Role="FromRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_PurchasingOrganizationType" Multiplicity="1" Role="ToRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD"><PropertyRef Name="PurchasingOrganization"/></Principal>
+					<Dependent Role="FromRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD"><PropertyRef Name="PurchasingOrganization"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="assoc_6038730FDB68BB23A236C4E6A537C470" sap:content-version="1"><End Type="ZCDS_SD020_VD_PARAM_CDS.I_PlantType" Multiplicity="1" Role="FromRole_assoc_6038730FDB68BB23A236C4E6A537C470"/><End Type="ZCDS_SD020_VD_PARAM_CDS.I_AddressType" Multiplicity="0..1" Role="ToRole_assoc_6038730FDB68BB23A236C4E6A537C470"/>
+				<ReferentialConstraint>
+					<Principal Role="ToRole_assoc_6038730FDB68BB23A236C4E6A537C470"><PropertyRef Name="AddressID"/></Principal>
+					<Dependent Role="FromRole_assoc_6038730FDB68BB23A236C4E6A537C470"><PropertyRef Name="AddressID"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZCDS_SD020_VD_PARAM_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true"
+				sap:supported-formats="atom json xlsx"><EntitySet Name="IBRCFOPCATT" EntityType="ZCDS_SD020_VD_PARAM_CDS.IBRCFOPCATTType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="I_Address" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_AddressType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="I_BR_CFOPText" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_BR_CFOPTextType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/><EntitySet Name="I_CompanyCodeStdVH" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_CompanyCodeStdVHType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="I_Customer_to_BusinessPartner" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_Customer_to_BusinessPartnerType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:content-version="1"/><EntitySet Name="I_Customer_VH" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_Customer_VHType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="I_Material" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_MaterialType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="I_Plant" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_PlantType" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:searchable="true" sap:content-version="1"/><EntitySet Name="I_PlantPurchasingOrganization" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_PlantPurchasingOrganizationType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:content-version="1"/><EntitySet Name="I_PurchasingOrganization" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_PurchasingOrganizationType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="I_Supplier_VH" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_Supplier_VHType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="I_UnitOfMeasure" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:content-version="1"/><EntitySet Name="I_UnitOfMeasureDimension" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureDimensionType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:content-version="1"/><EntitySet Name="I_UnitOfMeasureISOCode" EntityType="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureISOCodeType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:content-version="1"/><EntitySet Name="ZCDS_SD020_VD_PARAM" EntityType="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+				<AssociationSet Name="assoc_5E18390584266C106B459BC3FD3D3C50" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_5E18390584266C106B459BC3FD3D3C50"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="I_UnitOfMeasure" Role="FromRole_assoc_5E18390584266C106B459BC3FD3D3C50"/><End EntitySet="I_UnitOfMeasureISOCode" Role="ToRole_assoc_5E18390584266C106B459BC3FD3D3C50"/></AssociationSet>
+				<AssociationSet Name="assoc_75D4C48FCE006208849D6BB8FDA0A89D" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_75D4C48FCE006208849D6BB8FDA0A89D"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="ZCDS_SD020_VD_PARAM" Role="FromRole_assoc_75D4C48FCE006208849D6BB8FDA0A89D"/><End EntitySet="I_CompanyCodeStdVH" Role="ToRole_assoc_75D4C48FCE006208849D6BB8FDA0A89D"/></AssociationSet>
+				<AssociationSet Name="assoc_B447C9CFCA995A2AC5D0C506AA6159FC" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_B447C9CFCA995A2AC5D0C506AA6159FC"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="ZCDS_SD020_VD_PARAM" Role="FromRole_assoc_B447C9CFCA995A2AC5D0C506AA6159FC"/><End EntitySet="IBRCFOPCATT" Role="ToRole_assoc_B447C9CFCA995A2AC5D0C506AA6159FC"/></AssociationSet>
+				<AssociationSet Name="assoc_B46BCF309A9B43CB25FCEFE1CC5B4227" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="I_Material" Role="FromRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"/><End EntitySet="I_UnitOfMeasure" Role="ToRole_assoc_B46BCF309A9B43CB25FCEFE1CC5B4227"/></AssociationSet>
+				<AssociationSet Name="assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="ZCDS_SD020_VD_PARAM" Role="FromRole_assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863"/><End EntitySet="I_Material" Role="ToRole_assoc_2A6DB0CD34A7ADDC4C2FC677F6F86863"/></AssociationSet>
+				<AssociationSet Name="assoc_4548A0D0C8FF6327625D9BB569A41DAD" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_4548A0D0C8FF6327625D9BB569A41DAD"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="I_PlantPurchasingOrganization" Role="FromRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD"/><End EntitySet="I_PurchasingOrganization" Role="ToRole_assoc_4548A0D0C8FF6327625D9BB569A41DAD"/></AssociationSet>
+				<AssociationSet Name="assoc_9D669526915513FFA02D433D156D8A45" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_9D669526915513FFA02D433D156D8A45"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="I_PlantPurchasingOrganization" Role="FromRole_assoc_9D669526915513FFA02D433D156D8A45"/><End EntitySet="I_Plant" Role="ToRole_assoc_9D669526915513FFA02D433D156D8A45"/></AssociationSet>
+				<AssociationSet Name="assoc_6038730FDB68BB23A236C4E6A537C470" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_6038730FDB68BB23A236C4E6A537C470"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="I_Plant" Role="FromRole_assoc_6038730FDB68BB23A236C4E6A537C470"/><End EntitySet="I_Address" Role="ToRole_assoc_6038730FDB68BB23A236C4E6A537C470"/></AssociationSet>
+				<AssociationSet Name="assoc_FBD49117D4F1B686C718605273C349F0" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_FBD49117D4F1B686C718605273C349F0"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="ZCDS_SD020_VD_PARAM" Role="FromRole_assoc_FBD49117D4F1B686C718605273C349F0"/><End EntitySet="I_PlantPurchasingOrganization" Role="ToRole_assoc_FBD49117D4F1B686C718605273C349F0"/></AssociationSet>
+				<AssociationSet Name="assoc_022A2B29FD07455A62C095656B6D77AA" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_022A2B29FD07455A62C095656B6D77AA"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="ZCDS_SD020_VD_PARAM" Role="FromRole_assoc_022A2B29FD07455A62C095656B6D77AA"/><End EntitySet="I_Customer_to_BusinessPartner" Role="ToRole_assoc_022A2B29FD07455A62C095656B6D77AA"/></AssociationSet>
+				<AssociationSet Name="assoc_744267C89213C6F0BEAA53E2EB9C8F4F" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_744267C89213C6F0BEAA53E2EB9C8F4F"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="I_UnitOfMeasure" Role="FromRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F"/><End EntitySet="I_UnitOfMeasureDimension" Role="ToRole_assoc_744267C89213C6F0BEAA53E2EB9C8F4F"/></AssociationSet>
+				<AssociationSet Name="assoc_EBF97F0698BDC76F1E3AF501F0F18E9A" Association="ZCDS_SD020_VD_PARAM_CDS.assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="I_Material" Role="FromRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"/><End EntitySet="I_UnitOfMeasure" Role="ToRole_assoc_EBF97F0698BDC76F1E3AF501F0F18E9A"/></AssociationSet>
+			</EntityContainer>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_MaterialType/MaterialBaseUnit">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Unit of Measure"/><PropertyValue Property="CollectionPath" String="I_UnitOfMeasure"/><PropertyValue Property="SearchSupported" Bool="false"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="MaterialBaseUnit"/><PropertyValue Property="ValueListProperty" String="UnitOfMeasure"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="UnitOfMeasure_Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_MaterialType/MaterialWeightUnit">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Unit of Measure"/><PropertyValue Property="CollectionPath" String="I_UnitOfMeasure"/><PropertyValue Property="SearchSupported" Bool="false"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="MaterialWeightUnit"/><PropertyValue Property="ValueListProperty" String="UnitOfMeasure"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="UnitOfMeasure_Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_PlantType/PlantCustomer">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Value Help for Customer"/><PropertyValue Property="CollectionPath" String="I_Customer_VH"/><PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="PlantCustomer"/><PropertyValue Property="ValueListProperty" String="Customer"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="OrganizationBPName1"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="OrganizationBPName2"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Country"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="CityName"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="StreetName"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="CustomerName"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="CustomerAccountGroup"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AuthorizationGroup"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="IsBusinessPurposeCompleted"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_PlantType/PlantSupplier">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Value Help for Supplier"/><PropertyValue Property="CollectionPath" String="I_Supplier_VH"/><PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="PlantSupplier"/><PropertyValue Property="ValueListProperty" String="Supplier"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="SupplierName"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AuthorizationGroup"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="SupplierAccountGroup"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="IsBusinessPurposeCompleted"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="ZCDS_SD020_VD_PARAM_CDS.I_PlantPurchasingOrganizationType/PurchasingOrganization">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Purchasing Organization"/><PropertyValue Property="CollectionPath" String="I_PurchasingOrganization"/><PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="PurchasingOrganization"/><PropertyValue Property="ValueListProperty" String="PurchasingOrganization"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="PurchasingOrganizationName"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_PlantPurchasingOrganizationType/Plant">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Plant"/><PropertyValue Property="CollectionPath" String="I_Plant"/><PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="Plant"/><PropertyValue Property="ValueListProperty" String="Plant"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="PlantName"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType/UnitOfMeasureISOCode">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Unit of Measure ISO Code"/><PropertyValue Property="CollectionPath" String="I_UnitOfMeasureISOCode"/><PropertyValue Property="SearchSupported" Bool="false"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="UnitOfMeasureISOCode"/><PropertyValue Property="ValueListProperty" String="UnitOfMeasureISOCode"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="UnitOfMeasureISOCode_Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType/UnitOfMeasureDimension">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Unit of Measure Dimension"/><PropertyValue Property="CollectionPath" String="I_UnitOfMeasureDimension"/><PropertyValue Property="SearchSupported" Bool="false"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="UnitOfMeasureDimension"/><PropertyValue Property="ValueListProperty" String="UnitOfMeasureDimension"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="UnitOfMeasureDimension_Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType/bukrs">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Company Code"/><PropertyValue Property="CollectionPath" String="I_CompanyCodeStdVH"/><PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="bukrs"/><PropertyValue Property="ValueListProperty" String="CompanyCode"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="CompanyCodeName"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType/werks">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Responsible Purchasing Organizations for Plant"/><PropertyValue Property="CollectionPath" String="I_PlantPurchasingOrganization"/><PropertyValue Property="SearchSupported" Bool="false"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="werks"/><PropertyValue Property="ValueListProperty" String="Plant"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="PurchasingOrganization"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType/parid">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Customer to BusinessPartner Relationship"/><PropertyValue Property="CollectionPath" String="I_Customer_to_BusinessPartner"/><PropertyValue Property="SearchSupported" Bool="false"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="parid"/><PropertyValue Property="ValueListProperty" String="Customer"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="BusinessPartnerUUID"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AuthorizationGroup"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType/matnr">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Material"/><PropertyValue Property="CollectionPath" String="I_Material"/><PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="matnr"/><PropertyValue Property="ValueListProperty" String="Material"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Material_Text"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialType"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialGroup"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialBaseUnit"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialGrossWeight"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialNetWeight"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialWeightUnit"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialManufacturerNumber"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="MaterialManufacturerPartNumber"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AuthorizationGroup"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="IsBatchManagementRequired"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="CrossPlantConfigurableProduct"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="ProductCategory"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="ProductCharacteristic1"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="ProductCharacteristic2"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="ProductCharacteristic3"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="ProdCharc1InternalNumber"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="ProdCharc2InternalNumber"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="ProdCharc3InternalNumber"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType/cfop">
+				<Annotation Term="Common.ValueList">
+					<Record><PropertyValue Property="Label" String="Auxiliar View - NF Item CFOP Text"/><PropertyValue Property="CollectionPath" String="I_BR_CFOPText"/><PropertyValue Property="SearchSupported" Bool="false"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="cfop"/><PropertyValue Property="ValueListProperty" String="BR_CFOPCode"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Language"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="BR_CFOPVersion"/></Record>
+								<Record Type="Common.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="BR_CFOPDesc"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAM_CDS_Entities">
+				<Annotation Term="Aggregation.ApplySupported">
+					<Record>
+						<PropertyValue Property="Transformations">
+							<Collection>
+								<String>aggregate</String>
+								<String>groupby</String>
+								<String>filter</String>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Rollup" EnumMember="None"/></Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAM_CDS_Entities/ZCDS_SD020_VD_PARAM">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record><PropertyValue Property="RequiresFilter" Bool="true"/>
+						<PropertyValue Property="RequiredProperties">
+							<Collection>
+								<PropertyPath>bukrs</PropertyPath>
+								<PropertyPath>werks</PropertyPath>
+								<PropertyPath>credat</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.ZCDS_SD020_VD_PARAMType">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>werks</PropertyPath>
+						<PropertyPath>bukrs</PropertyPath>
+						<PropertyPath>itmnum</PropertyPath>
+						<PropertyPath>docnum</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCDS_SD020_VD_PARAM_CDS.I_UnitOfMeasureType/UnitOfMeasure"><Annotation Term="Common.UnitSpecificScale" Path="UnitOfMeasureDspNmbrOfDcmls"/></Annotations><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="https://gateway.hec.atem.com.br:80/sap/opu/odata/sap/ZCDS_SD020_VD_PARAM_CDS/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="https://gateway.hec.atem.com.br:80/sap/opu/odata/sap/ZCDS_SD020_VD_PARAM_CDS/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
