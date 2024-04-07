@@ -25,7 +25,7 @@ sap.ui.define([
                     async: true,
                     crossDomain: true,
                     headers: {
-                        'Authorization': 'Basic REVWRUxPUEVSOjcyNDU2OTgxeGRA',
+                        'Authorization': 'Basic U01FTEdFUzpJbmZpbml0QDA0',
                     }
                 };
 
@@ -49,7 +49,7 @@ sap.ui.define([
                     async: true,
                     crossDomain: true,
                     headers: {
-                        'Authorization': 'Basic REVWRUxPUEVSOjcyNDU2OTgxeGRA',
+                        'Authorization': 'Basic U01FTEdFUzpJbmZpbml0QDA0',
                     }
                 };
 

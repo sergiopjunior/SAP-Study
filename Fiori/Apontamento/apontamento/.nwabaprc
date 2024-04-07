@@ -1,0 +1,12 @@
+{
+    "base": "./dist",
+    "conn_usestrictssl" : false,
+    "conn_server": "http://vhnpldev:8000",
+    "conn_client" : "100",
+    "conn_user": "SMELGES",
+    "conn_password": "Infinit@04",
+    "abap_package": "ZBR_APONTA",
+    "abap_bsp": "ZSRM0001",
+    "abap_bsp_text": "Gerenciamento de Clientes",
+    "abap_transport" : "NPLK900128"
+}

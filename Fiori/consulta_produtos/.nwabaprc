@@ -1,0 +1,13 @@
+{ 
+    "base": "./dist", 
+    "conn_usestrictssl" : false, 
+    "conn_server": "http://vhnpldev:8000/",
+    "conn_client" : "100", 
+    "conn_user": "DEVELOPER",
+    "conn_password": "72456981xd@",
+    "abap_package": "ZFIORI_REMO",
+    "abap_bsp": "YMM0001",
+    "abap_bsp_text": "Consulta de Produtos",
+    "abap_language": "en",
+    "abap_transport": "NPLK900145"
+}
